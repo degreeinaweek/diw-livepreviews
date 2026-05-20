@@ -1,0 +1,704 @@
+<!doctype html>
+<html lang="en-AU">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>The Ku-Bros Doggy Daycare · Where dogs can be dogs · Kallangur</title>
+<meta name="description" content="A home-based doggy daycare on a fenced paddock in Kallangur. Sandpit, pools, obstacles — and a small group, every day. $40/day on multi-day weeks." />
+<link rel="canonical" href="https://livepreviews.degreeinaweek.com/kubros-doggy-daycare/" />
+<meta name="theme-color" content="#b8d4c7" />
+<meta property="og:type" content="website" />
+<meta property="og:site_name" content="The Ku-Bros Doggy Daycare" />
+<meta property="og:title" content="The Ku-Bros · Where dogs can be dogs · Kallangur" />
+<meta property="og:description" content="Home-based doggy daycare with a real paddock — sandpit, pools, obstacles." />
+<meta property="og:url" content="https://livepreviews.degreeinaweek.com/kubros-doggy-daycare/" />
+<meta property="og:locale" content="en_AU" />
+<link rel="icon" href="logo.png" />
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"AnimalShelter","name":"The Ku-Bros Doggy Daycare","url":"https://livepreviews.degreeinaweek.com/kubros-doggy-daycare/","priceRange":"$$","description":"Home-based doggy daycare with a paddock, sandpit, pools and obstacles in Kallangur.","address":{"@type":"PostalAddress","addressLocality":"Kallangur","addressRegion":"QLD","postalCode":"4503","addressCountry":"AU"},"aggregateRating":{"@type":"AggregateRating","ratingValue":"4.7","reviewCount":"24"},"areaServed":["Kallangur","Mango Hill","North Lakes","Murrumba Downs","Griffin","Burpengary","Brisbane North"]}
+</script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Anton&family=Inter:wght@400;500;600;700&family=Permanent+Marker&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --mint:#b8d4c7;       /* Ku-Bros sage from their site */
+    --mint-deep:#9bc1b1;
+    --mint-pale:#daeae3;
+    --orange:#f58220;     /* Ku-Bros orange — frisbee + tagline */
+    --orange-deep:#e36f0c;
+    --black:#171717;
+    --ink:#222824;
+    --paper:#fdfbf6;
+    --cream:#fff8ec;
+    --mute:#5a635c;
+    --rule:#0001;
+    --shadow:0 2px 12px rgba(23,23,23,.06), 0 14px 40px rgba(23,23,23,.08);
+  }
+  *{box-sizing:border-box;margin:0;padding:0}
+  html{scroll-behavior:smooth}
+  body{
+    font-family:'Inter',system-ui,sans-serif;
+    background:var(--paper);
+    color:var(--ink);
+    font-size:17px;line-height:1.6;
+    -webkit-font-smoothing:antialiased;
+  }
+  .display{font-family:'Anton','Impact',sans-serif;font-weight:400;letter-spacing:.005em;line-height:.95;text-transform:uppercase}
+  .marker{font-family:'Permanent Marker',cursive;font-weight:400}
+  .label{font-family:'Inter',sans-serif;font-size:11px;letter-spacing:.22em;text-transform:uppercase;font-weight:700}
+  .container{max-width:1200px;margin:0 auto;padding:0 28px}
+  a{color:inherit;text-decoration:none}
+  button{font:inherit;cursor:pointer;border:0;background:none;color:inherit}
+
+  /* NAV */
+  .nav{
+    position:absolute;top:0;left:0;right:0;z-index:10;
+    padding:18px 0;
+  }
+  .nav-inner{display:flex;align-items:center;justify-content:space-between;color:var(--black)}
+  .brand{display:flex;align-items:center;gap:14px}
+  .brand-logo{width:56px;height:56px;border-radius:50%;display:block}
+  .brand-text{display:flex;flex-direction:column;line-height:1}
+  .brand-name{font-family:'Permanent Marker',cursive;font-size:22px;color:var(--black);letter-spacing:.01em}
+  .brand-sub{font-family:'Anton',sans-serif;font-size:11px;letter-spacing:.32em;color:var(--orange);margin-top:6px;text-transform:uppercase}
+  .nav-links{display:flex;gap:36px;align-items:center}
+  .nav-links a{font-size:13px;letter-spacing:.16em;text-transform:uppercase;font-weight:600;color:var(--black)}
+  .nav-links a:hover{color:var(--orange)}
+  .btn{
+    display:inline-flex;align-items:center;gap:8px;
+    padding:14px 26px;border-radius:999px;
+    font-size:13px;letter-spacing:.18em;text-transform:uppercase;font-weight:700;
+    transition:transform .15s ease, background .15s ease;
+    border:2px solid transparent;
+  }
+  .btn-orange{background:var(--orange);color:#fff}
+  .btn-orange:hover{background:var(--orange-deep);transform:translateY(-1px)}
+  .btn-outline-black{background:transparent;color:var(--black);border-color:var(--black)}
+  .btn-outline-black:hover{background:var(--black);color:var(--mint)}
+  .btn-black{background:var(--black);color:var(--mint)}
+  .btn-black:hover{background:var(--ink);transform:translateY(-1px)}
+
+  /* HERO */
+  .hero{
+    position:relative;
+    background:var(--mint);
+    padding:140px 0 100px;
+    overflow:hidden;
+  }
+  .hero-bg-shapes{position:absolute;inset:0;overflow:hidden;z-index:0}
+  /* Big offset frisbee */
+  .shape-frisbee{
+    position:absolute;
+    right:-80px;top:120px;
+    width:540px;height:540px;border-radius:50%;
+    background:var(--orange);
+    opacity:.18;
+  }
+  /* Black contour ring */
+  .shape-ring{
+    position:absolute;
+    left:-160px;bottom:-180px;
+    width:480px;height:480px;border-radius:50%;
+    border:46px solid var(--black);
+    opacity:.06;
+  }
+  /* Paw dots */
+  .shape-dots{
+    position:absolute;inset:0;opacity:.30;
+    background-image:url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='80' height='80' viewBox='0 0 80 80'><g fill='%23171717' opacity='.06'><circle cx='10' cy='10' r='2'/><circle cx='40' cy='30' r='2'/><circle cx='70' cy='50' r='2'/><circle cx='20' cy='60' r='2'/><circle cx='55' cy='72' r='2'/></g></svg>");
+  }
+  .hero-inner{position:relative;z-index:2;display:grid;grid-template-columns:1.3fr 1fr;gap:60px;align-items:center}
+  .hero-kicker{display:inline-flex;align-items:center;gap:12px;color:var(--black);margin-bottom:22px}
+  .hero-kicker::before{content:"";display:block;width:36px;height:2px;background:var(--orange)}
+  .hero h1{
+    font-size:clamp(64px,9vw,128px);
+    color:var(--black);
+    margin-bottom:14px;
+  }
+  .hero h1 .marker-line{
+    display:block;
+    font-family:'Permanent Marker',cursive;
+    font-size:.42em;color:var(--orange);text-transform:none;
+    margin-top:12px;letter-spacing:0;
+  }
+  .hero-sub{
+    font-size:19px;max-width:46ch;
+    color:var(--ink);opacity:.85;
+    margin:24px 0 38px;
+  }
+  .hero-cta-row{display:flex;gap:14px;flex-wrap:wrap;margin-bottom:48px}
+  .hero-stats{display:flex;gap:36px;flex-wrap:wrap}
+  .hero-stat-num{font-family:Anton,sans-serif;font-size:42px;color:var(--orange);line-height:1}
+  .hero-stat-label{font-size:12px;letter-spacing:.18em;text-transform:uppercase;color:var(--black);font-weight:600;margin-top:6px}
+
+  /* Hero right column — logo card stack */
+  .hero-card{
+    background:var(--black);border-radius:24px;
+    padding:48px 36px;text-align:center;
+    color:var(--mint);
+    box-shadow:0 30px 60px rgba(23,23,23,.18);
+    position:relative;
+    transform:rotate(1.5deg);
+  }
+  .hero-card .big-logo{width:200px;height:200px;margin:0 auto 24px;display:block}
+  .hero-card .quote{font-family:'Permanent Marker',cursive;font-size:24px;line-height:1.2;color:var(--orange);margin-bottom:18px}
+  .hero-card .quote-cite{font-size:12px;letter-spacing:.2em;text-transform:uppercase;color:var(--mint);opacity:.7;font-weight:600}
+  .hero-card-stars{color:var(--orange);font-size:18px;letter-spacing:.1em;margin-bottom:14px}
+  /* sticker */
+  .sticker{
+    position:absolute;top:-22px;right:-22px;
+    background:var(--orange);color:var(--black);
+    width:108px;height:108px;border-radius:50%;
+    display:grid;place-items:center;
+    transform:rotate(-12deg);
+    box-shadow:0 8px 20px rgba(245,130,32,.4);
+  }
+  .sticker-text{font-family:'Permanent Marker',cursive;font-size:14px;line-height:1.1;text-align:center;padding:0 8px}
+
+  /* BOOKING CHIP */
+  .booking-chip{
+    position:relative;z-index:5;
+    max-width:1000px;margin:-44px auto 0;
+    background:var(--black);
+    border-radius:18px;
+    padding:14px;
+    display:grid;grid-template-columns:1fr 1fr 1fr auto;gap:6px;
+    box-shadow:var(--shadow);
+  }
+  .chip-field{
+    padding:14px 18px;border-radius:12px;
+    color:var(--mint);
+    display:flex;flex-direction:column;gap:4px;
+  }
+  .chip-field:hover{background:#0a0a0a}
+  .chip-field + .chip-field{border-left:1px solid #2a2a2a}
+  .chip-label{font-size:10px;letter-spacing:.22em;text-transform:uppercase;color:var(--orange);font-weight:700}
+  .chip-value{font-size:15px;color:var(--mint);font-weight:600}
+  .chip-cta{
+    background:var(--orange);color:var(--black);
+    border-radius:12px;padding:0 32px;
+    display:flex;align-items:center;gap:8px;
+    font-size:13px;letter-spacing:.18em;text-transform:uppercase;font-weight:700;
+  }
+  .chip-cta:hover{background:var(--orange-deep);color:#fff}
+
+  /* TRUST BAR */
+  .trust{padding:60px 0 20px;text-align:center}
+  .trust-label{color:var(--mute);margin-bottom:22px}
+  .trust-row{display:flex;justify-content:center;align-items:center;gap:50px;flex-wrap:wrap;color:var(--mute)}
+  .trust-item{display:flex;align-items:center;gap:10px;font-size:13px}
+  .trust-item strong{color:var(--black);font-weight:700}
+  .trust-stars{color:var(--orange);letter-spacing:.05em;font-size:14px}
+
+  /* SECTIONS */
+  section{padding:96px 0}
+  .eyebrow{color:var(--orange);margin-bottom:18px;display:inline-block}
+  .section-head{max-width:780px;margin-bottom:56px}
+  .section-head h2{font-size:clamp(48px,6vw,84px);margin-bottom:18px}
+  .section-head h2 .marker-line{display:block;font-family:'Permanent Marker',cursive;font-size:.36em;color:var(--orange);text-transform:none;margin-top:8px;line-height:1.1}
+  .section-head p{color:var(--mute);font-size:18px;max-width:52ch}
+
+  /* SERVICE / PRICING CARDS */
+  .cards{display:grid;grid-template-columns:repeat(3,1fr);gap:22px}
+  .card{
+    background:var(--cream);
+    border:2px solid var(--black);
+    border-radius:18px;
+    overflow:hidden;
+    transition:transform .2s ease;
+    position:relative;
+  }
+  .card:hover{transform:translateY(-4px)}
+  .card.featured{background:var(--black);color:var(--mint)}
+  .card.featured .card-price,.card.featured .card-title{color:var(--mint)}
+  .card.featured .card-feature{color:rgba(184,212,199,.85)}
+  .card-tag{
+    position:absolute;top:18px;right:18px;
+    background:var(--orange);color:var(--black);
+    border-radius:999px;padding:6px 14px;
+    font-size:10px;letter-spacing:.2em;text-transform:uppercase;font-weight:700;
+  }
+  .card-body{padding:34px 30px 36px}
+  .card-eyebrow{font-size:11px;letter-spacing:.22em;text-transform:uppercase;color:var(--orange);font-weight:700;margin-bottom:14px}
+  .card-title{font-family:Anton,sans-serif;font-size:36px;color:var(--black);text-transform:uppercase;letter-spacing:.01em;margin-bottom:8px;line-height:1}
+  .card-pitch{color:var(--mute);font-size:14px;line-height:1.55;margin-bottom:22px;min-height:46px}
+  .card-price{font-family:Anton,sans-serif;font-size:64px;color:var(--black);line-height:1;margin-bottom:2px}
+  .card-price-unit{font-family:Inter,sans-serif;font-size:14px;color:var(--mute);font-weight:600;text-transform:uppercase;letter-spacing:.14em;margin-bottom:24px}
+  .card.featured .card-price-unit{color:rgba(184,212,199,.7)}
+  .card-features{list-style:none;margin-bottom:28px}
+  .card-feature{padding:8px 0;font-size:14px;color:var(--ink);display:flex;gap:10px;align-items:flex-start}
+  .card-feature::before{content:"●";color:var(--orange);font-size:10px;margin-top:6px}
+  .card-cta{display:block;width:100%;padding:14px;background:var(--mint-deep);color:var(--black);border-radius:10px;font-size:12px;letter-spacing:.18em;text-transform:uppercase;font-weight:700;text-align:center;transition:background .15s}
+  .card-cta:hover{background:var(--mint)}
+  .card.featured .card-cta{background:var(--orange);color:var(--black)}
+  .card.featured .card-cta:hover{background:var(--orange-deep);color:#fff}
+
+  /* PADDOCK / WHAT WE HAVE */
+  .paddock{background:var(--mint);padding:120px 0}
+  .paddock-grid{display:grid;grid-template-columns:1.1fr 1fr;gap:80px;align-items:center}
+  .paddock-art{
+    aspect-ratio:1/1;
+    background:var(--cream);
+    border:3px solid var(--black);
+    border-radius:24px;
+    position:relative;overflow:hidden;
+    transform:rotate(-1.5deg);
+  }
+  .paddock-art svg{position:absolute;inset:0;width:100%;height:100%}
+  .paddock-text h2{font-size:clamp(48px,6vw,84px);margin-bottom:22px}
+  .paddock-text .marker-line{display:block;font-family:'Permanent Marker',cursive;color:var(--orange);font-size:.32em;margin-top:10px;text-transform:none;line-height:1.1}
+  .paddock-list{list-style:none;margin-top:28px}
+  .paddock-list li{padding:18px 0;border-bottom:2px dashed rgba(23,23,23,.18);display:grid;grid-template-columns:42px 1fr;gap:18px;align-items:start}
+  .paddock-list li:last-child{border-bottom:0}
+  .paddock-icon{
+    width:42px;height:42px;border-radius:50%;background:var(--black);color:var(--orange);
+    display:grid;place-items:center;font-family:Anton,sans-serif;font-size:18px;
+  }
+  .paddock-feat-title{font-family:Anton,sans-serif;font-size:22px;text-transform:uppercase;margin-bottom:4px;color:var(--black)}
+  .paddock-feat-copy{color:var(--ink);opacity:.78;font-size:15px}
+
+  /* MARQUEE / TAGLINE BAND */
+  .tagline-band{
+    background:var(--black);color:var(--orange);
+    overflow:hidden;padding:34px 0;
+    border-top:3px solid var(--orange);border-bottom:3px solid var(--orange);
+  }
+  .marquee{display:flex;gap:60px;white-space:nowrap;animation:marquee 24s linear infinite}
+  .marquee span{font-family:Anton,sans-serif;font-size:54px;text-transform:uppercase;letter-spacing:.04em}
+  .marquee span.alt{color:var(--mint);font-family:'Permanent Marker',cursive;text-transform:none}
+  @keyframes marquee{from{transform:translateX(0)}to{transform:translateX(-50%)}}
+
+  /* TESTIMONIAL */
+  .testi{background:var(--paper);padding:120px 0;text-align:center}
+  .testi blockquote{
+    font-family:'Permanent Marker',cursive;
+    font-size:clamp(32px,4.4vw,52px);line-height:1.25;
+    max-width:22ch;margin:0 auto 32px;color:var(--black);
+  }
+  .testi-cite{color:var(--mute);font-size:13px;letter-spacing:.18em;text-transform:uppercase;font-weight:700}
+  .testi-stars{color:var(--orange);font-size:20px;letter-spacing:.1em;margin-bottom:18px}
+
+  /* FAQ */
+  .faq{background:var(--mint-pale)}
+  .faq-list{max-width:820px;margin:0 auto}
+  .faq-item{border-bottom:2px solid var(--black);padding:24px 4px}
+  .faq-q{
+    display:flex;justify-content:space-between;align-items:center;
+    width:100%;text-align:left;
+    font-family:Anton,sans-serif;font-size:24px;color:var(--black);text-transform:uppercase;letter-spacing:.01em;
+  }
+  .faq-q::after{content:"+";color:var(--orange);font-size:32px;font-weight:600;transition:transform .2s}
+  .faq-item[open] .faq-q::after{content:"−"}
+  .faq-a{padding-top:14px;color:var(--ink);opacity:.85;font-size:16px;max-width:62ch}
+
+  /* CTA BAND */
+  .cta-band{
+    background:var(--orange);color:var(--black);
+    text-align:center;
+    padding:120px 0;
+    position:relative;overflow:hidden;
+  }
+  .cta-band::before{
+    content:"";position:absolute;inset:0;opacity:.10;
+    background-image:url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='200' height='200' viewBox='0 0 200 200'><g fill='%23171717'><circle cx='40' cy='40' r='8'/><circle cx='160' cy='80' r='10'/><circle cx='90' cy='130' r='6'/><circle cx='180' cy='170' r='8'/><circle cx='30' cy='160' r='10'/></g></svg>");
+  }
+  .cta-band > *{position:relative;z-index:1}
+  .cta-band h2{font-size:clamp(48px,6.4vw,96px);margin-bottom:18px;max-width:18ch;margin-left:auto;margin-right:auto;color:var(--black)}
+  .cta-band p{color:var(--black);opacity:.78;font-size:19px;margin-bottom:36px;max-width:48ch;margin-left:auto;margin-right:auto}
+
+  /* FOOTER */
+  footer{background:var(--black);color:rgba(184,212,199,.72);padding:80px 0 32px}
+  .foot-grid{display:grid;grid-template-columns:1.6fr 1fr 1fr 1fr;gap:48px;margin-bottom:48px;align-items:start}
+  .foot-h{color:var(--orange);font-size:11px;letter-spacing:.22em;text-transform:uppercase;margin-bottom:18px;font-weight:700}
+  .foot-grid p, .foot-grid a, .foot-grid li{font-size:14px;line-height:1.85}
+  .foot-grid ul{list-style:none}
+  .foot-grid a:hover{color:var(--orange)}
+  .foot-bottom{border-top:1px solid #2a2a2a;padding-top:24px;font-size:12px;display:flex;justify-content:space-between;flex-wrap:wrap;gap:16px;color:rgba(184,212,199,.5)}
+  .foot-logo{width:64px;height:64px;border-radius:50%;margin-bottom:18px;display:block;background:var(--mint);padding:4px}
+
+  @media (max-width:980px){
+    .hero-inner{grid-template-columns:1fr}
+    .hero-card{transform:none;margin-top:32px}
+    .booking-chip{grid-template-columns:1fr;margin-top:-30px}
+    .chip-field + .chip-field{border-left:0;border-top:1px solid #2a2a2a}
+    .nav-links{display:none}
+    .cards{grid-template-columns:1fr}
+    .paddock-grid{grid-template-columns:1fr;gap:48px}
+    .foot-grid{grid-template-columns:1fr 1fr;gap:32px}
+    .trust-row{gap:24px}
+    section{padding:64px 0}
+    .marquee span{font-size:36px}
+  }
+</style>
+</head>
+<body>
+
+<!-- NAV -->
+<nav class="nav">
+  <div class="container nav-inner">
+    <div class="brand">
+      <img src="logo.png" alt="The Ku-Bros" class="brand-logo" />
+      <div class="brand-text">
+        <span class="brand-name">The Ku_Bros</span>
+        <span class="brand-sub">Doggy Daycare · Kallangur</span>
+      </div>
+    </div>
+    <div class="nav-links">
+      <a href="#paddock">The Paddock</a>
+      <a href="#pricing">Pricing</a>
+      <a href="#reviews">Reviews</a>
+      <a href="#faq">FAQ</a>
+      <a href="#book" class="btn btn-orange">Book a Day →</a>
+    </div>
+  </div>
+</nav>
+
+<!-- HERO -->
+<header class="hero">
+  <div class="hero-bg-shapes">
+    <div class="shape-frisbee"></div>
+    <div class="shape-ring"></div>
+    <div class="shape-dots"></div>
+  </div>
+  <div class="container hero-inner">
+    <div>
+      <span class="label hero-kicker">Home-based daycare · Kallangur QLD</span>
+      <h1 class="display">
+        Where dogs<br>can <em style="font-style:normal;color:var(--orange)">be dogs.</em>
+        <span class="marker-line">no kennels. just a paddock.</span>
+      </h1>
+      <p class="hero-sub">A small, fenced paddock with a sandpit, two pools and a real obstacle course. We run it ourselves out of our home — so we know every dog by name, and every dog goes home tired.</p>
+      <div class="hero-cta-row">
+        <a href="#book" class="btn btn-orange">Book a Trial Day →</a>
+        <a href="#paddock" class="btn btn-outline-black">See the paddock</a>
+      </div>
+      <div class="hero-stats">
+        <div>
+          <div class="hero-stat-num">4.7★</div>
+          <div class="hero-stat-label">24 Google reviews</div>
+        </div>
+        <div>
+          <div class="hero-stat-num">$40</div>
+          <div class="hero-stat-label">/ day · multi-day rate</div>
+        </div>
+        <div>
+          <div class="hero-stat-num">~10</div>
+          <div class="hero-stat-label">dogs max, daily</div>
+        </div>
+      </div>
+    </div>
+    <div class="hero-card">
+      <div class="sticker"><div class="sticker-text">$40<br>multi-day!</div></div>
+      <img src="logo.png" alt="" class="big-logo" />
+      <div class="hero-card-stars">★★★★★</div>
+      <div class="quote">"Where dogs can be dogs."</div>
+      <div class="quote-cite">— Our promise · est. 2023</div>
+    </div>
+  </div>
+</header>
+
+<!-- BOOKING CHIP -->
+<div class="container">
+  <div class="booking-chip" id="book">
+    <div class="chip-field">
+      <span class="chip-label">Drop-off</span>
+      <span class="chip-value">Mon 26 May · 7am</span>
+    </div>
+    <div class="chip-field">
+      <span class="chip-label">Pick-up</span>
+      <span class="chip-value">Mon 26 May · 5pm</span>
+    </div>
+    <div class="chip-field">
+      <span class="chip-label">Dog</span>
+      <span class="chip-value">1 dog · Friendly</span>
+    </div>
+    <button class="chip-cta">Check the Paddock →</button>
+  </div>
+</div>
+
+<!-- TRUST BAR -->
+<section class="trust">
+  <div class="container">
+    <div class="label trust-label">Quietly running Kallangur · serving North Lakes, Mango Hill, Murrumba Downs</div>
+    <div class="trust-row">
+      <div class="trust-item"><span class="trust-stars">★★★★★</span> <span><strong>4.7</strong> · 24 Google reviews</span></div>
+      <div class="trust-item">Fully fenced 5,000m² paddock</div>
+      <div class="trust-item">Daily group capped at ~10</div>
+      <div class="trust-item">C5 vacc + temperament check required</div>
+    </div>
+  </div>
+</section>
+
+<!-- PRICING CARDS -->
+<section id="pricing">
+  <div class="container">
+    <div class="section-head">
+      <span class="label eyebrow">— Pricing</span>
+      <h2 class="display">Three ways to book.
+        <span class="marker-line">cheaper if they come more often.</span>
+      </h2>
+      <p>One flat day — drop off any time after 7am, pick up by 5pm. The price drops the more days they come, because honestly the dogs settle better when they see the same crew twice a week.</p>
+    </div>
+    <div class="cards">
+
+      <article class="card">
+        <div class="card-body">
+          <div class="card-eyebrow">Casual</div>
+          <div class="card-title">Drop-In Day</div>
+          <div class="card-pitch">For dogs who occasionally need a day out while you're away or working from the office.</div>
+          <div class="card-price">$55</div>
+          <div class="card-price-unit">per day · pay as you go</div>
+          <ul class="card-features">
+            <li class="card-feature">Full paddock access 7am–5pm</li>
+            <li class="card-feature">Pool, sandpit & obstacle course</li>
+            <li class="card-feature">Lunch (yours) + 2× water breaks</li>
+            <li class="card-feature">Pickup photo at the end of day</li>
+          </ul>
+          <a href="#book" class="card-cta">Book a casual day →</a>
+        </div>
+      </article>
+
+      <article class="card featured">
+        <div class="card-tag">Most booked</div>
+        <div class="card-body">
+          <div class="card-eyebrow">Weekly</div>
+          <div class="card-title">2–4 Days / Week</div>
+          <div class="card-pitch">For dogs who come on a regular rhythm — the sweet spot where they settle in and the price drops.</div>
+          <div class="card-price">$45</div>
+          <div class="card-price-unit">per day · weekly rate</div>
+          <ul class="card-features">
+            <li class="card-feature">Everything in Drop-In</li>
+            <li class="card-feature">Priority slot — guaranteed paddock spot</li>
+            <li class="card-feature">Weekly progress notes by SMS</li>
+            <li class="card-feature">Free 1× pickup + drop-off in Kallangur</li>
+          </ul>
+          <a href="#book" class="card-cta">Book a weekly slot →</a>
+        </div>
+      </article>
+
+      <article class="card">
+        <div class="card-body">
+          <div class="card-eyebrow">All-In</div>
+          <div class="card-title">5 Days / Week</div>
+          <div class="card-pitch">For dogs whose whole week revolves around the paddock — and owners who'd rather not commute home for a walk.</div>
+          <div class="card-price">$40</div>
+          <div class="card-price-unit">per day · full week</div>
+          <ul class="card-features">
+            <li class="card-feature">Everything in Weekly</li>
+            <li class="card-feature">Free transport (5km of Kallangur)</li>
+            <li class="card-feature">Monthly mini training tip session</li>
+            <li class="card-feature">Loyalty rate — pause anytime</li>
+          </ul>
+          <a href="#book" class="card-cta">Book the full week →</a>
+        </div>
+      </article>
+
+    </div>
+  </div>
+</section>
+
+<!-- PADDOCK BREAK (unique twist — illustrated SVG paddock map) -->
+<section class="paddock" id="paddock">
+  <div class="container paddock-grid">
+    <div class="paddock-art">
+      <!-- Hand-drawn paddock map -->
+      <svg viewBox="0 0 400 400" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid slice">
+        <rect width="400" height="400" fill="#fff8ec"/>
+        <!-- Grass texture -->
+        <g stroke="#9bc1b1" stroke-width="1" opacity=".5">
+          <path d="M20 100 q5 -8 10 0"/><path d="M40 130 q5 -8 10 0"/><path d="M60 110 q5 -8 10 0"/>
+          <path d="M80 140 q5 -8 10 0"/><path d="M120 110 q5 -8 10 0"/><path d="M150 130 q5 -8 10 0"/>
+          <path d="M300 150 q5 -8 10 0"/><path d="M340 130 q5 -8 10 0"/>
+          <path d="M70 320 q5 -8 10 0"/><path d="M110 350 q5 -8 10 0"/><path d="M200 360 q5 -8 10 0"/>
+          <path d="M300 320 q5 -8 10 0"/><path d="M340 350 q5 -8 10 0"/>
+        </g>
+        <!-- Paddock border (rough hand-drawn rectangle) -->
+        <path d="M30 60 L 370 56 L 372 358 L 26 362 Z" fill="none" stroke="#171717" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" stroke-dasharray="0"/>
+        <!-- Pool -->
+        <ellipse cx="120" cy="160" rx="44" ry="28" fill="#b8d4c7" stroke="#171717" stroke-width="2.5"/>
+        <path d="M85 158 q15 -10 30 0 t30 0" stroke="#9bc1b1" stroke-width="1.5" fill="none"/>
+        <text x="120" y="164" font-family="Permanent Marker" font-size="11" fill="#171717" text-anchor="middle">POOL</text>
+        <!-- Sandpit -->
+        <rect x="240" y="100" width="100" height="70" rx="6" fill="#f1dca5" stroke="#171717" stroke-width="2.5"/>
+        <text x="290" y="142" font-family="Permanent Marker" font-size="11" fill="#171717" text-anchor="middle">SANDPIT</text>
+        <!-- Obstacle: tunnel -->
+        <ellipse cx="100" cy="270" rx="40" ry="14" fill="none" stroke="#f58220" stroke-width="3"/>
+        <ellipse cx="100" cy="270" rx="34" ry="10" fill="none" stroke="#f58220" stroke-width="2" opacity=".6"/>
+        <text x="100" y="298" font-family="Permanent Marker" font-size="10" fill="#171717" text-anchor="middle">TUNNEL</text>
+        <!-- Obstacle: jump -->
+        <line x1="190" y1="280" x2="240" y2="280" stroke="#171717" stroke-width="3"/>
+        <line x1="195" y1="280" x2="195" y2="260" stroke="#171717" stroke-width="2"/>
+        <line x1="235" y1="280" x2="235" y2="260" stroke="#171717" stroke-width="2"/>
+        <line x1="200" y1="265" x2="230" y2="265" stroke="#f58220" stroke-width="3"/>
+        <text x="215" y="298" font-family="Permanent Marker" font-size="10" fill="#171717" text-anchor="middle">JUMP</text>
+        <!-- Obstacle: weave poles -->
+        <g stroke="#f58220" stroke-width="3" fill="none">
+          <circle cx="290" cy="245" r="4"/><circle cx="310" cy="265" r="4"/><circle cx="330" cy="245" r="4"/>
+        </g>
+        <text x="310" y="298" font-family="Permanent Marker" font-size="10" fill="#171717" text-anchor="middle">WEAVE</text>
+        <!-- Tree -->
+        <g>
+          <circle cx="50" cy="200" r="22" fill="#9bc1b1" stroke="#171717" stroke-width="2"/>
+          <rect x="46" y="218" width="8" height="22" fill="#614937" stroke="#171717" stroke-width="2"/>
+        </g>
+        <g>
+          <circle cx="360" cy="220" r="20" fill="#9bc1b1" stroke="#171717" stroke-width="2"/>
+          <rect x="356" y="236" width="8" height="22" fill="#614937" stroke="#171717" stroke-width="2"/>
+        </g>
+        <!-- Water bowl station -->
+        <rect x="160" y="320" width="80" height="22" rx="11" fill="#171717"/>
+        <text x="200" y="335" font-family="Anton" font-size="9" fill="#f58220" text-anchor="middle">WATER + LUNCH ZONE</text>
+        <!-- Dog paw prints zigzagging across -->
+        <g fill="#171717" opacity=".5">
+          <circle cx="180" cy="240" r="3"/><circle cx="186" cy="234" r="2"/><circle cx="174" cy="234" r="2"/><circle cx="186" cy="246" r="2"/><circle cx="174" cy="246" r="2"/>
+          <circle cx="220" cy="220" r="3"/><circle cx="226" cy="214" r="2"/><circle cx="214" cy="214" r="2"/>
+          <circle cx="260" cy="200" r="3"/>
+        </g>
+        <!-- "Welcome" sign -->
+        <g transform="translate(20,30)">
+          <rect width="120" height="22" rx="3" fill="#f58220" stroke="#171717" stroke-width="2"/>
+          <text x="60" y="15" font-family="Anton" font-size="11" fill="#171717" text-anchor="middle">THE KU-BROS PADDOCK</text>
+        </g>
+        <!-- Gate -->
+        <g transform="translate(180,46)">
+          <rect width="40" height="20" fill="#fff" stroke="#171717" stroke-width="2"/>
+          <text x="20" y="14" font-family="Permanent Marker" font-size="9" fill="#171717" text-anchor="middle">GATE</text>
+        </g>
+      </svg>
+    </div>
+    <div class="paddock-text">
+      <span class="label eyebrow">— What's in the paddock</span>
+      <h2 class="display">Five thousand square metres.
+        <span class="marker-line">no kennels. no crates. no shifts.</span>
+      </h2>
+      <ul class="paddock-list">
+        <li><div class="paddock-icon">01</div>
+          <div><div class="paddock-feat-title">Two pools</div>
+            <div class="paddock-feat-copy">Shallow paddler for the small dogs, deeper splash for the labs and shepherds. Cleaned daily.</div></div>
+        </li>
+        <li><div class="paddock-icon">02</div>
+          <div><div class="paddock-feat-title">Real sandpit</div>
+            <div class="paddock-feat-copy">A 7×4 metre sandpit — they'll dig like maniacs and sleep like rocks at home.</div></div>
+        </li>
+        <li><div class="paddock-icon">03</div>
+          <div><div class="paddock-feat-title">Obstacle course</div>
+            <div class="paddock-feat-copy">Tunnel, jump bar, weave poles. We rotate the setup every week so it stays interesting.</div></div>
+        </li>
+        <li><div class="paddock-icon">04</div>
+          <div><div class="paddock-feat-title">Shaded rest zone</div>
+            <div class="paddock-feat-copy">When they're done, there's water, a cool mat under the trees, and someone watching.</div></div>
+        </li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<!-- MARQUEE TAGLINE BAND -->
+<div class="tagline-band">
+  <div class="marquee">
+    <span>★ Where Dogs Can Be Dogs</span>
+    <span class="alt">no kennels</span>
+    <span>★ Where Dogs Can Be Dogs</span>
+    <span class="alt">no crates</span>
+    <span>★ Where Dogs Can Be Dogs</span>
+    <span class="alt">just a paddock</span>
+    <span>★ Where Dogs Can Be Dogs</span>
+    <span class="alt">no kennels</span>
+    <span>★ Where Dogs Can Be Dogs</span>
+    <span class="alt">no crates</span>
+    <span>★ Where Dogs Can Be Dogs</span>
+    <span class="alt">just a paddock</span>
+  </div>
+</div>
+
+<!-- TESTIMONIAL -->
+<section class="testi" id="reviews">
+  <div class="container">
+    <div class="testi-stars">★★★★★</div>
+    <blockquote>"It's our dog Disneyland. We love taking her — she gets there and she can't even wait to come and say hi."</blockquote>
+    <div class="testi-cite">— Renee, Murrumba Downs · Google Review</div>
+  </div>
+</section>
+
+<!-- FAQ -->
+<section class="faq" id="faq">
+  <div class="container">
+    <div class="section-head" style="text-align:center;margin-left:auto;margin-right:auto">
+      <span class="label eyebrow">— The honest answers</span>
+      <h2 class="display">Things people ask
+        <span class="marker-line">before they drop one off.</span>
+      </h2>
+    </div>
+    <div class="faq-list">
+      <details class="faq-item" open>
+        <summary class="faq-q">Do you take every dog?</summary>
+        <div class="faq-a">No. Every dog does a free 30-minute meet-and-greet first. If they're not comfortable in a group setting, we'll tell you straight up — we'd rather not take them than have a bad day for everyone.</div>
+      </details>
+      <details class="faq-item">
+        <summary class="faq-q">What do I need to bring?</summary>
+        <div class="faq-a">Lunch (we feed at noon-ish), their lead, their vaccination certificate (C5, current within 12 months), and that's it. Beds, toys and bowls we've got covered.</div>
+      </details>
+      <details class="faq-item">
+        <summary class="faq-q">What hours can I drop off and pick up?</summary>
+        <div class="faq-a">Drop-off any time between 7am and 9am. Pick-up between 3pm and 5pm. We're flexible if you're stuck in traffic — text us.</div>
+      </details>
+      <details class="faq-item">
+        <summary class="faq-q">What's your cancellation policy?</summary>
+        <div class="faq-a">Casual days — cancel up to 24 hours before, no charge. Weekly slots — give us a week's notice if you're pausing. Sick dog? Cancel anytime, no questions asked.</div>
+      </details>
+      <details class="faq-item">
+        <summary class="faq-q">Where are you based?</summary>
+        <div class="faq-a">Kallangur, in the Moreton Bay region. We're 4 minutes from Mango Hill, 8 from North Lakes, and we'll send you the exact address once a meet-and-greet is booked.</div>
+      </details>
+    </div>
+  </div>
+</section>
+
+<!-- CTA BAND -->
+<section class="cta-band">
+  <div class="container">
+    <h2 class="display">Ready to let them<br>be a dog for the day?</h2>
+    <p>Book a free 30-minute meet-and-greet. If the paddock isn't right for your dog, we'll be the first to tell you.</p>
+    <a href="#book" class="btn btn-black" style="padding:18px 36px;font-size:14px">Book a meet & greet →</a>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="container">
+    <div class="foot-grid">
+      <div>
+        <img src="logo.png" alt="" class="foot-logo" />
+        <p style="max-width:34ch;opacity:.78">A small, home-run doggy daycare in Kallangur. We started The Ku-Bros because we wanted somewhere we'd actually leave our own dog.</p>
+      </div>
+      <div>
+        <div class="foot-h">Visit</div>
+        <p>Kallangur, QLD 4503<br>(address shared after booking)</p>
+      </div>
+      <div>
+        <div class="foot-h">Pricing</div>
+        <ul>
+          <li><a href="#pricing">Casual day · $55</a></li>
+          <li><a href="#pricing">Weekly · $45</a></li>
+          <li><a href="#pricing">Full week · $40</a></li>
+        </ul>
+      </div>
+      <div>
+        <div class="foot-h">Book</div>
+        <ul>
+          <li><a href="#book">Book a day</a></li>
+          <li><a href="#faq">FAQ</a></li>
+          <li><a href="#paddock">The Paddock</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="foot-bottom">
+      <span>© The Ku-Bros Doggy Daycare · Kallangur QLD · Where dogs can be dogs</span>
+      <span style="opacity:.6">Site preview by <a href="https://degreeinaweek.com" style="color:var(--orange)">degreeinaweek.com</a></span>
+    </div>
+  </div>
+</footer>
+
+</body>
+</html>

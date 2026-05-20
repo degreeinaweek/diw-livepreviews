@@ -1,0 +1,916 @@
+<!doctype html>
+<html lang="en-AU">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Dogge Lane Brighton · Boutique dog grooming on Queens Parade · Brighton QLD</title>
+<meta name="description" content="A small boutique grooming salon on Queens Parade, Brighton. Doodle specialists. Every dog leaves in a signature polka-dot bandana. Online booking via MoeGo." />
+<link rel="canonical" href="https://livepreviews.degreeinaweek.com/dogge-lane-brighton/" />
+<meta name="theme-color" content="#fff7f5" />
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%23fff7f5'/%3E%3Ctext x='50%25' y='66%25' text-anchor='middle' font-family='Georgia,serif' font-style='italic' font-size='38' fill='%23e94b7a'%3ED%3C/text%3E%3C/svg%3E" />
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"PetGroomingService","name":"Dogge Lane Brighton","url":"https://livepreviews.degreeinaweek.com/dogge-lane-brighton/","telephone":"+61732695450","priceRange":"$$","address":{"@type":"PostalAddress","streetAddress":"14 Queens Parade","addressLocality":"Brighton","addressRegion":"QLD","postalCode":"4017","addressCountry":"AU"},"aggregateRating":{"@type":"AggregateRating","ratingValue":"4.8","reviewCount":"102"},"areaServed":["Brighton","Sandgate","Shorncliffe","Deagon","Bracken Ridge","Margate","Redcliffe"]}
+</script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Pacifico&family=Quicksand:wght@400;500;600;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --pink:#e94b7a;
+    --pink-soft:#f4a5bc;
+    --teal:#5ecfbc;
+    --teal-soft:#a8e5d8;
+    --peach:#f58a6d;
+    --peach-soft:#fbc5b3;
+    --cream:#fff7f5;
+    --paper:#fffdfb;
+    --milk:#fff2ee;
+    --dot:#3a3338;
+    --ink:#2a232e;
+    --mute:#857a8a;
+    --rule:#f3d9d9;
+    --shadow:0 2px 12px rgba(233,75,122,.10), 0 18px 44px rgba(94,207,188,.15);
+  }
+  *{box-sizing:border-box;margin:0;padding:0}
+  html{scroll-behavior:smooth}
+  body{
+    font-family:'Quicksand',system-ui,sans-serif;
+    background:var(--cream);
+    color:var(--ink);
+    font-size:17px;line-height:1.7;font-weight:500;
+    -webkit-font-smoothing:antialiased;
+  }
+  .script{font-family:'Pacifico',cursive;font-weight:400;letter-spacing:.005em;line-height:1}
+  .label{font-family:'Quicksand',sans-serif;font-size:11px;letter-spacing:.28em;text-transform:uppercase;font-weight:700;color:var(--pink)}
+  .container{max-width:1180px;margin:0 auto;padding:0 28px}
+  a{color:inherit;text-decoration:none}
+  button{font:inherit;cursor:pointer;border:0;background:none;color:inherit}
+
+  /* Polka-dot bandana background pattern (the signature motif) */
+  .polka{
+    background-color:var(--peach);
+    background-image:
+      radial-gradient(circle, rgba(255,255,255,.85) 2.5px, transparent 3px),
+      radial-gradient(circle, rgba(255,255,255,.85) 2.5px, transparent 3px);
+    background-size:24px 24px;
+    background-position:0 0, 12px 12px;
+  }
+  .polka-pink{background-color:var(--pink-soft)}
+  .polka-teal{background-color:var(--teal-soft)}
+  .polka-grey{background-color:#cbc3cb}
+
+  /* Gradient text */
+  .gradient-text{
+    background:linear-gradient(95deg, var(--pink) 0%, var(--peach) 45%, var(--teal) 100%);
+    -webkit-background-clip:text;background-clip:text;color:transparent;
+  }
+
+  /* NAV */
+  .nav{position:absolute;top:0;left:0;right:0;z-index:10;padding:22px 0}
+  .nav-inner{display:flex;align-items:center;justify-content:space-between;color:var(--ink)}
+  .brand{display:flex;align-items:center;gap:14px}
+  .brand-mark{width:70px;height:70px;border-radius:50%;background:var(--paper);box-shadow:var(--shadow);display:grid;place-items:center;padding:4px}
+  .brand-mark svg{width:100%;height:100%}
+  .brand-text{display:flex;flex-direction:column;line-height:.85}
+  .brand-name{font-family:'Pacifico',cursive;font-size:36px;line-height:.7}
+  .brand-sub{font-family:Quicksand,sans-serif;font-size:10px;color:var(--ink);letter-spacing:.26em;text-transform:uppercase;font-weight:700;margin-top:4px}
+  .nav-links{display:flex;gap:32px;align-items:center}
+  .nav-links a{font-size:14px;font-weight:600;color:var(--ink)}
+  .nav-links a:hover{color:var(--pink)}
+  .btn{
+    display:inline-flex;align-items:center;gap:8px;
+    padding:14px 26px;border-radius:999px;
+    font-family:Quicksand,sans-serif;font-size:13px;letter-spacing:.14em;font-weight:700;text-transform:uppercase;
+    transition:transform .15s ease, opacity .15s ease;
+  }
+  .btn-gradient{background:linear-gradient(95deg,var(--pink),var(--peach) 60%,var(--teal));color:#fff;box-shadow:0 6px 16px rgba(233,75,122,.30)}
+  .btn-gradient:hover{transform:translateY(-1px);opacity:.95}
+  .btn-outline-ink{background:transparent;color:var(--ink);border:2px solid var(--ink)}
+  .btn-outline-ink:hover{background:var(--ink);color:var(--cream)}
+  .btn-ink{background:var(--ink);color:var(--paper)}
+  .btn-ink:hover{background:var(--pink);transform:translateY(-1px)}
+
+  /* HERO */
+  .hero{position:relative;padding:140px 0 80px;overflow:hidden;background:var(--cream)}
+  /* Floating bandana shapes */
+  .bandana-shape{position:absolute;z-index:0;opacity:.55;border-radius:8px;transform:rotate(8deg)}
+  .bandana-shape.b1{top:120px;left:-50px;width:220px;height:120px}
+  .bandana-shape.b2{top:380px;right:-40px;width:180px;height:100px;transform:rotate(-12deg);opacity:.5}
+  .bandana-shape.b3{bottom:20px;left:30%;width:140px;height:80px;transform:rotate(4deg);opacity:.45}
+  .hero-inner{position:relative;z-index:2;display:grid;grid-template-columns:1.3fr 1fr;gap:60px;align-items:center}
+  .hero-eyebrow{display:inline-flex;align-items:center;gap:14px;color:var(--pink);margin-bottom:22px}
+  .hero-eyebrow::before,.hero-eyebrow::after{content:"";display:block;width:24px;height:2px;background:var(--peach)}
+  .hero h1{
+    font-family:Quicksand,sans-serif;font-weight:700;
+    font-size:clamp(52px,7vw,108px);
+    color:var(--ink);
+    margin-bottom:12px;
+    line-height:.98;letter-spacing:-.025em;
+  }
+  .hero h1 .script-line{
+    display:block;
+    font-family:'Pacifico',cursive;font-weight:400;
+    font-size:.85em;
+    line-height:.8;margin-bottom:6px;letter-spacing:0;
+  }
+  .hero h1 em{font-style:normal;color:var(--peach)}
+  .hero-sub{
+    font-size:19px;max-width:48ch;
+    color:var(--ink);font-weight:500;
+    margin:24px 0 36px;
+    line-height:1.6;
+  }
+  .hero-sub strong{color:var(--pink);font-weight:700}
+  .hero-cta-row{display:flex;gap:14px;flex-wrap:wrap;align-items:center;margin-bottom:36px}
+  .hero-aside{font-family:Pacifico,cursive;font-size:24px;color:var(--teal);line-height:1}
+  .hero-meta{display:flex;gap:32px;flex-wrap:wrap}
+  .hero-meta-item{display:flex;flex-direction:column;gap:2px}
+  .hero-meta-num{font-family:Pacifico,cursive;font-size:46px;line-height:.7;color:var(--pink)}
+  .hero-meta-label{font-size:11px;letter-spacing:.18em;text-transform:uppercase;font-weight:700;color:var(--ink)}
+
+  /* Hero portrait stack — two doodles in matching bandanas */
+  .hero-stack{position:relative}
+  .hero-photo{
+    position:relative;
+    background:#fff;
+    border-radius:16px;
+    padding:18px;
+    box-shadow:0 4px 24px rgba(0,0,0,.06), 0 20px 60px rgba(233,75,122,.18);
+    transform:rotate(2deg);
+  }
+  .hero-frame{
+    aspect-ratio:4/5;
+    border-radius:8px;overflow:hidden;
+    background:linear-gradient(160deg, var(--peach-soft) 0%, var(--pink-soft) 50%, var(--teal-soft) 100%);
+    position:relative;
+  }
+  .hero-frame svg{position:absolute;inset:0;width:100%;height:100%}
+  .hero-photo-cap{font-family:Pacifico,cursive;font-size:30px;color:var(--pink);text-align:center;margin-top:8px;line-height:.85}
+  .hero-photo-sub{font-family:Quicksand,sans-serif;font-size:11px;letter-spacing:.22em;text-transform:uppercase;font-weight:700;color:var(--ink);text-align:center;margin-top:6px;opacity:.6}
+  .hero-sticker{
+    position:absolute;top:-26px;right:-22px;
+    width:120px;height:120px;border-radius:50%;
+    display:grid;place-items:center;
+    transform:rotate(-12deg);
+    color:#fff;text-align:center;
+    box-shadow:0 6px 16px rgba(0,0,0,.15);
+  }
+  .hero-sticker .polka-text{font-family:Pacifico,cursive;font-size:24px;line-height:.85;color:#fff;text-shadow:1px 1px 0 rgba(0,0,0,.15)}
+  .hero-sticker em{font-style:normal;font-family:Quicksand,sans-serif;font-size:10px;letter-spacing:.2em;text-transform:uppercase;font-weight:700;color:#fff;display:block;margin-top:6px}
+
+  /* TRUST */
+  .trust{padding:28px 0;background:linear-gradient(95deg,var(--pink) 0%, var(--peach) 50%, var(--teal) 100%);color:#fff;overflow:hidden}
+  .trust-row{display:flex;justify-content:space-around;align-items:center;gap:32px;flex-wrap:wrap}
+  .trust-item{display:flex;align-items:center;gap:10px;font-size:13px;font-weight:600;letter-spacing:.04em}
+  .trust-item strong{font-weight:700}
+  .trust-stars{font-size:14px;letter-spacing:.08em}
+
+  /* SECTIONS */
+  section{padding:96px 0}
+  .section-head{max-width:780px;margin-bottom:56px}
+  .section-head h2{font-family:Quicksand,sans-serif;font-weight:700;font-size:clamp(40px,5vw,72px);margin-bottom:18px;color:var(--ink);line-height:1;letter-spacing:-.02em}
+  .section-head h2 .script-line{display:block;font-family:Pacifico,cursive;font-weight:400;font-size:.7em;line-height:.7;margin-bottom:4px}
+  .section-head p{color:var(--mute);font-size:18px;max-width:54ch;font-weight:500}
+  .section-head.center{margin-left:auto;margin-right:auto;text-align:center}
+
+  /* SERVICES */
+  .services{background:var(--paper)}
+  .price-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:24px}
+  .price-card{
+    position:relative;
+    background:#fff;
+    border-radius:24px;
+    padding:0 0 32px;
+    overflow:hidden;
+    box-shadow:0 4px 16px rgba(0,0,0,.04), 0 24px 60px rgba(233,75,122,.08);
+    transition:transform .25s ease;
+  }
+  .price-card:hover{transform:translateY(-6px)}
+  .price-band{height:14px}
+  .price-card:nth-child(1) .price-band{background:linear-gradient(95deg,var(--pink),var(--pink-soft))}
+  .price-card:nth-child(2) .price-band{background:linear-gradient(95deg,var(--pink),var(--peach),var(--teal))}
+  .price-card:nth-child(3) .price-band{background:linear-gradient(95deg,var(--teal),var(--teal-soft))}
+  .price-body{padding:28px 28px 0}
+  .price-feature-tag{
+    display:inline-block;
+    background:var(--ink);color:var(--paper);
+    padding:5px 14px;border-radius:999px;
+    font-size:10px;letter-spacing:.22em;text-transform:uppercase;font-weight:700;
+    margin-bottom:14px;
+  }
+  .price-card:nth-child(2) .price-feature-tag{background:linear-gradient(95deg,var(--pink),var(--peach));color:#fff}
+  .price-title{font-family:Quicksand,sans-serif;font-weight:700;font-size:30px;color:var(--ink);margin-bottom:10px;line-height:1}
+  .price-meta{color:var(--mute);font-size:14px;margin-bottom:24px;font-weight:500;min-height:46px;line-height:1.5}
+  .price-numrow{display:flex;align-items:baseline;gap:8px;margin-bottom:24px;padding-bottom:20px;border-bottom:1px solid var(--rule)}
+  .price-num{font-family:Quicksand,sans-serif;font-size:52px;font-weight:700;color:var(--pink);line-height:.85;letter-spacing:-.02em}
+  .price-card:nth-child(2) .price-num{background:linear-gradient(95deg,var(--pink),var(--peach));-webkit-background-clip:text;background-clip:text;color:transparent}
+  .price-card:nth-child(3) .price-num{color:var(--teal)}
+  .price-unit{font-size:13px;color:var(--mute);font-weight:600}
+  .price-includes{list-style:none;margin-bottom:24px}
+  .price-includes li{padding:7px 0;font-size:14px;display:flex;gap:10px;align-items:flex-start;color:var(--ink);font-weight:500;line-height:1.5}
+  .price-includes li::before{content:"♥";color:var(--pink);font-size:14px}
+  .price-card:nth-child(3) .price-includes li::before{color:var(--teal)}
+  .price-cta{display:block;text-align:center;background:var(--ink);color:var(--paper);padding:14px;border-radius:99px;font-size:12px;letter-spacing:.18em;text-transform:uppercase;font-weight:700;margin:0 28px}
+  .price-card:nth-child(2) .price-cta{background:linear-gradient(95deg,var(--pink),var(--peach),var(--teal));color:#fff}
+  .price-cta:hover{opacity:.9;transform:translateY(-1px)}
+
+  /* BANDANA WALL — the unique twist */
+  .bandana-wall{background:var(--milk);position:relative;overflow:hidden}
+  .bandana-wall::before{
+    content:"";position:absolute;left:0;right:0;top:0;height:60px;
+    background-image:
+      radial-gradient(circle, rgba(233,75,122,.4) 3px, transparent 3.5px),
+      radial-gradient(circle, rgba(233,75,122,.4) 3px, transparent 3.5px);
+    background-size:30px 30px;background-position:0 0,15px 15px;
+    opacity:.4;
+  }
+  .wall-grid{display:grid;grid-template-columns:repeat(6,1fr);gap:18px}
+  .wall-card{
+    position:relative;
+    background:#fff;
+    border-radius:14px;
+    padding:14px 14px 16px;
+    box-shadow:0 3px 10px rgba(0,0,0,.04), 0 14px 32px rgba(233,75,122,.10);
+  }
+  .wall-card:nth-child(1){transform:rotate(-2deg)}
+  .wall-card:nth-child(2){transform:rotate(1.5deg);margin-top:24px}
+  .wall-card:nth-child(3){transform:rotate(-1deg)}
+  .wall-card:nth-child(4){transform:rotate(2deg);margin-top:14px}
+  .wall-card:nth-child(5){transform:rotate(-1.5deg)}
+  .wall-card:nth-child(6){transform:rotate(1deg);margin-top:20px}
+  .wall-card-frame{
+    aspect-ratio:1/1;
+    border-radius:8px;overflow:hidden;
+    position:relative;margin-bottom:10px;
+  }
+  .wall-card-frame svg{position:absolute;inset:0;width:100%;height:100%}
+  .wall-card-name{font-family:Pacifico,cursive;font-size:24px;color:var(--pink);line-height:.8;text-align:center}
+  .wall-card-breed{font-family:Quicksand,sans-serif;font-size:10px;letter-spacing:.18em;text-transform:uppercase;font-weight:700;color:var(--ink);text-align:center;margin-top:4px;opacity:.6}
+
+  /* MEET / DUO */
+  .meet{background:#fff;position:relative;overflow:hidden}
+  .meet::before{
+    content:"";position:absolute;top:-100px;right:-100px;
+    width:320px;height:320px;border-radius:50%;
+    background:radial-gradient(circle at 40% 40%,var(--peach-soft), transparent 70%);
+    opacity:.7;
+  }
+  .meet::after{
+    content:"";position:absolute;bottom:-80px;left:-80px;
+    width:260px;height:260px;border-radius:50%;
+    background:radial-gradient(circle at 50% 50%,var(--teal-soft), transparent 70%);
+    opacity:.6;
+  }
+  .meet-grid{display:grid;grid-template-columns:1.1fr 1fr;gap:80px;align-items:center;position:relative}
+  .meet-text h2{font-size:clamp(40px,5vw,68px)}
+  .meet-text h2 .script-line{color:var(--peach)}
+  .meet-text p{font-size:18px;color:var(--ink);line-height:1.7;margin-bottom:18px;max-width:50ch;font-weight:500}
+  .meet-text p em{font-style:normal;background:linear-gradient(95deg,var(--pink-soft),var(--peach-soft));padding:0 8px;border-radius:6px}
+  .meet-list{list-style:none;margin-top:24px}
+  .meet-list li{padding:14px 0;border-bottom:1px solid var(--rule);font-size:15px;color:var(--ink);font-weight:500;display:grid;grid-template-columns:32px 1fr;gap:14px;align-items:center}
+  .meet-list li:last-child{border-bottom:0}
+  .meet-list li::before{content:"";width:24px;height:24px;border-radius:50%;background:linear-gradient(135deg,var(--pink),var(--peach));display:block}
+  .meet-list li:nth-child(2)::before{background:linear-gradient(135deg,var(--peach),var(--teal))}
+  .meet-list li:nth-child(3)::before{background:linear-gradient(135deg,var(--teal),var(--pink-soft))}
+  .meet-list li:nth-child(4)::before{background:linear-gradient(135deg,var(--pink),var(--teal))}
+  .meet-photo{
+    aspect-ratio:4/5;
+    background:linear-gradient(180deg,var(--peach-soft) 0%,var(--pink-soft) 100%);
+    border-radius:20px;overflow:hidden;position:relative;
+    box-shadow:0 24px 60px rgba(233,75,122,.18);
+  }
+  .meet-photo svg{position:absolute;inset:0;width:100%;height:100%}
+
+  /* TESTI */
+  .testi{background:var(--cream);text-align:center;padding:120px 0}
+  .testi-stars{color:var(--peach);font-size:24px;letter-spacing:.1em;margin-bottom:18px}
+  .testi blockquote{
+    font-family:Quicksand,sans-serif;font-weight:500;
+    font-size:clamp(28px,3.8vw,46px);line-height:1.25;
+    max-width:24ch;margin:0 auto 32px;color:var(--ink);
+    letter-spacing:-.01em;
+  }
+  .testi blockquote em{font-family:Pacifico,cursive;font-style:normal;font-weight:400;color:var(--pink);font-size:1.2em;line-height:.7;display:inline-block}
+  .testi-cite{font-family:Quicksand,sans-serif;font-size:12px;letter-spacing:.22em;text-transform:uppercase;color:var(--mute);font-weight:700}
+
+  /* FAQ */
+  .faq{background:var(--paper)}
+  .faq-list{max-width:820px;margin:0 auto}
+  .faq-item{background:#fff;border-radius:18px;padding:22px 26px;margin-bottom:12px;box-shadow:0 1px 4px rgba(0,0,0,.03), 0 8px 24px rgba(233,75,122,.05)}
+  .faq-q{display:flex;justify-content:space-between;align-items:center;width:100%;text-align:left;font-family:Quicksand,sans-serif;font-size:20px;color:var(--ink);font-weight:700;line-height:1.2}
+  .faq-q::after{
+    content:"";width:24px;height:24px;border-radius:50%;
+    background:linear-gradient(135deg,var(--pink),var(--peach));color:#fff;
+    display:grid;place-items:center;font-size:18px;line-height:0;font-weight:600;
+  }
+  .faq-q::after{content:"+"}
+  .faq-item[open] .faq-q::after{content:"−"}
+  .faq-a{padding-top:14px;color:var(--ink);font-size:16px;max-width:62ch;line-height:1.7;font-weight:500}
+  .faq-a strong{color:var(--pink)}
+
+  /* CTA — gradient band */
+  .cta-band{background:linear-gradient(110deg,var(--pink) 0%, var(--peach) 50%, var(--teal) 100%);color:#fff;text-align:center;padding:120px 0;position:relative;overflow:hidden}
+  .cta-band::before{
+    content:"";position:absolute;inset:0;opacity:.18;
+    background-image:
+      radial-gradient(circle, rgba(255,255,255,.9) 3px, transparent 3.5px),
+      radial-gradient(circle, rgba(255,255,255,.9) 3px, transparent 3.5px);
+    background-size:36px 36px;
+    background-position:0 0,18px 18px;
+  }
+  .cta-band > *{position:relative;z-index:1}
+  .cta-band h2{font-family:Quicksand,sans-serif;font-weight:700;font-size:clamp(48px,6vw,86px);margin-bottom:18px;max-width:18ch;margin-left:auto;margin-right:auto;color:#fff;line-height:.98;letter-spacing:-.02em}
+  .cta-band h2 .script-line{display:block;font-family:Pacifico,cursive;font-weight:400;font-size:.6em;line-height:.7;color:#fff}
+  .cta-band p{color:rgba(255,255,255,.95);font-size:19px;margin-bottom:36px;max-width:46ch;margin-left:auto;margin-right:auto;font-weight:500}
+
+  /* FOOTER */
+  footer{background:var(--ink);color:rgba(255,247,245,.78);padding:72px 0 32px}
+  .foot-grid{display:grid;grid-template-columns:1.6fr 1fr 1fr 1fr;gap:48px;margin-bottom:48px;align-items:start}
+  .foot-h{color:var(--peach);font-size:11px;letter-spacing:.24em;text-transform:uppercase;margin-bottom:18px;font-weight:700}
+  .foot-grid p, .foot-grid a, .foot-grid li{font-size:14px;line-height:1.85;font-weight:500}
+  .foot-grid ul{list-style:none}
+  .foot-grid a:hover{color:var(--peach)}
+  .foot-bottom{border-top:1px solid #3d3540;padding-top:24px;font-size:12px;display:flex;justify-content:space-between;flex-wrap:wrap;gap:16px;color:rgba(255,247,245,.5)}
+  .foot-brand-name{font-family:Pacifico,cursive;font-size:42px;line-height:.7;background:linear-gradient(95deg,var(--pink-soft),var(--peach-soft),var(--teal-soft));-webkit-background-clip:text;background-clip:text;color:transparent}
+
+  @media (max-width:980px){
+    .hero-inner, .meet-grid{grid-template-columns:1fr;gap:48px}
+    .hero-photo{transform:none;max-width:420px;margin:0 auto}
+    .nav-links{display:none}
+    .price-grid{grid-template-columns:1fr;gap:24px}
+    .wall-grid{grid-template-columns:1fr 1fr}
+    .wall-card{transform:none !important;margin-top:0 !important}
+    .foot-grid{grid-template-columns:1fr 1fr;gap:32px}
+    .trust-row{gap:18px}
+    section{padding:64px 0}
+  }
+</style>
+</head>
+<body>
+
+<!-- SVG defs -->
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+  <defs>
+    <linearGradient id="brandGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#e94b7a"/>
+      <stop offset="50%" stop-color="#f58a6d"/>
+      <stop offset="100%" stop-color="#5ecfbc"/>
+    </linearGradient>
+    <linearGradient id="brandGradV" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#e94b7a"/>
+      <stop offset="100%" stop-color="#5ecfbc"/>
+    </linearGradient>
+    <pattern id="dotsPink" x="0" y="0" width="14" height="14" patternUnits="userSpaceOnUse">
+      <rect width="14" height="14" fill="#f4a5bc"/>
+      <circle cx="7" cy="7" r="1.6" fill="#fff"/>
+    </pattern>
+    <pattern id="dotsTeal" x="0" y="0" width="14" height="14" patternUnits="userSpaceOnUse">
+      <rect width="14" height="14" fill="#5ecfbc"/>
+      <circle cx="7" cy="7" r="1.6" fill="#fff"/>
+    </pattern>
+    <pattern id="dotsPeach" x="0" y="0" width="14" height="14" patternUnits="userSpaceOnUse">
+      <rect width="14" height="14" fill="#f58a6d"/>
+      <circle cx="7" cy="7" r="1.6" fill="#fff"/>
+    </pattern>
+    <pattern id="dotsGrey" x="0" y="0" width="16" height="16" patternUnits="userSpaceOnUse">
+      <rect width="16" height="16" fill="#cbc3cb"/>
+      <circle cx="8" cy="8" r="1.8" fill="#fff"/>
+    </pattern>
+  </defs>
+
+  <!-- Dogge Lane brand mark — colorful gradient script wordmark with pink paw -->
+  <symbol id="dl-mark" viewBox="0 0 100 100">
+    <circle cx="50" cy="50" r="48" fill="#fff" stroke="url(#brandGrad)" stroke-width="2.5"/>
+    <!-- pink paw print at top -->
+    <g transform="translate(50,22)" fill="#e94b7a">
+      <ellipse cx="0" cy="3" rx="5" ry="4.5"/>
+      <ellipse cx="-7" cy="-3" rx="2.2" ry="3"/>
+      <ellipse cx="-3" cy="-6" rx="2.2" ry="3"/>
+      <ellipse cx="3" cy="-6" rx="2.2" ry="3"/>
+      <ellipse cx="7" cy="-3" rx="2.2" ry="3"/>
+    </g>
+    <!-- Dogge -->
+    <text x="50" y="58" text-anchor="middle" font-family="Pacifico, cursive" font-size="22" fill="url(#brandGrad)">Dogge</text>
+    <!-- Lane -->
+    <text x="50" y="76" text-anchor="middle" font-family="Pacifico, cursive" font-size="18" fill="url(#brandGradV)">Lane</text>
+    <!-- small heart -->
+    <path d="M58 76 q1.5 -2 3 0 q1.5 -2 3 0 q0 2 -3 4 q-3 -2 -3 -4 z" fill="#e94b7a"/>
+    <!-- sub -->
+    <text x="50" y="88" text-anchor="middle" font-family="Quicksand, sans-serif" font-weight="700" font-size="4.5" letter-spacing=".22em" fill="#2a232e">DOG GROOMING</text>
+  </symbol>
+
+  <!-- Hero: two doodles wearing matching polka bandanas -->
+  <symbol id="hero-doodles" viewBox="0 0 400 500">
+    <defs>
+      <radialGradient id="warmBg" cx="50%" cy="30%" r="70%">
+        <stop offset="0%" stop-color="#fbc5b3"/>
+        <stop offset="100%" stop-color="#f4a5bc"/>
+      </radialGradient>
+    </defs>
+    <rect width="400" height="500" fill="url(#warmBg)"/>
+    <!-- soft botanicals -->
+    <g stroke="#fff" stroke-width="1.4" fill="none" opacity=".5">
+      <path d="M30 70 Q 50 90 40 130"/><path d="M30 80 q8 -2 14 4"/>
+      <path d="M370 70 Q 350 90 360 130"/><path d="M370 80 q-8 -2 -14 4"/>
+    </g>
+
+    <!-- Left doodle (golden) -->
+    <g transform="translate(110,260)">
+      <!-- body -->
+      <ellipse cx="0" cy="60" rx="60" ry="50" fill="#e4b894" stroke="#2a232e" stroke-width="1.6"/>
+      <!-- legs -->
+      <rect x="-32" y="80" width="20" height="60" rx="10" fill="#e4b894" stroke="#2a232e" stroke-width="1.4"/>
+      <rect x="12" y="80" width="20" height="60" rx="10" fill="#e4b894" stroke="#2a232e" stroke-width="1.4"/>
+      <!-- bandana around neck -->
+      <path d="M-44 6 L 44 6 L 36 28 L -36 28 Z" fill="url(#dotsPink)" stroke="#2a232e" stroke-width="1.6"/>
+      <path d="M-46 4 L -56 22 L -44 16 Z" fill="url(#dotsPink)" stroke="#2a232e" stroke-width="1.4"/>
+      <path d="M46 4 L 56 22 L 44 16 Z" fill="url(#dotsPink)" stroke="#2a232e" stroke-width="1.4"/>
+      <!-- head -->
+      <circle cx="0" cy="-30" r="56" fill="#e4b894" stroke="#2a232e" stroke-width="1.6"/>
+      <!-- fluff lines -->
+      <g stroke="#c89776" stroke-width="1" fill="none" opacity=".5">
+        <path d="M-46 -56 q8 -10 16 0"/><path d="M-26 -64 q8 -10 16 0"/><path d="M-6 -64 q8 -10 16 0"/><path d="M14 -56 q8 -10 16 0"/>
+      </g>
+      <!-- ears -->
+      <ellipse cx="-46" cy="-28" rx="16" ry="32" fill="#c89776" stroke="#2a232e" stroke-width="1.4"/>
+      <ellipse cx="46" cy="-28" rx="16" ry="32" fill="#c89776" stroke="#2a232e" stroke-width="1.4"/>
+      <!-- face -->
+      <ellipse cx="0" cy="-14" rx="22" ry="16" fill="#f0d3b8"/>
+      <circle cx="-10" cy="-26" r="3.4" fill="#2a232e"/>
+      <circle cx="10" cy="-26" r="3.4" fill="#2a232e"/>
+      <circle cx="-9.2" cy="-27" r="1" fill="#fff"/>
+      <circle cx="10.8" cy="-27" r="1" fill="#fff"/>
+      <!-- nose -->
+      <ellipse cx="0" cy="-10" rx="4.6" ry="3.4" fill="#2a232e"/>
+      <!-- mouth -->
+      <path d="M0 -6 Q 0 4 -6 2" stroke="#7c5c47" stroke-width="1.4" fill="none"/>
+      <path d="M0 -6 Q 0 4 6 2" stroke="#7c5c47" stroke-width="1.4" fill="none"/>
+      <path d="M-4 2 Q 0 8 4 2 Z" fill="#e94b7a"/>
+    </g>
+
+    <!-- Right doodle (cream) -->
+    <g transform="translate(290,280)">
+      <ellipse cx="0" cy="55" rx="55" ry="46" fill="#fff5e6" stroke="#2a232e" stroke-width="1.6"/>
+      <rect x="-30" y="74" width="18" height="56" rx="9" fill="#fff5e6" stroke="#2a232e" stroke-width="1.4"/>
+      <rect x="12" y="74" width="18" height="56" rx="9" fill="#fff5e6" stroke="#2a232e" stroke-width="1.4"/>
+      <!-- matching pink bandana -->
+      <path d="M-40 4 L 40 4 L 32 24 L -32 24 Z" fill="url(#dotsPink)" stroke="#2a232e" stroke-width="1.6"/>
+      <path d="M-42 2 L -52 18 L -40 14 Z" fill="url(#dotsPink)" stroke="#2a232e" stroke-width="1.4"/>
+      <path d="M42 2 L 52 18 L 40 14 Z" fill="url(#dotsPink)" stroke="#2a232e" stroke-width="1.4"/>
+      <circle cx="0" cy="-30" r="52" fill="#fff5e6" stroke="#2a232e" stroke-width="1.6"/>
+      <g stroke="#e6cfa6" stroke-width="1" fill="none" opacity=".7">
+        <path d="M-42 -54 q8 -10 16 0"/><path d="M-22 -62 q8 -10 16 0"/><path d="M-2 -62 q8 -10 16 0"/><path d="M18 -54 q8 -10 16 0"/>
+      </g>
+      <!-- floppy ears -->
+      <ellipse cx="-42" cy="-26" rx="14" ry="28" fill="#fff" stroke="#2a232e" stroke-width="1.4"/>
+      <ellipse cx="42" cy="-26" rx="14" ry="28" fill="#fff" stroke="#2a232e" stroke-width="1.4"/>
+      <!-- face -->
+      <ellipse cx="0" cy="-14" rx="20" ry="14" fill="#fffaf0"/>
+      <circle cx="-9" cy="-25" r="3.2" fill="#2a232e"/>
+      <circle cx="9" cy="-25" r="3.2" fill="#2a232e"/>
+      <circle cx="-8.2" cy="-26" r="1" fill="#fff"/>
+      <circle cx="9.8" cy="-26" r="1" fill="#fff"/>
+      <ellipse cx="0" cy="-10" rx="4.4" ry="3.2" fill="#2a232e"/>
+      <path d="M0 -7 Q 0 2 -5 1" stroke="#7c5c47" stroke-width="1.4" fill="none"/>
+      <path d="M0 -7 Q 0 2 5 1" stroke="#7c5c47" stroke-width="1.4" fill="none"/>
+      <!-- top fluff (groomed) -->
+      <path d="M-16 -76 Q 0 -94 16 -76" fill="#fff" stroke="#2a232e" stroke-width="1.4"/>
+    </g>
+  </symbol>
+
+  <!-- 6 wall-card dog illustrations, each in a different bandana color -->
+  <symbol id="dog-1" viewBox="0 0 200 200">
+    <rect width="200" height="200" fill="none"/>
+    <ellipse cx="100" cy="140" rx="62" ry="40" fill="#e4b894" stroke="#2a232e" stroke-width="1.6"/>
+    <circle cx="100" cy="80" r="52" fill="#e4b894" stroke="#2a232e" stroke-width="1.6"/>
+    <ellipse cx="56" cy="74" rx="12" ry="24" fill="#c89776" stroke="#2a232e" stroke-width="1.4"/>
+    <ellipse cx="144" cy="74" rx="12" ry="24" fill="#c89776" stroke="#2a232e" stroke-width="1.4"/>
+    <ellipse cx="100" cy="92" rx="20" ry="14" fill="#f0d3b8"/>
+    <circle cx="90" cy="80" r="3" fill="#2a232e"/>
+    <circle cx="110" cy="80" r="3" fill="#2a232e"/>
+    <ellipse cx="100" cy="94" rx="4" ry="3" fill="#2a232e"/>
+    <path d="M50 130 L 150 130 L 142 154 L 58 154 Z" fill="url(#dotsPink)" stroke="#2a232e" stroke-width="1.6"/>
+  </symbol>
+  <symbol id="dog-2" viewBox="0 0 200 200">
+    <ellipse cx="100" cy="138" rx="58" ry="38" fill="#fff" stroke="#2a232e" stroke-width="1.6"/>
+    <circle cx="100" cy="80" r="50" fill="#2a232e"/>
+    <ellipse cx="58" cy="74" rx="11" ry="22" fill="#2a232e" stroke="#2a232e" stroke-width="1"/>
+    <ellipse cx="142" cy="74" rx="11" ry="22" fill="#2a232e" stroke="#2a232e" stroke-width="1"/>
+    <ellipse cx="100" cy="90" rx="18" ry="12" fill="#3a3338"/>
+    <circle cx="91" cy="80" r="3" fill="#fff"/>
+    <circle cx="109" cy="80" r="3" fill="#fff"/>
+    <ellipse cx="100" cy="92" rx="4" ry="3" fill="#1a1418"/>
+    <path d="M50 128 L 150 128 L 142 152 L 58 152 Z" fill="url(#dotsTeal)" stroke="#2a232e" stroke-width="1.6"/>
+  </symbol>
+  <symbol id="dog-3" viewBox="0 0 200 200">
+    <ellipse cx="100" cy="138" rx="60" ry="38" fill="#fff5e6" stroke="#2a232e" stroke-width="1.6"/>
+    <circle cx="100" cy="80" r="50" fill="#fff5e6" stroke="#2a232e" stroke-width="1.6"/>
+    <ellipse cx="56" cy="74" rx="12" ry="24" fill="#fff" stroke="#2a232e" stroke-width="1.4"/>
+    <ellipse cx="144" cy="74" rx="12" ry="24" fill="#fff" stroke="#2a232e" stroke-width="1.4"/>
+    <path d="M84 56 Q 100 38 116 56" fill="#fff" stroke="#2a232e" stroke-width="1.4"/>
+    <ellipse cx="100" cy="92" rx="20" ry="14" fill="#fffaf0"/>
+    <circle cx="91" cy="80" r="3" fill="#2a232e"/>
+    <circle cx="109" cy="80" r="3" fill="#2a232e"/>
+    <ellipse cx="100" cy="94" rx="4" ry="3" fill="#2a232e"/>
+    <path d="M50 130 L 150 130 L 142 154 L 58 154 Z" fill="url(#dotsPeach)" stroke="#2a232e" stroke-width="1.6"/>
+  </symbol>
+  <symbol id="dog-4" viewBox="0 0 200 200">
+    <ellipse cx="100" cy="140" rx="60" ry="38" fill="#998273" stroke="#2a232e" stroke-width="1.6"/>
+    <circle cx="100" cy="80" r="50" fill="#998273" stroke="#2a232e" stroke-width="1.6"/>
+    <path d="M62 50 L 50 24 L 80 46 Z" fill="#998273" stroke="#2a232e" stroke-width="1.4"/>
+    <path d="M138 50 L 150 24 L 120 46 Z" fill="#998273" stroke="#2a232e" stroke-width="1.4"/>
+    <ellipse cx="100" cy="92" rx="18" ry="12" fill="#b8a290"/>
+    <circle cx="90" cy="80" r="3" fill="#2a232e"/>
+    <circle cx="110" cy="80" r="3" fill="#2a232e"/>
+    <ellipse cx="100" cy="94" rx="4" ry="3" fill="#2a232e"/>
+    <path d="M50 130 L 150 130 L 142 154 L 58 154 Z" fill="url(#dotsGrey)" stroke="#2a232e" stroke-width="1.6"/>
+  </symbol>
+  <symbol id="dog-5" viewBox="0 0 200 200">
+    <ellipse cx="100" cy="138" rx="56" ry="38" fill="#f0d3b8" stroke="#2a232e" stroke-width="1.6"/>
+    <circle cx="100" cy="80" r="46" fill="#f0d3b8" stroke="#2a232e" stroke-width="1.6"/>
+    <!-- corgi-style upright ears -->
+    <path d="M70 50 L 64 28 L 84 44 Z" fill="#f0d3b8" stroke="#2a232e" stroke-width="1.4"/>
+    <path d="M130 50 L 136 28 L 116 44 Z" fill="#f0d3b8" stroke="#2a232e" stroke-width="1.4"/>
+    <!-- white belly -->
+    <ellipse cx="100" cy="148" rx="36" ry="22" fill="#fff" stroke="#2a232e" stroke-width="1.4"/>
+    <ellipse cx="100" cy="90" rx="18" ry="13" fill="#fffaf0"/>
+    <circle cx="91" cy="80" r="3" fill="#2a232e"/>
+    <circle cx="109" cy="80" r="3" fill="#2a232e"/>
+    <ellipse cx="100" cy="94" rx="4" ry="3" fill="#2a232e"/>
+    <path d="M50 128 L 150 128 L 142 152 L 58 152 Z" fill="url(#dotsPink)" stroke="#2a232e" stroke-width="1.6"/>
+  </symbol>
+  <symbol id="dog-6" viewBox="0 0 200 200">
+    <ellipse cx="100" cy="142" rx="60" ry="36" fill="#fff" stroke="#2a232e" stroke-width="1.6"/>
+    <circle cx="100" cy="84" r="48" fill="#fff" stroke="#2a232e" stroke-width="1.6"/>
+    <!-- westie pointy ears -->
+    <path d="M70 56 L 62 30 L 84 50 Z" fill="#fff" stroke="#2a232e" stroke-width="1.4"/>
+    <path d="M130 56 L 138 30 L 116 50 Z" fill="#fff" stroke="#2a232e" stroke-width="1.4"/>
+    <!-- beard -->
+    <path d="M70 100 Q 70 130 100 132 Q 130 130 130 100" fill="#fff" stroke="#2a232e" stroke-width="1.4"/>
+    <circle cx="88" cy="80" r="3" fill="#2a232e"/>
+    <circle cx="112" cy="80" r="3" fill="#2a232e"/>
+    <ellipse cx="100" cy="98" rx="5" ry="4" fill="#2a232e"/>
+    <path d="M50 132 L 150 132 L 142 156 L 58 156 Z" fill="url(#dotsTeal)" stroke="#2a232e" stroke-width="1.6"/>
+  </symbol>
+
+  <!-- Meet the team: groomer holding a doodle in a bandana -->
+  <symbol id="meet-team" viewBox="0 0 400 500">
+    <defs>
+      <radialGradient id="mtBg" cx="50%" cy="35%" r="70%">
+        <stop offset="0%" stop-color="#fbc5b3"/>
+        <stop offset="100%" stop-color="#f4a5bc"/>
+      </radialGradient>
+    </defs>
+    <rect width="400" height="500" fill="url(#mtBg)"/>
+    <!-- person -->
+    <g>
+      <path d="M 130 500 L 130 340 Q 130 248 200 248 Q 270 248 270 340 L 270 500 Z" fill="#5ecfbc"/>
+      <ellipse cx="200" cy="190" rx="46" ry="54" fill="#f0d3b8"/>
+      <!-- hair (warm brown) -->
+      <path d="M 154 198 Q 130 110 200 100 Q 270 110 246 198 Q 250 160 230 144 Q 215 134 200 134 Q 185 134 170 144 Q 150 160 154 198 Z" fill="#7c5c47"/>
+      <!-- smile -->
+      <path d="M 188 218 Q 200 226 212 218" stroke="#7c5c47" stroke-width="1.6" fill="none"/>
+      <!-- eyes -->
+      <ellipse cx="184" cy="194" rx="2.6" ry="3" fill="#2a232e"/>
+      <ellipse cx="216" cy="194" rx="2.6" ry="3" fill="#2a232e"/>
+      <!-- arms -->
+      <path d="M 156 320 Q 130 360 175 400" stroke="#f0d3b8" stroke-width="32" fill="none" stroke-linecap="round"/>
+      <path d="M 244 320 Q 270 360 225 400" stroke="#f0d3b8" stroke-width="32" fill="none" stroke-linecap="round"/>
+      <!-- dog in arms -->
+      <ellipse cx="200" cy="380" rx="56" ry="40" fill="#fff5e6" stroke="#2a232e" stroke-width="1.6"/>
+      <circle cx="200" cy="340" r="38" fill="#fff5e6" stroke="#2a232e" stroke-width="1.6"/>
+      <ellipse cx="172" cy="338" rx="12" ry="22" fill="#fff" stroke="#2a232e" stroke-width="1.4"/>
+      <ellipse cx="228" cy="338" rx="12" ry="22" fill="#fff" stroke="#2a232e" stroke-width="1.4"/>
+      <circle cx="192" cy="338" r="2.2" fill="#2a232e"/>
+      <circle cx="208" cy="338" r="2.2" fill="#2a232e"/>
+      <ellipse cx="200" cy="348" rx="3" ry="2.2" fill="#2a232e"/>
+      <!-- groomed top -->
+      <path d="M186 312 Q 200 296 214 312" fill="#fff5e6" stroke="#2a232e" stroke-width="1.4"/>
+      <!-- bandana on dog -->
+      <path d="M 162 372 L 238 372 L 232 392 L 168 392 Z" fill="url(#dotsTeal)" stroke="#2a232e" stroke-width="1.6"/>
+    </g>
+  </symbol>
+</svg>
+
+<!-- NAV -->
+<nav class="nav">
+  <div class="container nav-inner">
+    <div class="brand">
+      <div class="brand-mark"><svg><use href="#dl-mark"/></svg></div>
+      <div class="brand-text">
+        <span class="brand-name gradient-text">Dogge Lane</span>
+        <span class="brand-sub">Brighton · est. 14 Queens Parade</span>
+      </div>
+    </div>
+    <div class="nav-links">
+      <a href="#services">Services</a>
+      <a href="#wall">Wall of Dogges</a>
+      <a href="#meet">The Salon</a>
+      <a href="#faq">FAQ</a>
+      <a href="#book" class="btn btn-gradient">Book Online →</a>
+    </div>
+  </div>
+</nav>
+
+<!-- HERO -->
+<header class="hero">
+  <div class="bandana-shape b1 polka"></div>
+  <div class="bandana-shape b2 polka-teal" style="background-image:radial-gradient(circle, rgba(255,255,255,.85) 2.5px, transparent 3px), radial-gradient(circle, rgba(255,255,255,.85) 2.5px, transparent 3px);background-size:24px 24px;background-position:0 0,12px 12px"></div>
+  <div class="bandana-shape b3 polka-pink" style="background-image:radial-gradient(circle, rgba(255,255,255,.85) 2.5px, transparent 3px), radial-gradient(circle, rgba(255,255,255,.85) 2.5px, transparent 3px);background-size:22px 22px;background-position:0 0,11px 11px"></div>
+
+  <div class="container hero-inner">
+    <div>
+      <span class="label hero-eyebrow">— Brighton's boutique dog salon</span>
+      <h1>
+        <span class="script-line gradient-text">Every dog leaves in a</span>
+        polka-dot <em>bandana.</em>
+      </h1>
+      <p class="hero-sub">A small grooming salon at <strong>14 Queens Parade</strong> — we're doodle specialists, but every breed welcome. Online booking, fixed pricing, and yes, the bandana is included.</p>
+      <div class="hero-cta-row">
+        <a href="#book" class="btn btn-gradient">Book Online →</a>
+        <a href="tel:+61732695450" class="btn btn-outline-ink">Call (07) 3269 5450</a>
+        <span class="hero-aside">~3 day wait!</span>
+      </div>
+      <div class="hero-meta">
+        <div class="hero-meta-item">
+          <span class="hero-meta-num">4.8★</span>
+          <span class="hero-meta-label">102 reviews</span>
+        </div>
+        <div class="hero-meta-item">
+          <span class="hero-meta-num">7yrs</span>
+          <span class="hero-meta-label">on Queens Pde</span>
+        </div>
+        <div class="hero-meta-item">
+          <span class="hero-meta-num">2,400+</span>
+          <span class="hero-meta-label">happy doggoes</span>
+        </div>
+      </div>
+    </div>
+    <div class="hero-stack">
+      <div class="hero-sticker polka">
+        <div>
+          <div class="polka-text">matching!</div>
+          <em>bandana set</em>
+        </div>
+      </div>
+      <div class="hero-photo">
+        <div class="hero-frame"><svg><use href="#hero-doodles"/></svg></div>
+        <div class="hero-photo-cap">Otis & Pearl</div>
+        <div class="hero-photo-sub">Brother & sister · cavoodles · regulars</div>
+      </div>
+    </div>
+  </div>
+</header>
+
+<!-- TRUST gradient strip -->
+<section class="trust">
+  <div class="container trust-row">
+    <div class="trust-item"><span class="trust-stars">★★★★★</span> <strong>4.8 · 102 reviews</strong></div>
+    <div class="trust-item">●  102 dogs / month</div>
+    <div class="trust-item">●  online booking via MoeGo</div>
+    <div class="trust-item">●  fixed pricing, no surprises</div>
+  </div>
+</section>
+
+<!-- SERVICES -->
+<section class="services" id="services">
+  <div class="container">
+    <div class="section-head">
+      <span class="label">— Services & pricing</span>
+      <h2>
+        <span class="script-line gradient-text">three groom levels.</span>
+        Quick. Standard. Show-off.
+      </h2>
+      <p>Pricing is fixed by coat type, not surprises at pickup. Doodles, doodle-mixes, spoodles, cavoodles, groodles, mini-groodles — yes, we know the difference, and yes, we'll style them all.</p>
+    </div>
+    <div class="price-grid">
+
+      <div class="price-card">
+        <div class="price-band"></div>
+        <div class="price-body">
+          <div class="price-feature-tag">In-and-out</div>
+          <h3 class="price-title">The Quick One</h3>
+          <p class="price-meta">Bath, blow-dry, brush-out, ears + nails. Done in just over an hour.</p>
+          <div class="price-numrow">
+            <span class="price-num">$55</span>
+            <span class="price-unit">/ dog · small–medium</span>
+          </div>
+          <ul class="price-includes">
+            <li>Two-step shampoo + condition</li>
+            <li>Full hand blow-dry</li>
+            <li>Ear clean, nail trim</li>
+            <li>Polka-dot bandana 🎀</li>
+          </ul>
+        </div>
+        <a href="#book" class="price-cta">Book online →</a>
+      </div>
+
+      <div class="price-card">
+        <div class="price-band"></div>
+        <div class="price-body">
+          <div class="price-feature-tag">Most booked</div>
+          <h3 class="price-title">The Full Dogge</h3>
+          <p class="price-meta">Everything in The Quick One, plus a breed clip & scissor finish — the regular.</p>
+          <div class="price-numrow">
+            <span class="price-num">$85</span>
+            <span class="price-unit">/ dog · breed-priced</span>
+          </div>
+          <ul class="price-includes">
+            <li>Everything in The Quick One</li>
+            <li>Breed clip or custom style</li>
+            <li>Hand scissor finish</li>
+            <li>Pickup photo + bandana 🎀</li>
+          </ul>
+        </div>
+        <a href="#book" class="price-cta">Book online →</a>
+      </div>
+
+      <div class="price-card">
+        <div class="price-band"></div>
+        <div class="price-body">
+          <div class="price-feature-tag">Photo-ready</div>
+          <h3 class="price-title">The Show-Off</h3>
+          <p class="price-meta">Full groom + face cleanse + paw butter + matching scrunchie / bow / bowtie.</p>
+          <div class="price-numrow">
+            <span class="price-num">$115</span>
+            <span class="price-unit">/ dog · for the gram</span>
+          </div>
+          <ul class="price-includes">
+            <li>Everything in The Full Dogge</li>
+            <li>Hypo-allergenic face wash</li>
+            <li>Paw butter + cologne</li>
+            <li>Matched-set accessory 💖</li>
+          </ul>
+        </div>
+        <a href="#book" class="price-cta">Book online →</a>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- WALL OF DOGGES -->
+<section class="bandana-wall" id="wall">
+  <div class="container">
+    <div class="section-head center">
+      <span class="label">— The Wall of Dogges</span>
+      <h2>
+        <span class="script-line gradient-text">a small sample of</span>
+        Every dog. Every bandana.
+      </h2>
+      <p style="margin:0 auto">Every Dogge Lane regular gets a polka-dot bandana, every groom. Some live in them. A few have come back wearing the same one nine grooms later.</p>
+    </div>
+
+    <div class="wall-grid">
+      <div class="wall-card">
+        <div class="wall-card-frame" style="background:linear-gradient(160deg,#fbc5b3,#f4a5bc)"><svg><use href="#dog-1"/></svg></div>
+        <div class="wall-card-name">Otis</div>
+        <div class="wall-card-breed">Cavoodle · 3yrs</div>
+      </div>
+      <div class="wall-card">
+        <div class="wall-card-frame" style="background:linear-gradient(160deg,#a8e5d8,#5ecfbc)"><svg><use href="#dog-2"/></svg></div>
+        <div class="wall-card-name">Luna</div>
+        <div class="wall-card-breed">Spoodle · 5yrs</div>
+      </div>
+      <div class="wall-card">
+        <div class="wall-card-frame" style="background:linear-gradient(160deg,#fbc5b3,#f58a6d)"><svg><use href="#dog-3"/></svg></div>
+        <div class="wall-card-name">Beau</div>
+        <div class="wall-card-breed">Groodle · 2yrs</div>
+      </div>
+      <div class="wall-card">
+        <div class="wall-card-frame" style="background:linear-gradient(160deg,#e6e6e6,#cbc3cb)"><svg><use href="#dog-4"/></svg></div>
+        <div class="wall-card-name">Bandit</div>
+        <div class="wall-card-breed">Schnauzer · 8yrs</div>
+      </div>
+      <div class="wall-card">
+        <div class="wall-card-frame" style="background:linear-gradient(160deg,#f4a5bc,#e94b7a)"><svg><use href="#dog-5"/></svg></div>
+        <div class="wall-card-name">Mabel</div>
+        <div class="wall-card-breed">Corgi · 4yrs</div>
+      </div>
+      <div class="wall-card">
+        <div class="wall-card-frame" style="background:linear-gradient(160deg,#a8e5d8,#5ecfbc)"><svg><use href="#dog-6"/></svg></div>
+        <div class="wall-card-name">Pip</div>
+        <div class="wall-card-breed">Westie · 6yrs</div>
+      </div>
+    </div>
+    <p style="text-align:center;margin-top:36px;font-family:Pacifico,cursive;font-size:28px;color:var(--peach);line-height:.85">— + over 200 regulars on the books —</p>
+  </div>
+</section>
+
+<!-- MEET / THE SALON -->
+<section class="meet" id="meet">
+  <div class="container meet-grid">
+    <div class="meet-text">
+      <span class="label">— The salon on Queens Pde</span>
+      <h2>
+        <span class="script-line gradient-text">14 Queens Parade.</span>
+        Small. Stylish. Booked.
+      </h2>
+      <p>Dogge Lane is a two-table salon in a sky-blue shopfront on the Brighton side of Queens Parade. We've been here since 2018. <em>We take five dogs a day, max</em>, and we do it slowly on purpose.</p>
+      <p>We're known for doodles, but we'll style anything with fur — corgis, schnauzers, westies, golden bois. Every dog leaves in a polka-dot bandana, sized to fit.</p>
+      <ul class="meet-list">
+        <li>Online booking via MoeGo — pick your day, slot, and dog</li>
+        <li>Fixed pricing — no surprise upcharges at pickup</li>
+        <li>Pickup photo sent to your phone, every groom</li>
+        <li>One groomer, one dog, one finish at a time</li>
+      </ul>
+    </div>
+    <div class="meet-photo"><svg><use href="#meet-team"/></svg></div>
+  </div>
+</section>
+
+<!-- TESTI -->
+<section class="testi">
+  <div class="container">
+    <div class="testi-stars">★★★★★</div>
+    <blockquote>Otis comes home looking <em>like a magazine.</em> The bandana is now his entire personality.</blockquote>
+    <div class="testi-cite">— Steph · Sandgate · Google Review</div>
+  </div>
+</section>
+
+<!-- FAQ -->
+<section class="faq" id="faq">
+  <div class="container">
+    <div class="section-head center">
+      <span class="label">— The honest stuff</span>
+      <h2>
+        <span class="script-line gradient-text">things people ask before they</span>
+        Book in.
+      </h2>
+    </div>
+    <div class="faq-list">
+      <details class="faq-item" open>
+        <summary class="faq-q">Do you only do doodles?</summary>
+        <div class="faq-a">No — we're known for doodles because Brighton has a million of them, but we groom <strong>every breed</strong>. Schnauzers, terriers, corgis, shih tzus, you name it. The pricing changes by coat, not breed.</div>
+      </details>
+      <details class="faq-item">
+        <summary class="faq-q">Is the polka-dot bandana really included?</summary>
+        <div class="faq-a">Yes. <strong>Every dog</strong>, every visit. Pink, teal, peach or grey — we pick based on what suits your dog. Bring back the old one and we'll swap for a fresh one, no charge.</div>
+      </details>
+      <details class="faq-item">
+        <summary class="faq-q">How do I book?</summary>
+        <div class="faq-a">Easiest way is online via MoeGo — pick a day, a slot, and your dog. We confirm within a few hours. Phone <strong>(07) 3269 5450</strong> if you'd rather chat to a human.</div>
+      </details>
+      <details class="faq-item">
+        <summary class="faq-q">What if my dog has been kicked out of another salon?</summary>
+        <div class="faq-a">We hear that a lot. Tell us when you book — we'll schedule you for a longer, quieter slot the first time. Most dogs settle by visit two.</div>
+      </details>
+      <details class="faq-item">
+        <summary class="faq-q">Cancellation policy?</summary>
+        <div class="faq-a">Cancel up to 24 hours out — free. Inside 24 hours, half the service fee. <strong>Sick dog or sick owner, any notice — no charge</strong>, just text us.</div>
+      </details>
+    </div>
+  </div>
+</section>
+
+<!-- CTA -->
+<section class="cta-band" id="book">
+  <div class="container">
+    <h2>
+      <span class="script-line">ready to dress them in a</span>
+      polka-dot bandana?
+    </h2>
+    <p>Book online — pick your day, your slot, and your dog. We'll confirm within a few hours.</p>
+    <a href="#" class="btn btn-ink" style="padding:18px 36px;font-size:14px">Book Online (MoeGo) →</a>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="container">
+    <div class="foot-grid">
+      <div>
+        <div class="foot-brand-name">Dogge Lane</div>
+        <div style="font-family:Quicksand;font-weight:700;font-size:11px;letter-spacing:.22em;color:#fff;margin:8px 0 16px">BRIGHTON · DOG GROOMING</div>
+        <p style="max-width:34ch;opacity:.78">A boutique dog grooming salon on Queens Parade. Doodle specialists. Every dog leaves in a polka-dot bandana — that's not a marketing thing, it's a real bandana.</p>
+      </div>
+      <div>
+        <div class="foot-h">Find us</div>
+        <p>14 Queens Parade<br>Brighton QLD 4017<br><span style="opacity:.7">Tue–Sat by appointment</span></p>
+      </div>
+      <div>
+        <div class="foot-h">Reach us</div>
+        <ul>
+          <li><a href="tel:+61732695450">(07) 3269 5450</a></li>
+          <li><a href="#book">Book online (MoeGo)</a></li>
+          <li><a href="https://www.facebook.com/doggelane/">Facebook</a></li>
+        </ul>
+      </div>
+      <div>
+        <div class="foot-h">Hours</div>
+        <ul>
+          <li>Tue–Fri · 8:30am–4pm</li>
+          <li>Sat · 8:30am–12pm</li>
+          <li>Sun & Mon · closed</li>
+        </ul>
+      </div>
+    </div>
+    <div class="foot-bottom">
+      <span>© Dogge Lane Brighton · 14 Queens Parade, QLD 4017 · every dog in a bandana</span>
+      <span style="opacity:.6">Site preview by <a href="https://degreeinaweek.com" style="color:var(--peach)">degreeinaweek.com</a></span>
+    </div>
+  </div>
+</footer>
+
+</body>
+</html>
