@@ -1,0 +1,385 @@
+<!doctype html>
+<html lang="en-AU">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>The Fort Specialty Coffee — North Lakes</title>
+<meta name="description" content="A small specialty coffee bar in North Lakes. Single-origin filter, espresso, and a tight all-day kitchen. Open 6:30am weekdays.">
+<meta name="robots" content="noindex,nofollow">
+<link rel="icon" href="data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'><rect width='64' height='64' fill='%2318130f'/><text x='50%' y='58%' font-family='Georgia,serif' font-style='italic' font-size='34' fill='%23e8d9b8' text-anchor='middle'>F</text></svg>">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@1,500;1,700&family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+
+<style>
+:root{
+  --ink:#18130f;       /* deep coffee black */
+  --paper:#f3ead8;     /* warm cream */
+  --paper-2:#ebdfc6;
+  --bronze:#a87232;    /* military bronze */
+  --bronze-deep:#7a4f1d;
+  --olive:#3d4a32;     /* fort/military green */
+  --stamp:#b03a26;     /* stamp red */
+  --rule:rgba(24,19,15,.18);
+  --mono:'JetBrains Mono',ui-monospace,monospace;
+  --serif:'Playfair Display',Georgia,serif;
+  --sans:'Inter',system-ui,sans-serif;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html,body{background:var(--paper);color:var(--ink);font-family:var(--sans);-webkit-font-smoothing:antialiased;line-height:1.55}
+a{color:inherit;text-decoration:none}
+img{display:block;max-width:100%}
+
+/* ===== NAV — dark utilitarian ===== */
+.nav{position:sticky;top:0;z-index:50;background:var(--ink);color:var(--paper);border-bottom:1px solid #2a221b}
+.nav-inner{max-width:1240px;margin:0 auto;padding:14px 32px;display:flex;align-items:center;justify-content:space-between;gap:24px}
+.brand{display:flex;align-items:center;gap:12px;font-family:var(--serif);font-style:italic;font-size:22px;letter-spacing:.5px}
+.brand .badge{width:36px;height:36px;border:1.5px solid var(--bronze);border-radius:50%;display:grid;place-items:center;color:var(--bronze);font-size:14px;font-family:var(--sans);font-weight:700;font-style:normal;letter-spacing:1px}
+.nav ul{list-style:none;display:flex;gap:30px;font-family:var(--mono);font-size:12px;letter-spacing:.18em;text-transform:uppercase}
+.nav ul a{opacity:.78;transition:.2s}
+.nav ul a:hover{opacity:1;color:var(--bronze)}
+.nav .cta{font-family:var(--mono);font-size:11px;letter-spacing:.2em;text-transform:uppercase;color:var(--ink);background:var(--paper);padding:10px 18px;border-radius:999px}
+
+/* ===== HERO ===== */
+.hero{background:var(--ink);color:var(--paper);padding:80px 32px 120px;position:relative;overflow:hidden}
+.hero::before{
+  content:"";position:absolute;inset:0;
+  background:radial-gradient(ellipse at 80% 0%, rgba(168,114,50,.22), transparent 55%),
+             radial-gradient(ellipse at 0% 100%, rgba(61,74,50,.25), transparent 50%);
+  pointer-events:none;
+}
+.hero-inner{max-width:1240px;margin:0 auto;position:relative;display:grid;grid-template-columns:1.2fr 1fr;gap:80px;align-items:center}
+.eyebrow{font-family:var(--mono);font-size:11px;letter-spacing:.35em;text-transform:uppercase;color:var(--bronze);display:flex;align-items:center;gap:14px;margin-bottom:28px}
+.eyebrow::before,.eyebrow::after{content:"";height:1px;flex:1;background:var(--bronze);opacity:.4;max-width:60px}
+h1{font-family:var(--serif);font-style:italic;font-weight:500;font-size:clamp(56px,7.5vw,108px);line-height:.95;letter-spacing:-.02em;margin-bottom:24px}
+h1 em{font-style:italic;color:var(--bronze)}
+.hero p{font-size:18px;max-width:520px;opacity:.82;margin-bottom:36px}
+.hero-actions{display:flex;gap:14px;flex-wrap:wrap}
+.btn{display:inline-flex;align-items:center;gap:10px;padding:14px 24px;border-radius:999px;font-family:var(--mono);font-size:12px;letter-spacing:.2em;text-transform:uppercase;font-weight:500;transition:.2s;border:1px solid transparent}
+.btn-primary{background:var(--paper);color:var(--ink)}
+.btn-primary:hover{background:var(--bronze);color:var(--paper)}
+.btn-ghost{border-color:rgba(243,234,216,.3);color:var(--paper)}
+.btn-ghost:hover{border-color:var(--bronze);color:var(--bronze)}
+
+/* hero card — today's pour */
+.hero-card{background:linear-gradient(180deg,#1f1812,#15110d);border:1px solid #2c231b;border-radius:4px;padding:32px;position:relative}
+.hero-card::before{
+  content:"";position:absolute;inset:6px;border:1px solid rgba(168,114,50,.25);border-radius:2px;pointer-events:none;
+}
+.card-label{font-family:var(--mono);font-size:10px;letter-spacing:.3em;text-transform:uppercase;color:var(--bronze);margin-bottom:14px}
+.card-bean{font-family:var(--serif);font-style:italic;font-size:34px;line-height:1.05;margin-bottom:6px}
+.card-origin{font-family:var(--mono);font-size:12px;letter-spacing:.1em;opacity:.7;margin-bottom:22px}
+.card-tasting{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;padding:18px 0;border-top:1px solid rgba(243,234,216,.12);border-bottom:1px solid rgba(243,234,216,.12);margin-bottom:22px}
+.taste{font-family:var(--mono);font-size:11px;letter-spacing:.08em;opacity:.8;text-align:center}
+.taste b{display:block;font-family:var(--serif);font-style:italic;font-weight:500;font-size:18px;letter-spacing:0;color:var(--paper);margin-bottom:4px;opacity:1}
+.card-grid{display:grid;grid-template-columns:1fr 1fr;gap:6px;font-family:var(--mono);font-size:11px;letter-spacing:.05em;opacity:.78}
+.card-grid div{display:flex;justify-content:space-between;padding:6px 0}
+
+/* stamp */
+.stamp{position:absolute;right:-18px;top:-22px;width:104px;height:104px;border:2px solid var(--stamp);color:var(--stamp);border-radius:50%;display:grid;place-items:center;text-align:center;transform:rotate(-12deg);font-family:var(--mono);font-size:9px;letter-spacing:.22em;text-transform:uppercase;line-height:1.5;background:rgba(24,19,15,.4)}
+.stamp b{display:block;font-family:var(--serif);font-style:italic;font-weight:700;font-size:18px;letter-spacing:0;color:var(--paper);margin:2px 0}
+
+/* ticker */
+.ticker{background:var(--bronze);color:var(--ink);overflow:hidden;border-bottom:1px solid var(--ink)}
+.ticker-track{display:flex;gap:48px;padding:14px 0;animation:marquee 38s linear infinite;font-family:var(--mono);font-size:12px;letter-spacing:.3em;text-transform:uppercase;font-weight:500;white-space:nowrap}
+.ticker-track span{padding-left:48px;border-left:1px solid rgba(24,19,15,.3)}
+@keyframes marquee{0%{transform:translateX(0)}100%{transform:translateX(-50%)}}
+
+/* ===== MENU HERO ===== */
+.menu-hero{padding:120px 32px;max-width:1240px;margin:0 auto}
+.section-head{display:flex;justify-content:space-between;align-items:flex-end;margin-bottom:60px;gap:40px;flex-wrap:wrap}
+.section-head .lead{max-width:540px}
+.section-head h2{font-family:var(--serif);font-style:italic;font-weight:500;font-size:clamp(40px,5vw,68px);line-height:1;letter-spacing:-.015em}
+.section-head h2 em{color:var(--bronze-deep)}
+.section-head .meta{font-family:var(--mono);font-size:11px;letter-spacing:.25em;text-transform:uppercase;color:var(--bronze-deep)}
+
+.brew-guide{display:grid;grid-template-columns:repeat(3,1fr);gap:0;border:1px solid var(--ink);background:var(--paper-2)}
+.brew{padding:36px 30px;border-right:1px solid var(--ink);position:relative}
+.brew:last-child{border-right:none}
+.brew-num{font-family:var(--mono);font-size:11px;letter-spacing:.3em;color:var(--bronze-deep);margin-bottom:18px}
+.brew-name{font-family:var(--serif);font-style:italic;font-size:38px;line-height:1;margin-bottom:6px}
+.brew-origin{font-family:var(--mono);font-size:11px;letter-spacing:.15em;text-transform:uppercase;opacity:.65;margin-bottom:22px}
+.brew-notes{display:flex;flex-wrap:wrap;gap:6px;margin-bottom:24px}
+.note{font-family:var(--mono);font-size:10px;letter-spacing:.1em;text-transform:uppercase;padding:5px 10px;border:1px solid var(--ink);border-radius:999px}
+.brew-meta{font-family:var(--mono);font-size:11px;line-height:1.9;border-top:1px dashed var(--ink);padding-top:14px;opacity:.85}
+.brew-meta b{font-family:var(--serif);font-style:italic;font-weight:500;font-size:13px;letter-spacing:0;color:var(--ink);opacity:1}
+.brew-meta div{display:flex;justify-content:space-between}
+
+/* ===== KITCHEN ===== */
+.kitchen{background:var(--ink);color:var(--paper);padding:120px 32px}
+.kitchen-inner{max-width:1240px;margin:0 auto;display:grid;grid-template-columns:1fr 1.4fr;gap:80px}
+.kitchen h2{font-family:var(--serif);font-style:italic;font-weight:500;font-size:clamp(40px,5vw,68px);line-height:.95;letter-spacing:-.015em;margin-bottom:24px}
+.kitchen h2 em{color:var(--bronze)}
+.kitchen p{opacity:.78;max-width:380px;margin-bottom:32px}
+.kitchen-list{display:flex;flex-direction:column}
+.dish{display:grid;grid-template-columns:1fr auto;gap:30px;padding:22px 0;border-bottom:1px solid rgba(243,234,216,.12);align-items:baseline}
+.dish-title{font-family:var(--serif);font-style:italic;font-size:24px;font-weight:500}
+.dish-price{font-family:var(--mono);font-size:13px;color:var(--bronze);letter-spacing:.1em}
+.dish-desc{grid-column:1/-1;font-size:13px;opacity:.62;margin-top:6px;max-width:520px;font-family:var(--mono);letter-spacing:.02em}
+.dish:first-child{border-top:1px solid rgba(243,234,216,.12)}
+.kitchen .note-line{margin-top:24px;font-family:var(--mono);font-size:11px;letter-spacing:.2em;text-transform:uppercase;color:var(--bronze);opacity:.85}
+
+/* ===== STORY ===== */
+.story{padding:140px 32px;max-width:1100px;margin:0 auto;text-align:center}
+.story-eyebrow{font-family:var(--mono);font-size:11px;letter-spacing:.35em;text-transform:uppercase;color:var(--bronze-deep);margin-bottom:32px}
+.story h2{font-family:var(--serif);font-style:italic;font-weight:500;font-size:clamp(34px,4vw,54px);line-height:1.15;letter-spacing:-.01em;max-width:880px;margin:0 auto}
+.story h2 em{color:var(--bronze-deep)}
+.story .signature{margin-top:42px;font-family:var(--serif);font-style:italic;font-size:22px;color:var(--bronze-deep)}
+.story .signature small{display:block;font-family:var(--mono);font-style:normal;font-size:10px;letter-spacing:.3em;text-transform:uppercase;opacity:.6;margin-top:6px}
+
+/* ===== VISIT ===== */
+.visit{background:var(--paper-2);padding:120px 32px;border-top:1px solid var(--rule);border-bottom:1px solid var(--rule)}
+.visit-inner{max-width:1240px;margin:0 auto;display:grid;grid-template-columns:1fr 1fr;gap:80px;align-items:start}
+.visit h2{font-family:var(--serif);font-style:italic;font-weight:500;font-size:clamp(40px,5vw,68px);line-height:.95;letter-spacing:-.015em;margin-bottom:24px}
+.visit h2 em{color:var(--bronze-deep)}
+.visit .addr{font-family:var(--mono);font-size:14px;line-height:1.9;letter-spacing:.04em;border-left:2px solid var(--bronze);padding-left:18px;margin:32px 0}
+.visit .addr b{display:block;font-family:var(--serif);font-style:italic;font-weight:500;font-size:18px;letter-spacing:0;margin-bottom:4px}
+.hours{border:1px solid var(--ink);background:var(--paper)}
+.hours h3{font-family:var(--mono);font-size:11px;letter-spacing:.3em;text-transform:uppercase;padding:22px 28px;border-bottom:1px solid var(--ink);color:var(--bronze-deep)}
+.hours-list{padding:20px 28px}
+.hours-row{display:grid;grid-template-columns:1fr auto;font-family:var(--mono);font-size:13px;letter-spacing:.05em;padding:10px 0;border-bottom:1px dashed var(--rule)}
+.hours-row:last-child{border:none}
+.hours-row span:first-child{font-family:var(--serif);font-style:italic;font-size:17px;font-weight:500;letter-spacing:0}
+.hours-row.closed span:last-child{color:var(--stamp);opacity:.85}
+
+/* ===== FOOTER ===== */
+footer{background:var(--ink);color:var(--paper);padding:80px 32px 40px}
+.foot-inner{max-width:1240px;margin:0 auto;display:grid;grid-template-columns:2fr 1fr 1fr;gap:60px;margin-bottom:50px}
+.foot-brand .brand{margin-bottom:18px}
+.foot-brand p{font-family:var(--mono);font-size:12px;line-height:1.9;letter-spacing:.04em;opacity:.65;max-width:340px}
+.foot h4{font-family:var(--mono);font-size:11px;letter-spacing:.3em;text-transform:uppercase;color:var(--bronze);margin-bottom:18px}
+.foot ul{list-style:none;display:flex;flex-direction:column;gap:10px;font-family:var(--mono);font-size:13px;letter-spacing:.04em;opacity:.78}
+.foot ul a:hover{color:var(--bronze)}
+.foot-bottom{border-top:1px solid rgba(243,234,216,.1);padding-top:28px;display:flex;justify-content:space-between;font-family:var(--mono);font-size:10px;letter-spacing:.25em;text-transform:uppercase;opacity:.42;max-width:1240px;margin:0 auto;flex-wrap:wrap;gap:14px}
+
+@media (max-width:880px){
+  .nav ul{display:none}
+  .hero-inner,.visit-inner,.kitchen-inner,.foot-inner{grid-template-columns:1fr;gap:48px}
+  .brew-guide{grid-template-columns:1fr}
+  .brew{border-right:none;border-bottom:1px solid var(--ink)}
+  .brew:last-child{border-bottom:none}
+  .stamp{display:none}
+}
+</style>
+</head>
+<body>
+
+<!-- NAV -->
+<nav class="nav">
+  <div class="nav-inner">
+    <div class="brand"><span class="badge">F</span>The Fort</div>
+    <ul>
+      <li><a href="#brew">Brew</a></li>
+      <li><a href="#kitchen">Kitchen</a></li>
+      <li><a href="#story">Story</a></li>
+      <li><a href="#visit">Visit</a></li>
+    </ul>
+    <a href="#visit" class="cta">Open · 6:30am</a>
+  </div>
+</nav>
+
+<!-- HERO -->
+<header class="hero">
+  <div class="hero-inner">
+    <div>
+      <div class="eyebrow">Est. 2018 · North Lakes</div>
+      <h1>Small bar.<br>Honest <em>coffee.</em></h1>
+      <p>A specialty coffee bar at the corner of Endeavour & Sibley. We pour a rotating single-origin filter, a house espresso blend, and a tight kitchen menu built to match the cup in your hand.</p>
+      <div class="hero-actions">
+        <a href="#brew" class="btn btn-primary">See today's pour →</a>
+        <a href="#visit" class="btn btn-ghost">Find us</a>
+      </div>
+    </div>
+    <div class="hero-card">
+      <div class="stamp">Today<b>Filter</b>Single<br>origin</div>
+      <div class="card-label">On the brew bar · this week</div>
+      <div class="card-bean">Las Mercedes</div>
+      <div class="card-origin">Huila, Colombia · Pink Bourbon · Washed</div>
+      <div class="card-tasting">
+        <div class="taste"><b>Stone fruit</b>nectarine</div>
+        <div class="taste"><b>Florals</b>jasmine</div>
+        <div class="taste"><b>Finish</b>brown sugar</div>
+      </div>
+      <div class="card-grid">
+        <div><span>Producer</span><span>F. Lopez</span></div>
+        <div><span>Altitude</span><span>1,750m</span></div>
+        <div><span>Roast date</span><span>05 May</span></div>
+        <div><span>Method</span><span>V60 · Aeropress</span></div>
+      </div>
+    </div>
+  </div>
+</header>
+
+<!-- TICKER -->
+<div class="ticker"><div class="ticker-track">
+  <span>Single Origin Filter</span><span>House Espresso Blend</span><span>Open 6:30am Weekdays</span><span>Kitchen closes 1:45pm</span><span>Pour Over · V60 · Aeropress</span><span>Single Origin Filter</span><span>House Espresso Blend</span><span>Open 6:30am Weekdays</span><span>Kitchen closes 1:45pm</span><span>Pour Over · V60 · Aeropress</span>
+</div></div>
+
+<!-- BREW GUIDE — menu as hero -->
+<section class="menu-hero" id="brew">
+  <div class="section-head">
+    <div class="lead">
+      <h2>The brew <em>guide.</em></h2>
+    </div>
+    <div class="meta">Rotating weekly · ask the bar</div>
+  </div>
+
+  <div class="brew-guide">
+    <div class="brew">
+      <div class="brew-num">No. 01 · Filter</div>
+      <div class="brew-name">Las Mercedes</div>
+      <div class="brew-origin">Huila, Colombia</div>
+      <div class="brew-notes">
+        <span class="note">Nectarine</span><span class="note">Jasmine</span><span class="note">Brown sugar</span>
+      </div>
+      <div class="brew-meta">
+        <b>Brew method</b>
+        <div><span>Pour over</span><span>$6.5</span></div>
+        <div><span>Aeropress</span><span>$6.0</span></div>
+        <div><span>Batch brew</span><span>$5.5</span></div>
+      </div>
+    </div>
+    <div class="brew">
+      <div class="brew-num">No. 02 · Espresso</div>
+      <div class="brew-name">House Blend</div>
+      <div class="brew-origin">Ethiopia · Brazil</div>
+      <div class="brew-notes">
+        <span class="note">Dark chocolate</span><span class="note">Hazelnut</span><span class="note">Caramel</span>
+      </div>
+      <div class="brew-meta">
+        <b>On the bar</b>
+        <div><span>Black</span><span>$4.5</span></div>
+        <div><span>White</span><span>$5.0</span></div>
+        <div><span>Magic</span><span>$5.0</span></div>
+      </div>
+    </div>
+    <div class="brew">
+      <div class="brew-num">No. 03 · Slow bar</div>
+      <div class="brew-name">Reserve</div>
+      <div class="brew-origin">Limited · 24-hour notice</div>
+      <div class="brew-notes">
+        <span class="note">Anaerobic</span><span class="note">Geisha</span><span class="note">Competition lot</span>
+      </div>
+      <div class="brew-meta">
+        <b>Available</b>
+        <div><span>Tasting flight</span><span>$18</span></div>
+        <div><span>Pour over</span><span>$12</span></div>
+        <div><span>Retail bag 200g</span><span>$32</span></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- KITCHEN -->
+<section class="kitchen" id="kitchen">
+  <div class="kitchen-inner">
+    <div>
+      <h2>The <em>kitchen</em> menu.</h2>
+      <p>Short, seasonal, built to match a flat white at 7am or a filter at 11. Kitchen closes 1:45pm so the team can rest before the next dawn.</p>
+      <div class="note-line">— Updated weekly</div>
+    </div>
+    <div class="kitchen-list">
+      <div class="dish">
+        <div class="dish-title">Sourdough &amp; cultured butter</div>
+        <div class="dish-price">$9</div>
+        <div class="dish-desc">Two slices, slow-cultured sourdough, house-cultured butter, sea salt.</div>
+      </div>
+      <div class="dish">
+        <div class="dish-title">Eggs on toast</div>
+        <div class="dish-price">$14</div>
+        <div class="dish-desc">Poached, scrambled or fried. Sourdough or rye.</div>
+      </div>
+      <div class="dish">
+        <div class="dish-title">Bircher &amp; stone fruit</div>
+        <div class="dish-price">$15</div>
+        <div class="dish-desc">Rolled oats, vanilla yoghurt, seasonal stone fruit, toasted seeds.</div>
+      </div>
+      <div class="dish">
+        <div class="dish-title">Mushroom &amp; brown butter</div>
+        <div class="dish-price">$22</div>
+        <div class="dish-desc">Roasted field mushrooms, brown butter, fried egg, hazelnut dukkah, sourdough.</div>
+      </div>
+      <div class="dish">
+        <div class="dish-title">Smoked salmon plate</div>
+        <div class="dish-price">$24</div>
+        <div class="dish-desc">House-cured salmon, labneh, pickled cucumber, dill oil, rye.</div>
+      </div>
+      <div class="dish">
+        <div class="dish-title">Brisket roll</div>
+        <div class="dish-price">$19</div>
+        <div class="dish-desc">12-hour brisket, slaw, pickles, milk bun. Available from 10am.</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- STORY -->
+<section class="story" id="story">
+  <div class="story-eyebrow">— A note from the bar</div>
+  <h2>"We're a small bar with one rule: <em>nothing leaves the pass that we wouldn't drink ourselves.</em> If a bean tastes flat tomorrow, we'll cut it. If a loaf comes in stale, we'll pull the sandwiches. Everything else is just decoration."</h2>
+  <div class="signature">— The Fort team<small>North Lakes · est. 2018</small></div>
+</section>
+
+<!-- VISIT -->
+<section class="visit" id="visit">
+  <div class="visit-inner">
+    <div>
+      <h2>Find <em>the bar.</em></h2>
+      <p>We're on the corner of Endeavour Boulevard and Sibley Street, opposite the lake. Free street parking out front. Dog-friendly outside seats.</p>
+      <div class="addr">
+        <b>The Fort Specialty Coffee</b>
+        Cnr Endeavour Blvd &amp; Sibley St<br>
+        North Lakes QLD 4509<br>
+        @fortspecialtycoffee
+      </div>
+      <a href="https://www.instagram.com/fortspecialtycoffee/" class="btn btn-primary" style="background:var(--ink);color:var(--paper)">Follow on Instagram →</a>
+    </div>
+    <div class="hours">
+      <h3>Trading hours</h3>
+      <div class="hours-list">
+        <div class="hours-row"><span>Mon — Fri</span><span>6:30am — 2:00pm</span></div>
+        <div class="hours-row"><span>Saturday</span><span>7:00am — 2:00pm</span></div>
+        <div class="hours-row"><span>Sunday</span><span>7:00am — 2:00pm</span></div>
+        <div class="hours-row"><span>Kitchen closes</span><span>1:45pm</span></div>
+        <div class="hours-row closed"><span>Public hols</span><span>Check the 'gram</span></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="foot-inner">
+    <div class="foot-brand foot">
+      <div class="brand" style="color:var(--paper)"><span class="badge">F</span>The Fort</div>
+      <p>A small specialty coffee bar serving the North Lakes neighbourhood since 2018. Single origin filter, house espresso, honest food.</p>
+    </div>
+    <div class="foot">
+      <h4>Visit</h4>
+      <ul>
+        <li>Cnr Endeavour &amp; Sibley</li>
+        <li>North Lakes QLD 4509</li>
+        <li>Open from 6:30am</li>
+      </ul>
+    </div>
+    <div class="foot">
+      <h4>Follow</h4>
+      <ul>
+        <li><a href="https://www.instagram.com/fortspecialtycoffee/">@fortspecialtycoffee</a></li>
+        <li><a href="https://www.facebook.com/FortSpecialtyCoffee/">Facebook</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="foot-bottom">
+    <span>© The Fort Specialty Coffee · North Lakes</span>
+    <span>Concept mockup · Degree In A Week</span>
+  </div>
+</footer>
+
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"CafeOrCoffeeShop","name":"The Fort Specialty Coffee","address":{"@type":"PostalAddress","streetAddress":"Cnr Endeavour Blvd & Sibley St","addressLocality":"North Lakes","addressRegion":"QLD","postalCode":"4509","addressCountry":"AU"},"openingHours":["Mo-Fr 06:30-14:00","Sa-Su 07:00-14:00"],"sameAs":["https://www.instagram.com/fortspecialtycoffee/","https://www.facebook.com/FortSpecialtyCoffee/"]}
+</script>
+
+</body>
+</html>

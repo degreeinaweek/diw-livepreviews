@@ -1,0 +1,369 @@
+<!doctype html>
+<html lang="en-AU">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Strawberry View Coffee Shack — Bellmere</title>
+<meta name="description" content="A coffee shack on a working strawberry farm in Bellmere. Glasshouse Mountain views, fresh strawberry everything, in-season picking.">
+<meta name="robots" content="noindex,nofollow">
+<link rel="icon" href="data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'><circle cx='32' cy='32' r='28' fill='%23fbe5e0'/><text x='50%' y='66%' font-family='Yeseva One,serif' font-size='40' fill='%23a23838' text-anchor='middle'>s</text></svg>">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Yeseva+One&family=Crimson+Pro:ital,wght@0,400;0,600;1,400;1,600&family=Caveat:wght@500;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+<style>
+:root{
+  --berry:#a23838;
+  --berry-deep:#7a2424;
+  --rose:#e89a8e;
+  --rose-soft:#fbe5e0;
+  --cream:#fbf2e2;
+  --paper:#fdf8ec;
+  --sage:#7a8e60;
+  --sage-deep:#566543;
+  --navy:#2b3a52;
+  --navy-deep:#1a2536;
+  --ink:#241814;
+  --rule:rgba(36,24,20,.14);
+  --display:'Yeseva One',serif;
+  --serif:'Crimson Pro',Georgia,serif;
+  --hand:'Caveat',cursive;
+  --sans:'Inter',system-ui,sans-serif;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html,body{background:var(--paper);color:var(--ink);font-family:var(--sans);line-height:1.65;-webkit-font-smoothing:antialiased}
+a{color:inherit;text-decoration:none}
+img{display:block;max-width:100%}
+
+.nav{position:sticky;top:0;z-index:50;background:var(--paper);border-bottom:1px solid var(--rule)}
+.nav-inner{max-width:1280px;margin:0 auto;padding:18px 36px;display:flex;align-items:center;justify-content:space-between;gap:24px}
+.brand{display:flex;align-items:center;gap:14px}
+.brand .berry{width:48px;height:48px;background:var(--rose-soft);border:2px solid var(--berry);border-radius:50%;display:grid;place-items:center;color:var(--berry);font-family:var(--display);font-size:24px;line-height:1}
+.brand-name{font-family:var(--display);font-size:24px;color:var(--berry);line-height:1}
+.brand-name small{display:block;font-family:var(--sans);font-size:9px;letter-spacing:.32em;text-transform:uppercase;font-weight:600;color:var(--sage-deep);margin-top:5px}
+.nav ul{list-style:none;display:flex;gap:32px;font-family:var(--sans);font-size:13px;letter-spacing:.16em;text-transform:uppercase;font-weight:600;color:var(--navy)}
+.nav ul a:hover{color:var(--berry)}
+.nav .cta{font-family:var(--sans);font-size:12px;letter-spacing:.2em;text-transform:uppercase;color:var(--cream);background:var(--berry);padding:11px 22px;border-radius:999px;font-weight:600}
+
+/* hero with mountain silhouette */
+.hero{padding:80px 36px 0;background:linear-gradient(180deg,var(--cream) 0%,var(--cream) 65%,var(--paper) 65%);position:relative;overflow:hidden}
+.hero::before{
+  content:"";position:absolute;bottom:35%;left:0;right:0;height:120px;
+  background:linear-gradient(180deg,transparent 0%,var(--sage) 100%);
+  clip-path:polygon(0 100%,8% 60%,16% 80%,24% 50%,32% 75%,40% 35%,48% 65%,56% 40%,64% 70%,72% 30%,80% 55%,88% 45%,96% 70%,100% 50%,100% 100%);
+  opacity:.7;
+}
+.hero::after{
+  content:"";position:absolute;bottom:35%;left:0;right:0;height:80px;
+  background:var(--sage-deep);
+  clip-path:polygon(0 100%,10% 70%,20% 85%,30% 65%,42% 80%,50% 60%,58% 75%,70% 55%,82% 78%,92% 65%,100% 75%,100% 100%);
+  opacity:.85;
+}
+.hero-inner{max-width:1280px;margin:0 auto;display:grid;grid-template-columns:1.2fr 1fr;gap:80px;align-items:center;position:relative;z-index:1}
+.eyebrow{font-family:var(--hand);font-size:36px;color:var(--berry);margin-bottom:0;line-height:1}
+h1{font-family:var(--display);font-size:clamp(60px,8.5vw,124px);line-height:.96;letter-spacing:-.02em;color:var(--berry-deep);margin-bottom:28px;margin-top:12px}
+h1 em{font-family:var(--serif);font-style:italic;font-weight:400;color:var(--sage-deep)}
+.hero p{font-family:var(--serif);font-size:22px;line-height:1.55;max-width:520px;color:var(--ink);margin-bottom:36px;font-style:italic}
+.hero-actions{display:flex;gap:14px;flex-wrap:wrap;margin-bottom:120px}
+.btn{display:inline-flex;align-items:center;gap:10px;padding:16px 28px;font-family:var(--sans);font-size:12px;letter-spacing:.22em;text-transform:uppercase;font-weight:700;border-radius:999px;border:2px solid transparent;transition:.2s}
+.btn-primary{background:var(--berry);color:var(--cream)}
+.btn-primary:hover{background:var(--berry-deep)}
+.btn-ghost{border-color:var(--berry);color:var(--berry)}
+.btn-ghost:hover{background:var(--berry);color:var(--cream)}
+
+/* picking ticket */
+.ticket{background:var(--cream);border:2px dashed var(--berry);border-radius:14px;padding:34px 30px;position:relative;transform:rotate(2deg);box-shadow:0 24px 50px rgba(36,24,20,.18)}
+.ticket::before{content:"";position:absolute;top:18px;left:50%;transform:translateX(-50%);width:46px;height:6px;background:var(--berry);border-radius:3px}
+.ticket .stamp{position:absolute;top:-20px;right:-16px;width:96px;height:96px;border:3px solid var(--berry);color:var(--berry);border-radius:50%;display:grid;place-items:center;text-align:center;transform:rotate(-12deg);font-family:var(--sans);font-size:9px;letter-spacing:.24em;text-transform:uppercase;line-height:1.5;background:var(--cream);font-weight:700}
+.ticket .stamp b{font-family:var(--display);font-size:22px;display:block;letter-spacing:0;color:var(--berry-deep);margin:2px 0;font-weight:400;text-transform:none}
+.ticket .pre{font-family:var(--hand);font-size:26px;color:var(--sage-deep);line-height:1;margin-bottom:6px;margin-top:18px;text-align:center}
+.ticket h3{font-family:var(--display);font-size:38px;color:var(--berry);line-height:1;margin-bottom:20px;text-align:center}
+.ticket .rows{border-top:1.5px dashed var(--berry);padding-top:18px}
+.ticket .row{display:grid;grid-template-columns:90px 1fr;gap:14px;align-items:baseline;padding:8px 0;font-family:var(--serif);font-size:17px}
+.ticket .row b{font-family:var(--sans);font-size:10px;letter-spacing:.22em;text-transform:uppercase;font-weight:700;color:var(--sage-deep)}
+.ticket .row span{font-style:italic}
+
+/* berry pattern band */
+.berries{background:var(--rose-soft);padding:30px 36px;text-align:center;font-family:var(--serif);font-style:italic;font-size:22px;color:var(--berry-deep)}
+.berries span{margin:0 22px;font-family:var(--hand);font-style:normal;color:var(--sage-deep);font-size:28px}
+
+/* menu — farm board */
+.menu{padding:120px 36px;max-width:1280px;margin:0 auto}
+.section-head{margin-bottom:60px;text-align:center}
+.section-head .pre{font-family:var(--hand);font-size:38px;color:var(--berry);margin-bottom:6px;line-height:1}
+.section-head h2{font-family:var(--display);font-size:clamp(54px,7vw,108px);line-height:.95;letter-spacing:-.02em;color:var(--berry-deep)}
+.section-head h2 em{font-family:var(--serif);font-style:italic;font-weight:400;color:var(--sage-deep)}
+.section-head .sub{font-family:var(--serif);font-style:italic;font-size:20px;color:var(--ink);max-width:600px;margin:14px auto 0;opacity:.78}
+
+.farm-board{background:var(--cream);border:2px solid var(--berry);border-radius:8px;padding:50px 50px 40px;position:relative;margin-top:30px}
+.farm-board::before{content:"FRESH TODAY";position:absolute;top:-16px;left:40px;background:var(--berry);color:var(--cream);padding:6px 18px;font-family:var(--sans);font-size:11px;letter-spacing:.3em;text-transform:uppercase;font-weight:700;border-radius:0 0 8px 8px}
+
+.farm-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:40px;margin-top:20px}
+.farm-col h3{font-family:var(--display);font-size:32px;color:var(--berry-deep);line-height:1;margin-bottom:6px}
+.farm-col .pre{font-family:var(--hand);font-size:24px;color:var(--sage-deep);margin-bottom:18px;padding-bottom:16px;border-bottom:2px solid var(--berry);line-height:1}
+.dish{display:grid;grid-template-columns:1fr auto;gap:14px;padding:12px 0;border-bottom:1px dashed var(--rule);align-items:baseline}
+.dish:last-child{border:none}
+.dish-name{font-family:var(--serif);font-size:18px;font-weight:600;color:var(--ink)}
+.dish-name b{font-family:var(--sans);font-size:9px;font-weight:700;letter-spacing:.2em;text-transform:uppercase;color:var(--berry);margin-left:6px;vertical-align:middle}
+.dish-price{font-family:var(--display);font-size:18px;color:var(--berry)}
+.dish-desc{grid-column:1/-1;font-family:var(--serif);font-style:italic;font-size:14px;color:var(--ink);opacity:.7;margin-top:2px}
+
+.farm-bottom{margin-top:50px;padding-top:30px;border-top:2px dashed var(--berry);display:grid;grid-template-columns:1fr 1fr;gap:40px;font-family:var(--serif);font-style:italic;font-size:18px;color:var(--ink);opacity:.85}
+.farm-bottom b{font-family:var(--display);font-style:normal;color:var(--berry-deep);font-size:24px;line-height:1;display:block;margin-bottom:4px}
+
+/* the view feature */
+.view{background:var(--navy);color:var(--cream);padding:140px 36px;position:relative;overflow:hidden}
+.view::before{
+  content:"";position:absolute;bottom:0;left:0;right:0;height:120px;background:var(--sage-deep);
+  clip-path:polygon(0 100%,10% 50%,20% 80%,30% 40%,42% 70%,50% 30%,58% 65%,70% 35%,82% 70%,92% 45%,100% 60%,100% 100%);
+}
+.view-inner{max-width:1280px;margin:0 auto;display:grid;grid-template-columns:1fr 1fr;gap:80px;align-items:center;position:relative;z-index:1}
+.view .pre{font-family:var(--hand);font-size:38px;color:var(--rose);line-height:1;margin-bottom:6px}
+.view h2{font-family:var(--display);font-size:clamp(48px,6vw,92px);line-height:.95;letter-spacing:-.02em;margin-bottom:18px}
+.view h2 em{font-family:var(--serif);font-style:italic;font-weight:400;color:var(--rose)}
+.view p{font-family:var(--serif);font-style:italic;font-size:22px;line-height:1.55;color:var(--cream);opacity:.85;margin-bottom:28px;max-width:480px}
+.view .view-list{display:grid;gap:20px}
+.view-item{display:grid;grid-template-columns:80px 1fr;gap:24px;padding:20px 0;border-top:1.5px solid rgba(251,242,226,.18);align-items:baseline}
+.view-item:first-child{border:none}
+.view-item .n{font-family:var(--display);font-size:46px;line-height:1;color:var(--rose)}
+.view-item b{font-family:var(--serif);font-style:italic;font-weight:600;font-size:22px;display:block;color:var(--cream);margin-bottom:4px}
+.view-item span{font-family:var(--sans);font-size:14px;color:var(--cream);opacity:.7;line-height:1.5}
+
+/* story */
+.story{padding:140px 36px;max-width:1000px;margin:0 auto;text-align:center}
+.story .pre{font-family:var(--hand);font-size:38px;color:var(--berry);margin-bottom:18px;line-height:1}
+.story h2{font-family:var(--display);font-size:clamp(34px,4vw,54px);line-height:1.2;color:var(--berry-deep);max-width:900px;margin:0 auto}
+.story h2 em{font-family:var(--serif);font-style:italic;font-weight:400;color:var(--sage-deep)}
+.story .sig{margin-top:38px;font-family:var(--hand);font-size:34px;color:var(--sage-deep);line-height:1}
+.story .sig small{display:block;font-family:var(--sans);font-size:11px;letter-spacing:.3em;text-transform:uppercase;font-weight:600;opacity:.55;margin-top:10px;color:var(--ink)}
+
+/* visit */
+.visit{background:var(--rose-soft);padding:130px 36px;border-top:1px solid var(--rule)}
+.visit-inner{max-width:1280px;margin:0 auto;display:grid;grid-template-columns:1fr 1fr;gap:80px;align-items:start}
+.visit .pre{font-family:var(--hand);font-size:36px;color:var(--berry);line-height:1;margin-bottom:6px}
+.visit h2{font-family:var(--display);font-size:clamp(46px,5.5vw,82px);line-height:.95;letter-spacing:-.02em;color:var(--berry-deep);margin-bottom:24px}
+.visit h2 em{font-family:var(--serif);font-style:italic;font-weight:400;color:var(--sage-deep)}
+.visit .body{font-family:var(--serif);font-style:italic;font-size:22px;line-height:1.55;color:var(--ink);opacity:.85;margin-bottom:32px;max-width:480px}
+.visit .addr{font-family:var(--sans);font-size:15px;line-height:2;border-left:3px solid var(--berry);padding-left:22px;margin-bottom:32px}
+.visit .addr b{font-family:var(--display);font-size:24px;letter-spacing:0;display:block;margin-bottom:4px;color:var(--berry-deep)}
+
+.hours{background:var(--cream);border:2px solid var(--berry);border-radius:8px;overflow:hidden}
+.hours h3{font-family:var(--display);font-size:30px;padding:24px 32px;background:var(--berry);color:var(--cream);line-height:1}
+.hours-list{padding:24px 32px}
+.hours-row{display:grid;grid-template-columns:1fr auto;font-family:var(--sans);font-size:14px;padding:14px 0;border-bottom:1px dashed var(--rule);align-items:center}
+.hours-row:last-child{border:none}
+.hours-row span:first-child{font-family:var(--sans);font-size:13px;letter-spacing:.18em;text-transform:uppercase;font-weight:700;color:var(--ink)}
+.hours-row span:last-child{font-family:var(--serif);font-style:italic;font-size:18px;color:var(--berry)}
+.hours-row.closed span:last-child{color:#999}
+
+footer{background:var(--navy-deep);color:var(--cream);padding:80px 36px 36px}
+.foot-inner{max-width:1280px;margin:0 auto;display:grid;grid-template-columns:2fr 1fr 1fr 1fr;gap:60px;margin-bottom:50px}
+.foot h4{font-family:var(--display);font-size:22px;color:var(--rose);margin-bottom:18px;line-height:1}
+.foot ul{list-style:none;display:flex;flex-direction:column;gap:10px;font-family:var(--sans);font-size:14px;opacity:.78}
+.foot-brand p{font-family:var(--serif);font-style:italic;font-size:18px;line-height:1.5;opacity:.78;margin-top:18px;max-width:340px}
+.foot-bottom{border-top:1px solid rgba(251,242,226,.1);padding-top:28px;max-width:1280px;margin:0 auto;display:flex;justify-content:space-between;font-family:var(--sans);font-size:11px;letter-spacing:.2em;text-transform:uppercase;opacity:.4;flex-wrap:wrap;gap:14px}
+
+@media (max-width:960px){
+  .nav ul{display:none}
+  .hero-inner,.visit-inner,.foot-inner,.view-inner,.farm-bottom{grid-template-columns:1fr;gap:48px}
+  .farm-grid{grid-template-columns:1fr}
+  h1{font-size:56px}
+}
+</style>
+</head>
+<body>
+
+<nav class="nav">
+  <div class="nav-inner">
+    <div class="brand">
+      <div class="berry">s</div>
+      <div class="brand-name">Strawberry View<small>Coffee Shack · Bellmere</small></div>
+    </div>
+    <ul>
+      <li><a href="#menu">Menu</a></li>
+      <li><a href="#view">The view</a></li>
+      <li><a href="#story">Farm story</a></li>
+      <li><a href="#visit">Visit</a></li>
+    </ul>
+    <a href="#visit" class="cta">Open 8 — 4</a>
+  </div>
+</nav>
+
+<header class="hero">
+  <div class="hero-inner">
+    <div>
+      <div class="eyebrow">— Bellmere, on the farm —</div>
+      <h1>A coffee shack<br>between the<em>strawberries</em><br>and the mountains.</h1>
+      <p>A timber shack on a working strawberry farm. Glasshouse Mountain views one direction, rows of strawberries the other. Drive out for a Saturday and stay for the slice of lemon-coconut.</p>
+      <div class="hero-actions">
+        <a href="#menu" class="btn btn-primary">See the menu →</a>
+        <a href="#visit" class="btn btn-ghost">How to get out here</a>
+      </div>
+    </div>
+    <div class="ticket">
+      <div class="stamp">Pick<b>Sat</b>9–11</div>
+      <div class="pre">— this weekend on the farm —</div>
+      <h3>Pick &amp; sip</h3>
+      <div class="rows">
+        <div class="row"><b>Saturday</b><span>U-pick strawberries · 9–11am</span></div>
+        <div class="row"><b>Special</b><span>Berry &amp; cream scone, $9</span></div>
+        <div class="row"><b>Sip</b><span>House strawberry shake $8</span></div>
+        <div class="row"><b>Kids</b><span>Playground &amp; the goat</span></div>
+        <div class="row"><b>Bring</b><span>Hat · cash for berries · friends</span></div>
+      </div>
+    </div>
+  </div>
+</header>
+
+<div class="berries">Glasshouse views <span>·</span> Real strawberries <span>·</span> Real playground <span>·</span> Real coffee</div>
+
+<section class="menu" id="menu">
+  <div class="section-head">
+    <div class="pre">— what's on the bench —</div>
+    <h2>The farm <em>menu.</em></h2>
+    <div class="sub">A short menu built around what's growing. Strawberries in spring, pumpkin in autumn, scones every day.</div>
+  </div>
+
+  <div class="farm-board">
+    <div class="farm-grid">
+      <div class="farm-col">
+        <div class="pre">From the bench</div>
+        <h3>Breakfast</h3>
+        <div class="dish"><div class="dish-name">Strawberry pancakes <b>House</b></div><div class="dish-price">$18</div><div class="dish-desc">Three-stack, farm strawberries, vanilla cream, maple. Our hero plate.</div></div>
+        <div class="dish"><div class="dish-name">Bacon &amp; egg roll</div><div class="dish-price">$11</div><div class="dish-desc">Brioche, smoked bacon, fried egg, relish or BBQ.</div></div>
+        <div class="dish"><div class="dish-name">Big breakfast</div><div class="dish-price">$22</div><div class="dish-desc">Eggs, bacon, sausage, mushroom, tomato, sourdough.</div></div>
+        <div class="dish"><div class="dish-name">Avo on sourdough <b>GF</b></div><div class="dish-price">$16</div></div>
+      </div>
+      <div class="farm-col">
+        <div class="pre">From the deck</div>
+        <h3>Lunch</h3>
+        <div class="dish"><div class="dish-name">Farm ploughman's <b>Share</b></div><div class="dish-price">$28</div><div class="dish-desc">Local ham, cheddar, pickled veg, chutney, sourdough, fruit. For two.</div></div>
+        <div class="dish"><div class="dish-name">Pumpkin soup</div><div class="dish-price">$14</div><div class="dish-desc">Made daily. Sourdough, butter, sea salt.</div></div>
+        <div class="dish"><div class="dish-name">Steak sandwich</div><div class="dish-price">$19</div><div class="dish-desc">Charred sirloin, onion jam, mustard, Turkish.</div></div>
+        <div class="dish"><div class="dish-name">Garden salad <b>GF</b></div><div class="dish-price">$16</div></div>
+      </div>
+      <div class="farm-col">
+        <div class="pre">From the field</div>
+        <h3>Strawberry</h3>
+        <div class="dish"><div class="dish-name">Punnet · 250g</div><div class="dish-price">$7</div><div class="dish-desc">Picked that morning. Stocked til 3 or sold out.</div></div>
+        <div class="dish"><div class="dish-name">Berry &amp; cream scone <b>Best</b></div><div class="dish-price">$9</div><div class="dish-desc">Warm scone, jam from the kitchen, fresh berries, thick cream.</div></div>
+        <div class="dish"><div class="dish-name">Strawberry shake</div><div class="dish-price">$8</div><div class="dish-desc">Real berries blended with farm milk. Not from a syrup.</div></div>
+        <div class="dish"><div class="dish-name">Strawberry trifle pot</div><div class="dish-price">$10</div><div class="dish-desc">Sponge, custard, berries, cream. Single-serve, take it home.</div></div>
+      </div>
+    </div>
+    <div class="farm-bottom">
+      <div><b>U-pick days</b>Saturdays in season (Aug–Nov). Bring cash, $14/punnet of your own picking. Boots advised.</div>
+      <div><b>Whole orders</b>Cakes, slices, scone platters for weekend tables. 24 hours notice — call 0417 416 964.</div>
+    </div>
+  </div>
+</section>
+
+<section class="view" id="view">
+  <div class="view-inner">
+    <div>
+      <div class="pre">— the view —</div>
+      <h2>Glasshouse one way,<em>strawberries the other.</em></h2>
+      <p>We didn't build the cafe. We just put the coffee where the view already was. The mountains do half the work — we handle the scones.</p>
+    </div>
+    <div class="view-list">
+      <div class="view-item">
+        <div class="n">01</div>
+        <div><b>The deck</b><span>Outdoor tables facing west, full mountain view. Sun shades for summer.</span></div>
+      </div>
+      <div class="view-item">
+        <div class="n">02</div>
+        <div><b>The playground</b><span>Small but real. For the kids while you finish the coffee.</span></div>
+      </div>
+      <div class="view-item">
+        <div class="n">03</div>
+        <div><b>The rows</b><span>Working strawberry farm. Open for u-pick Saturdays in season.</span></div>
+      </div>
+      <div class="view-item">
+        <div class="n">04</div>
+        <div><b>The drive</b><span>35 minutes from Brisbane, 20 from Caboolture. Worth it. Promise.</span></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="story" id="story">
+  <div class="pre">— the why —</div>
+  <h2>"The farm has been here longer than the road. We built the shack so people would come for the strawberries and stay <em>for the view of the Glasshouse Mountains across the field.</em>"</h2>
+  <div class="sig">— The family at Strawberry View<small>204 Stern Road · Bellmere</small></div>
+</section>
+
+<section class="visit" id="visit">
+  <div class="visit-inner">
+    <div>
+      <div class="pre">— drive out —</div>
+      <h2>Stern Road,<em>Bellmere.</em></h2>
+      <div class="body">35 minutes from Brisbane, 20 from Caboolture, ten from the highway. Park anywhere on the gravel, head for the shack.</div>
+      <div class="addr">
+        <b>Strawberry View Coffee Shack</b>
+        204 Stern Road<br>
+        Bellmere QLD 4510<br>
+        0417 416 964
+      </div>
+      <a href="#" class="btn btn-primary">Phone ahead for cakes →</a>
+    </div>
+    <div class="hours">
+      <h3>When we're open</h3>
+      <div class="hours-list">
+        <div class="hours-row"><span>Mon — Fri</span><span>8:00am — 4:00pm</span></div>
+        <div class="hours-row"><span>Saturday</span><span>8:00am — 3:00pm</span></div>
+        <div class="hours-row closed"><span>Sunday</span><span>Closed (family day)</span></div>
+        <div class="hours-row"><span>Kitchen</span><span>Til 2pm weekdays</span></div>
+        <div class="hours-row"><span>U-pick</span><span>Sat 9–11, in season</span></div>
+        <div class="hours-row"><span>Strawberries</span><span>Til sold out</span></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="foot-inner">
+    <div class="foot-brand foot">
+      <div class="brand">
+        <div class="berry" style="background:var(--berry);border-color:var(--rose);color:var(--rose)">s</div>
+        <div class="brand-name" style="color:var(--rose)">Strawberry View<small style="color:var(--rose-soft)">Coffee Shack · Bellmere</small></div>
+      </div>
+      <p>A coffee shack on a working strawberry farm, with the Glasshouse Mountains across the field.</p>
+    </div>
+    <div class="foot">
+      <h4>Visit</h4>
+      <ul>
+        <li>204 Stern Road</li>
+        <li>Bellmere QLD 4510</li>
+        <li>0417 416 964</li>
+      </ul>
+    </div>
+    <div class="foot">
+      <h4>Pick</h4>
+      <ul>
+        <li>Saturdays in season</li>
+        <li>$14 per punnet</li>
+        <li>Bring boots</li>
+      </ul>
+    </div>
+    <div class="foot">
+      <h4>Order</h4>
+      <ul>
+        <li>Whole cakes</li>
+        <li>Scone platters</li>
+        <li>24hr notice</li>
+      </ul>
+    </div>
+  </div>
+  <div class="foot-bottom">
+    <span>© Strawberry View Coffee Shack · Bellmere QLD</span>
+    <span>Concept mockup · Degree In A Week</span>
+  </div>
+</footer>
+
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"CafeOrCoffeeShop","name":"Strawberry View Coffee Shack","address":{"@type":"PostalAddress","streetAddress":"204 Stern Road","addressLocality":"Bellmere","addressRegion":"QLD","postalCode":"4510","addressCountry":"AU"},"telephone":"+61417416964","openingHours":["Mo-Fr 08:00-16:00","Sa 08:00-15:00"]}
+</script>
+
+</body>
+</html>

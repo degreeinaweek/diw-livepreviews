@@ -1,0 +1,390 @@
+<!doctype html>
+<html lang="en-AU">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>The Hideout Coffee House — Narangba</title>
+<meta name="description" content="A treehouse-style coffee house in Narangba. Plant-forward kitchen, specialty coffee, and improv comedy nights. Open late Thursdays + Fridays.">
+<meta name="robots" content="noindex,nofollow">
+<link rel="icon" href="data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'><rect width='64' height='64' fill='%231f2a1f'/><text x='50%' y='62%' font-family='Fraunces,serif' font-size='34' font-style='italic' fill='%23e8d9b8' text-anchor='middle'>h</text></svg>">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,600;0,9..144,700;1,9..144,500;1,9..144,700&family=Caveat:wght@500;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+
+<style>
+:root{
+  --forest:#1f2a1f;
+  --forest-2:#2a3a2a;
+  --moss:#4a5d3e;
+  --terracotta:#c46b3d;
+  --terracotta-deep:#8a4a26;
+  --bark:#3a2a1f;
+  --cream:#f4ead6;
+  --paper:#faf4e6;
+  --leaf:#7a9b5e;
+  --rule:rgba(31,42,31,.15);
+  --serif:'Fraunces','Times New Roman',serif;
+  --hand:'Caveat',cursive;
+  --sans:'Inter',system-ui,sans-serif;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html,body{background:var(--paper);color:var(--forest);font-family:var(--sans);line-height:1.65;-webkit-font-smoothing:antialiased}
+a{color:inherit;text-decoration:none}
+img{display:block;max-width:100%}
+
+/* leafy bg pattern */
+.leaf-bg{position:relative}
+.leaf-bg::before{
+  content:"";position:absolute;inset:0;pointer-events:none;opacity:.06;
+  background-image:
+    radial-gradient(ellipse 30px 80px at 10% 20%, var(--leaf) 60%, transparent 70%),
+    radial-gradient(ellipse 25px 60px at 85% 60%, var(--leaf) 60%, transparent 70%),
+    radial-gradient(ellipse 20px 50px at 40% 80%, var(--leaf) 60%, transparent 70%);
+  background-size:300px 300px;
+}
+
+/* ===== NAV ===== */
+.nav{position:sticky;top:0;z-index:50;background:rgba(31,42,31,.96);backdrop-filter:blur(8px);color:var(--cream);border-bottom:1px solid var(--forest-2)}
+.nav-inner{max-width:1280px;margin:0 auto;padding:18px 36px;display:flex;align-items:center;justify-content:space-between;gap:24px}
+.brand{display:flex;align-items:center;gap:14px;font-family:var(--serif);font-style:italic;font-weight:500;font-size:28px;letter-spacing:-.01em}
+.brand .leaf{width:38px;height:38px;background:var(--cream);color:var(--forest);border-radius:50%;display:grid;place-items:center;font-family:var(--serif);font-style:italic;font-size:22px;font-weight:600}
+.nav ul{list-style:none;display:flex;gap:32px;font-family:var(--sans);font-size:13px;letter-spacing:.18em;text-transform:uppercase;font-weight:500}
+.nav ul a{opacity:.8;transition:.2s}
+.nav ul a:hover{color:var(--terracotta);opacity:1}
+.nav .cta{font-family:var(--sans);font-size:12px;letter-spacing:.2em;text-transform:uppercase;color:var(--forest);background:var(--terracotta);padding:11px 22px;border-radius:999px;font-weight:600}
+.nav .cta:hover{background:var(--cream)}
+
+/* ===== HERO ===== */
+.hero{background:var(--forest);color:var(--cream);padding:90px 36px 110px;position:relative;overflow:hidden}
+.hero-inner{max-width:1280px;margin:0 auto;display:grid;grid-template-columns:1.2fr 1fr;gap:80px;align-items:center;position:relative}
+.eyebrow{font-family:var(--hand);font-size:28px;color:var(--terracotta);margin-bottom:12px;font-weight:500;line-height:1}
+h1{font-family:var(--serif);font-style:italic;font-weight:500;font-size:clamp(60px,8.5vw,124px);line-height:.95;letter-spacing:-.03em;margin-bottom:32px;color:var(--cream)}
+h1 .alt{font-style:normal;font-weight:600;font-size:.85em;display:block;letter-spacing:-.02em;color:var(--terracotta)}
+.hero p{font-size:19px;max-width:520px;opacity:.86;margin-bottom:38px;line-height:1.7}
+.hero-actions{display:flex;gap:14px;flex-wrap:wrap}
+.btn{display:inline-flex;align-items:center;gap:10px;padding:15px 26px;font-family:var(--sans);font-size:12px;letter-spacing:.2em;text-transform:uppercase;font-weight:600;border-radius:999px;transition:.2s;border:1px solid transparent}
+.btn-primary{background:var(--terracotta);color:var(--cream)}
+.btn-primary:hover{background:var(--cream);color:var(--forest)}
+.btn-ghost{border-color:var(--cream);color:var(--cream)}
+.btn-ghost:hover{background:var(--cream);color:var(--forest)}
+
+/* hero board — what's on this week */
+.board{background:var(--bark);border:8px solid var(--bark);outline:2px solid var(--terracotta);outline-offset:-14px;padding:42px 36px;position:relative}
+.board::after{content:"";position:absolute;top:-12px;left:50%;transform:translateX(-50%);width:80px;height:18px;background:var(--terracotta);border-radius:0 0 8px 8px}
+.board-title{font-family:var(--hand);font-size:36px;color:var(--terracotta);line-height:1;margin-bottom:6px;text-align:center}
+.board-sub{text-align:center;font-family:var(--sans);font-size:11px;letter-spacing:.3em;text-transform:uppercase;color:var(--cream);opacity:.6;margin-bottom:26px}
+.board-day{display:grid;grid-template-columns:80px 1fr auto;gap:16px;padding:14px 0;border-bottom:1px dashed rgba(244,234,214,.18);align-items:baseline;color:var(--cream)}
+.board-day:last-child{border:none}
+.board-day .d{font-family:var(--serif);font-style:italic;font-weight:600;font-size:18px;color:var(--terracotta)}
+.board-day .e{font-family:var(--sans);font-size:14px;font-weight:500}
+.board-day .e small{display:block;font-family:var(--sans);font-size:11px;opacity:.55;font-weight:400;margin-top:3px;letter-spacing:.05em}
+.board-day .t{font-family:var(--serif);font-style:italic;font-size:15px;opacity:.8}
+
+/* ===== KITCHEN BOWL ===== */
+.kitchen{padding:130px 36px;max-width:1280px;margin:0 auto}
+.section-head{margin-bottom:60px;text-align:center}
+.section-head .pre{font-family:var(--hand);font-size:32px;color:var(--terracotta-deep);margin-bottom:8px;line-height:1}
+.section-head h2{font-family:var(--serif);font-weight:500;font-size:clamp(46px,6vw,84px);line-height:1;letter-spacing:-.02em;margin-bottom:14px}
+.section-head h2 em{font-style:italic;color:var(--terracotta-deep)}
+.section-head .sub{font-family:var(--serif);font-style:italic;font-size:20px;opacity:.7;max-width:580px;margin:0 auto}
+
+.bowl-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:30px;margin-top:50px}
+.bowl{background:var(--cream);border-radius:28px;padding:36px 32px;position:relative;overflow:hidden;border:1px solid var(--rule)}
+.bowl::before{
+  content:"";position:absolute;top:-40px;right:-40px;width:140px;height:140px;border-radius:50%;background:var(--terracotta);opacity:.08;
+}
+.bowl-num{font-family:var(--hand);font-size:30px;color:var(--terracotta-deep);line-height:1;margin-bottom:6px;position:relative}
+.bowl h3{font-family:var(--serif);font-style:italic;font-weight:500;font-size:34px;line-height:1.05;margin-bottom:8px;position:relative}
+.bowl-vegan{display:inline-block;font-family:var(--sans);font-size:10px;letter-spacing:.2em;text-transform:uppercase;color:var(--leaf);font-weight:700;padding:4px 9px;border:1.5px solid var(--leaf);border-radius:999px;margin-bottom:18px;position:relative}
+.bowl-body{font-family:var(--serif);font-size:16px;line-height:1.6;opacity:.78;margin-bottom:20px;position:relative}
+.bowl-ingredients{font-family:var(--sans);font-size:11px;letter-spacing:.06em;text-transform:uppercase;font-weight:600;opacity:.6;line-height:2;padding-top:18px;border-top:1.5px dashed var(--rule);position:relative}
+.bowl-price{position:absolute;top:32px;right:32px;font-family:var(--serif);font-style:italic;font-weight:600;font-size:26px;color:var(--terracotta-deep);z-index:1}
+
+/* drinks strip */
+.drinks{margin-top:80px;padding-top:60px;border-top:1px solid var(--rule);display:grid;grid-template-columns:240px 1fr;gap:60px;align-items:center}
+.drinks h3{font-family:var(--serif);font-style:italic;font-weight:500;font-size:44px;line-height:1;color:var(--terracotta-deep)}
+.drinks-list{display:grid;grid-template-columns:repeat(4,1fr);gap:24px}
+.drink-item{font-family:var(--serif);font-size:18px;font-weight:500}
+.drink-item small{display:block;font-family:var(--sans);font-size:11px;letter-spacing:.15em;text-transform:uppercase;opacity:.55;font-weight:600;margin-top:6px;letter-spacing:.05em}
+.drink-item span{display:block;font-family:var(--serif);font-style:italic;font-weight:600;color:var(--terracotta-deep);font-size:16px;margin-top:8px}
+
+/* ===== EVENINGS ===== */
+.eve{background:var(--bark);color:var(--cream);padding:140px 36px;position:relative;overflow:hidden}
+.eve::after{
+  content:"";position:absolute;inset:0;
+  background:radial-gradient(ellipse at 80% 0%,rgba(196,107,61,.25),transparent 55%);
+}
+.eve-inner{max-width:1280px;margin:0 auto;display:grid;grid-template-columns:1fr 1fr;gap:80px;align-items:center;position:relative}
+.eve .pre{font-family:var(--hand);font-size:32px;color:var(--terracotta);line-height:1;margin-bottom:8px}
+.eve h2{font-family:var(--serif);font-weight:500;font-size:clamp(46px,5.5vw,82px);line-height:1;letter-spacing:-.02em;margin-bottom:24px}
+.eve h2 em{font-style:italic;color:var(--terracotta)}
+.eve p{font-family:var(--serif);font-style:italic;font-size:20px;line-height:1.55;opacity:.82;margin-bottom:30px;max-width:480px}
+.eve .ticket{background:var(--cream);color:var(--forest);padding:42px 38px;border-radius:8px;position:relative;transform:rotate(-1.2deg);box-shadow:0 30px 60px rgba(0,0,0,.3)}
+.eve .ticket::before,.eve .ticket::after{content:"";position:absolute;top:50%;width:30px;height:30px;background:var(--bark);border-radius:50%;transform:translateY(-50%)}
+.eve .ticket::before{left:-15px}
+.eve .ticket::after{right:-15px}
+.eve .ticket .pre{color:var(--terracotta-deep);font-size:28px;margin-bottom:0}
+.eve .ticket h3{font-family:var(--serif);font-style:italic;font-weight:500;font-size:46px;line-height:1;margin-bottom:14px}
+.eve .ticket .meta{font-family:var(--sans);font-size:11px;letter-spacing:.25em;text-transform:uppercase;font-weight:600;color:var(--terracotta-deep);margin-bottom:24px}
+.eve .ticket .grid{display:grid;grid-template-columns:auto 1fr;gap:8px 18px;font-family:var(--serif);font-size:16px;border-top:1.5px dashed var(--rule);padding-top:18px}
+.eve .ticket .grid b{font-family:var(--sans);font-size:10px;letter-spacing:.2em;text-transform:uppercase;font-weight:700;color:var(--terracotta-deep);align-self:center}
+
+/* ===== STORY ===== */
+.story{padding:140px 36px;max-width:1000px;margin:0 auto;text-align:center}
+.story .pre{font-family:var(--hand);font-size:34px;color:var(--terracotta-deep);margin-bottom:18px;line-height:1}
+.story h2{font-family:var(--serif);font-weight:500;font-size:clamp(34px,4vw,54px);line-height:1.2;letter-spacing:-.01em;max-width:880px;margin:0 auto}
+.story h2 em{font-style:italic;color:var(--terracotta-deep)}
+.story .sig{margin-top:36px;font-family:var(--hand);font-size:32px;color:var(--terracotta-deep);line-height:1}
+.story .sig small{display:block;font-family:var(--sans);font-size:11px;letter-spacing:.3em;text-transform:uppercase;font-weight:600;opacity:.5;margin-top:10px}
+
+/* ===== VISIT ===== */
+.visit{background:var(--forest);color:var(--cream);padding:130px 36px}
+.visit-inner{max-width:1280px;margin:0 auto;display:grid;grid-template-columns:1fr 1fr;gap:80px;align-items:start}
+.visit .pre{font-family:var(--hand);font-size:32px;color:var(--terracotta);line-height:1;margin-bottom:8px}
+.visit h2{font-family:var(--serif);font-weight:500;font-size:clamp(46px,5.5vw,82px);line-height:1;letter-spacing:-.02em;margin-bottom:24px}
+.visit h2 em{font-style:italic;color:var(--terracotta)}
+.visit .body{font-family:var(--serif);font-style:italic;font-size:20px;line-height:1.55;opacity:.82;margin-bottom:32px;max-width:460px}
+.visit .addr{font-family:var(--sans);font-size:15px;line-height:2;border-left:2px solid var(--terracotta);padding-left:20px;margin-bottom:32px;opacity:.92}
+.visit .addr b{font-family:var(--serif);font-style:italic;font-weight:600;font-size:22px;letter-spacing:0;display:block;margin-bottom:4px;color:var(--cream);opacity:1}
+.hours{background:var(--cream);color:var(--forest);border-radius:14px;overflow:hidden}
+.hours h3{font-family:var(--serif);font-style:italic;font-weight:500;font-size:30px;padding:24px 32px;background:var(--terracotta);color:var(--cream)}
+.hours-list{padding:24px 32px}
+.hours-row{display:grid;grid-template-columns:1fr auto;font-family:var(--sans);font-size:14px;padding:12px 0;border-bottom:1px dashed rgba(31,42,31,.15);align-items:center}
+.hours-row:last-child{border:none}
+.hours-row span:first-child{font-family:var(--sans);font-size:12px;letter-spacing:.2em;text-transform:uppercase;font-weight:600}
+.hours-row span:last-child{font-family:var(--serif);font-style:italic;font-size:18px;font-weight:500}
+.hours-row.late span:last-child{color:var(--terracotta-deep)}
+.hours-row.late span:last-child::after{content:" ✦";font-style:normal}
+
+/* ===== FOOTER ===== */
+footer{background:var(--bark);color:var(--cream);padding:80px 36px 36px}
+.foot-inner{max-width:1280px;margin:0 auto;display:grid;grid-template-columns:2fr 1fr 1fr 1fr;gap:60px;margin-bottom:50px}
+.foot h4{font-family:var(--serif);font-style:italic;font-weight:500;font-size:22px;color:var(--terracotta);margin-bottom:18px}
+.foot ul{list-style:none;display:flex;flex-direction:column;gap:10px;font-family:var(--sans);font-size:14px;opacity:.78}
+.foot ul a:hover{color:var(--terracotta)}
+.foot-brand p{font-family:var(--serif);font-style:italic;font-size:18px;line-height:1.5;opacity:.75;margin-top:18px;max-width:340px}
+.foot-bottom{border-top:1px solid rgba(244,234,214,.1);padding-top:28px;max-width:1280px;margin:0 auto;display:flex;justify-content:space-between;font-family:var(--sans);font-size:11px;letter-spacing:.2em;text-transform:uppercase;opacity:.4;flex-wrap:wrap;gap:14px}
+
+@media (max-width:960px){
+  .nav ul{display:none}
+  .hero-inner,.visit-inner,.foot-inner,.eve-inner{grid-template-columns:1fr;gap:48px}
+  .bowl-grid{grid-template-columns:1fr;gap:20px}
+  .drinks{grid-template-columns:1fr;gap:30px}
+  .drinks-list{grid-template-columns:1fr 1fr}
+}
+</style>
+</head>
+<body>
+
+<!-- NAV -->
+<nav class="nav">
+  <div class="nav-inner">
+    <div class="brand"><span class="leaf">h</span>The Hideout</div>
+    <ul>
+      <li><a href="#kitchen">Kitchen</a></li>
+      <li><a href="#evenings">Evenings</a></li>
+      <li><a href="#story">Story</a></li>
+      <li><a href="#visit">Visit</a></li>
+    </ul>
+    <a href="#evenings" class="cta">Improv Thursdays</a>
+  </div>
+</nav>
+
+<!-- HERO -->
+<header class="hero">
+  <div class="hero-inner">
+    <div>
+      <div class="eyebrow">tucked away on Main Street ✦</div>
+      <h1>A coffee<br>house in the<span class="alt">treetops.</span></h1>
+      <p>Wood walls, hanging plants, plant-forward kitchen, specialty coffee. Open from 7am for breakfast — and twice a week we stay open late for improv comedy and live music.</p>
+      <div class="hero-actions">
+        <a href="#kitchen" class="btn btn-primary">The bowl menu →</a>
+        <a href="#evenings" class="btn btn-ghost">What's on this week</a>
+      </div>
+    </div>
+    <div class="board">
+      <div class="board-title">This week at the hideout</div>
+      <div class="board-sub">— Daily 7am specials + evening shows —</div>
+      <div class="board-day"><div class="d">Mon</div><div class="e">Bowl special<small>Roast pumpkin + dukkah</small></div><div class="t">$16</div></div>
+      <div class="board-day"><div class="d">Tue</div><div class="e">Pour-over flight<small>Three single origins</small></div><div class="t">$15</div></div>
+      <div class="board-day"><div class="d">Wed</div><div class="e">Open mic night<small>Sign up at the counter, 7pm</small></div><div class="t">Free</div></div>
+      <div class="board-day"><div class="d">Thu</div><div class="e">Improv showcase<small>Doors 7pm, show 7:30</small></div><div class="t">$18</div></div>
+      <div class="board-day"><div class="d">Fri</div><div class="e">Friday Late<small>Kitchen til 10, wine til close</small></div><div class="t">À la carte</div></div>
+      <div class="board-day"><div class="d">Sat</div><div class="e">Improv class<small>Beginners welcome, 11am</small></div><div class="t">$35</div></div>
+    </div>
+  </div>
+</header>
+
+<!-- KITCHEN — bowl menu hero -->
+<section class="kitchen" id="kitchen">
+  <div class="section-head">
+    <div class="pre">— from the kitchen —</div>
+    <h2>The <em>bowl menu.</em></h2>
+    <div class="sub">Plant-forward, grain-built, made each morning. Six bowls plus daily specials. Add an egg or smoked salmon to any of them.</div>
+  </div>
+  <div class="bowl-grid">
+    <div class="bowl">
+      <div class="bowl-price">$22</div>
+      <div class="bowl-num">No. 01</div>
+      <h3>The Sanctuary</h3>
+      <div class="bowl-vegan">Vegan</div>
+      <div class="bowl-body">Roasted pumpkin, charred cauli, brown rice, miso-tahini, pomegranate, herb oil.</div>
+      <div class="bowl-ingredients">Pumpkin · Cauli · Brown rice · Tahini · Mint · Pomegranate</div>
+    </div>
+    <div class="bowl">
+      <div class="bowl-price">$24</div>
+      <div class="bowl-num">No. 02</div>
+      <h3>Morning Green</h3>
+      <div class="bowl-vegan">Veg · GF</div>
+      <div class="bowl-body">Avocado, soft egg, smashed peas, labneh, dukkah, sourdough wedge, lemon.</div>
+      <div class="bowl-ingredients">Avo · Pea · Egg · Labneh · Dukkah · Sourdough · Lemon</div>
+    </div>
+    <div class="bowl">
+      <div class="bowl-price">$26</div>
+      <div class="bowl-num">No. 03</div>
+      <h3>The Forager</h3>
+      <div class="bowl-vegan">House pick</div>
+      <div class="bowl-body">Wild mushroom, polenta, parmesan crumb, brown butter, soft egg, watercress.</div>
+      <div class="bowl-ingredients">Mushroom · Polenta · Brown butter · Egg · Watercress · Parmesan</div>
+    </div>
+    <div class="bowl">
+      <div class="bowl-price">$25</div>
+      <div class="bowl-num">No. 04</div>
+      <h3>Sea Garden</h3>
+      <div class="bowl-vegan">Pescatarian</div>
+      <div class="bowl-body">Hot-smoked salmon, soba, sesame, cucumber ribbon, ginger dressing, nori crumb.</div>
+      <div class="bowl-ingredients">Salmon · Soba · Sesame · Ginger · Cucumber · Nori</div>
+    </div>
+    <div class="bowl">
+      <div class="bowl-price">$21</div>
+      <div class="bowl-num">No. 05</div>
+      <h3>Sunrise Oats</h3>
+      <div class="bowl-vegan">Vegan</div>
+      <div class="bowl-body">Slow-cooked oats, coconut, banana, peanut crumble, raw honey, cocoa nib.</div>
+      <div class="bowl-ingredients">Oats · Coconut · Banana · Peanut · Honey · Cocoa</div>
+    </div>
+    <div class="bowl">
+      <div class="bowl-price">$23</div>
+      <div class="bowl-num">No. 06</div>
+      <h3>The Late Plate</h3>
+      <div class="bowl-vegan">After 4pm</div>
+      <div class="bowl-body">Charred greens, white bean, anchovy, lemon crumb, soft egg, sourdough. Wine-friendly.</div>
+      <div class="bowl-ingredients">Bean · Charred greens · Anchovy · Egg · Sourdough · Lemon</div>
+    </div>
+  </div>
+
+  <div class="drinks">
+    <h3>Plus the bar —</h3>
+    <div class="drinks-list">
+      <div class="drink-item">House espresso<small>Local roast</small><span>$4.5</span></div>
+      <div class="drink-item">Pour-over<small>Rotating filter</small><span>$7</span></div>
+      <div class="drink-item">Matcha latte<small>Ceremonial grade</small><span>$6.5</span></div>
+      <div class="drink-item">Friday wine<small>Six glasses</small><span>$12+</span></div>
+    </div>
+  </div>
+</section>
+
+<!-- EVENINGS -->
+<section class="eve" id="evenings">
+  <div class="eve-inner">
+    <div>
+      <div class="pre">— after dark —</div>
+      <h2>Coffee by day,<br><em>comedy by night.</em></h2>
+      <p>Twice a week we push the tables back, dim the lights and run an improv showcase. Two house teams plus a guest troupe each Thursday. Beginners' class on Saturdays.</p>
+      <a href="#" class="btn btn-primary">Book a Thursday seat →</a>
+    </div>
+    <div class="ticket">
+      <div class="pre">this Thursday</div>
+      <h3>Improv<br>Showcase</h3>
+      <div class="meta">Doors 7:00 · Show 7:30 · BYO friend</div>
+      <div class="grid">
+        <b>Tickets</b><span>$18 · $22 at door</span>
+        <b>Bar</b><span>Beer · wine · coffee</span>
+        <b>Kitchen</b><span>Snack menu til 9</span>
+        <b>Seats</b><span>40 max, first in best dressed</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- STORY -->
+<section class="story" id="story">
+  <div class="pre">— the quiet why —</div>
+  <h2>"We built a treehouse on Main Street because Narangba needed somewhere that <em>didn't close at 3pm.</em> Somewhere you could come for breakfast and stay through the night you didn't know you needed."</h2>
+  <div class="sig">— The Hideout team<small>22 Main Street · Narangba</small></div>
+</section>
+
+<!-- VISIT -->
+<section class="visit" id="visit">
+  <div class="visit-inner">
+    <div>
+      <div class="pre">— find us —</div>
+      <h2>Tucked in<br><em>on Main.</em></h2>
+      <div class="body">A short walk from the train station, opposite the pharmacy. Garden seats, indoor mezzanine, and the show room out back.</div>
+      <div class="addr">
+        <b>The Hideout Coffee House</b>
+        22 Main Street<br>
+        Narangba QLD 4504<br>
+        (07) 3886 7573
+      </div>
+      <a href="#" class="btn btn-primary">Order pick-up →</a>
+    </div>
+    <div class="hours">
+      <h3>When we're open</h3>
+      <div class="hours-list">
+        <div class="hours-row"><span>Mon — Wed</span><span>7:00am — 7:00pm</span></div>
+        <div class="hours-row late"><span>Thu — Fri</span><span>7:00am — 10:00pm</span></div>
+        <div class="hours-row late"><span>Saturday</span><span>7:00am — 11:00pm</span></div>
+        <div class="hours-row"><span>Sunday</span><span>8:00am — 5:00pm</span></div>
+        <div class="hours-row"><span>Kitchen</span><span>Til 9pm late nights</span></div>
+        <div class="hours-row"><span>Show nights</span><span>Thu &amp; first Sat</span></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="foot-inner">
+    <div class="foot-brand foot">
+      <div class="brand" style="color:var(--cream)"><span class="leaf">h</span>The Hideout</div>
+      <p>A treehouse on Main Street. Plant-forward bowls, specialty coffee, and improv after dark.</p>
+    </div>
+    <div class="foot">
+      <h4>Visit</h4>
+      <ul>
+        <li>22 Main Street</li>
+        <li>Narangba QLD 4504</li>
+        <li>(07) 3886 7573</li>
+      </ul>
+    </div>
+    <div class="foot">
+      <h4>Evenings</h4>
+      <ul>
+        <li>Thursday improv</li>
+        <li>Friday late kitchen</li>
+        <li>Saturday classes</li>
+      </ul>
+    </div>
+    <div class="foot">
+      <h4>Follow</h4>
+      <ul>
+        <li>Pick-up orders</li>
+        <li>Gift cards</li>
+        <li>Show tickets</li>
+      </ul>
+    </div>
+  </div>
+  <div class="foot-bottom">
+    <span>© The Hideout Coffee House · Narangba QLD</span>
+    <span>Concept mockup · Degree In A Week</span>
+  </div>
+</footer>
+
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"CafeOrCoffeeShop","name":"The Hideout Coffee House","address":{"@type":"PostalAddress","streetAddress":"22 Main Street","addressLocality":"Narangba","addressRegion":"QLD","postalCode":"4504","addressCountry":"AU"},"telephone":"+61738867573","openingHours":["Mo-We 07:00-19:00","Th-Fr 07:00-22:00","Sa 07:00-23:00","Su 08:00-17:00"]}
+</script>
+
+</body>
+</html>

@@ -1,0 +1,428 @@
+<!doctype html>
+<html lang="en-AU">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Blaktan — Coffee Roastery &amp; Kitchen, North Lakes</title>
+<meta name="description" content="Coffee roastery and modern Asian kitchen at Burke Crescent, North Lakes. Beans roasted on-site. Open daily from 6am.">
+<meta name="robots" content="noindex,nofollow">
+<link rel="icon" href="data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'><rect width='64' height='64' fill='%231a2520'/><circle cx='32' cy='32' r='20' fill='none' stroke='%23d4823c' stroke-width='3'/><text x='50%' y='62%' font-family='Oswald,sans-serif' font-size='26' fill='%23d4823c' text-anchor='middle' font-weight='700'>B</text></svg>">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;500;600;700&family=Cormorant+Garamond:ital,wght@0,500;0,700;1,500&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+
+<style>
+:root{
+  --ink:#101714;          /* near-black forest */
+  --forest:#1a2520;       /* deep forest green */
+  --forest-2:#243430;
+  --copper:#d4823c;       /* signature copper */
+  --copper-deep:#a85f24;
+  --warm:#f4ece0;         /* warm bone */
+  --warm-2:#e8dcc7;
+  --paper:#f9f3e8;
+  --rule:rgba(244,236,224,.14);
+  --display:'Oswald',sans-serif;
+  --serif:'Cormorant Garamond',Georgia,serif;
+  --sans:'Inter',system-ui,sans-serif;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html,body{background:var(--paper);color:var(--ink);font-family:var(--sans);-webkit-font-smoothing:antialiased;line-height:1.6}
+a{color:inherit;text-decoration:none}
+img{display:block;max-width:100%}
+
+/* ===== NAV ===== */
+.nav{position:sticky;top:0;z-index:50;background:var(--forest);color:var(--warm);border-bottom:1px solid #2a3a34}
+.nav-inner{max-width:1280px;margin:0 auto;padding:18px 36px;display:flex;align-items:center;justify-content:space-between;gap:28px}
+.brand{display:flex;align-items:center;gap:14px;font-family:var(--display);font-size:24px;font-weight:600;letter-spacing:.2em;text-transform:uppercase}
+.brand .mark{width:42px;height:42px;border:2px solid var(--copper);border-radius:50%;display:grid;place-items:center;color:var(--copper);font-size:20px;font-weight:700;letter-spacing:0;font-family:var(--display)}
+.nav ul{list-style:none;display:flex;gap:36px;font-family:var(--display);font-size:13px;letter-spacing:.18em;text-transform:uppercase;font-weight:500}
+.nav ul a{opacity:.78;transition:.2s}
+.nav ul a:hover{color:var(--copper);opacity:1}
+.nav .cta{font-family:var(--display);font-size:12px;letter-spacing:.2em;text-transform:uppercase;color:var(--forest);background:var(--copper);padding:11px 22px;border-radius:2px;font-weight:600}
+
+/* ===== HERO ===== */
+.hero{background:var(--forest);color:var(--warm);padding:90px 36px 100px;position:relative;overflow:hidden}
+.hero::before{
+  content:"";position:absolute;inset:0;
+  background:
+    radial-gradient(circle at 90% 20%, rgba(212,130,60,.22), transparent 45%),
+    repeating-linear-gradient(45deg,transparent 0 30px,rgba(212,130,60,.025) 30px 31px);
+  pointer-events:none;
+}
+.hero-inner{max-width:1280px;margin:0 auto;display:grid;grid-template-columns:1.3fr 1fr;gap:80px;align-items:center;position:relative}
+.eyebrow{font-family:var(--display);font-size:12px;letter-spacing:.4em;text-transform:uppercase;color:var(--copper);margin-bottom:32px;font-weight:500}
+h1{font-family:var(--display);font-weight:600;font-size:clamp(64px,9vw,128px);line-height:.92;letter-spacing:-.01em;text-transform:uppercase;margin-bottom:24px}
+h1 .it{font-family:var(--serif);font-style:italic;font-weight:500;text-transform:none;letter-spacing:-.02em;color:var(--copper);display:block}
+.hero p{font-size:18px;max-width:520px;opacity:.82;margin-bottom:36px;font-family:var(--serif);font-size:22px;line-height:1.5;font-style:italic}
+.hero-actions{display:flex;gap:14px;flex-wrap:wrap}
+.btn{display:inline-flex;align-items:center;gap:10px;padding:15px 26px;font-family:var(--display);font-size:12px;letter-spacing:.22em;text-transform:uppercase;font-weight:600;transition:.2s;border:1px solid transparent}
+.btn-primary{background:var(--copper);color:var(--forest)}
+.btn-primary:hover{background:var(--warm);color:var(--forest)}
+.btn-ghost{border-color:var(--warm);color:var(--warm)}
+.btn-ghost:hover{background:var(--warm);color:var(--forest)}
+
+/* hero medallion card */
+.medallion{position:relative;aspect-ratio:1;background:radial-gradient(circle,#2c3d36 0%,#1a2520 70%);border:3px solid var(--copper);border-radius:50%;display:grid;place-items:center;padding:48px;text-align:center}
+.medallion::before{content:"";position:absolute;inset:14px;border:1px solid rgba(212,130,60,.4);border-radius:50%}
+.medallion-eyebrow{font-family:var(--display);font-size:11px;letter-spacing:.4em;text-transform:uppercase;color:var(--copper);margin-bottom:14px}
+.medallion h3{font-family:var(--serif);font-style:italic;font-weight:500;font-size:54px;line-height:1;color:var(--warm);margin-bottom:6px}
+.medallion .origin{font-family:var(--display);font-size:13px;letter-spacing:.25em;text-transform:uppercase;color:var(--copper);font-weight:500;margin-bottom:24px}
+.medallion .ring{position:absolute;width:96%;height:96%;border:1px dashed rgba(212,130,60,.3);border-radius:50%;animation:spin 60s linear infinite}
+.medallion .ring span{position:absolute;top:50%;left:50%;transform-origin:0 0;font-family:var(--display);font-size:10px;letter-spacing:.5em;color:var(--copper);text-transform:uppercase}
+@keyframes spin{from{transform:rotate(0)}to{transform:rotate(360deg)}}
+.medallion .notes{display:flex;justify-content:center;gap:12px;font-family:var(--display);font-size:10px;letter-spacing:.2em;text-transform:uppercase;opacity:.8}
+.medallion .notes span{padding:6px 12px;border:1px solid rgba(212,130,60,.4);border-radius:999px;color:var(--copper)}
+
+/* roast band */
+.roast-band{background:var(--ink);color:var(--copper);padding:24px 36px;border-top:1px solid var(--forest-2);border-bottom:1px solid var(--forest-2);font-family:var(--display);font-size:13px;letter-spacing:.3em;text-transform:uppercase;font-weight:500;text-align:center}
+.roast-band b{color:var(--warm);font-weight:600}
+.roast-band span{margin:0 22px;opacity:.4}
+
+/* ===== ROASTERY — menu hero ===== */
+.roastery{padding:130px 36px;max-width:1280px;margin:0 auto}
+.section-head{display:flex;justify-content:space-between;align-items:flex-end;margin-bottom:70px;gap:40px;flex-wrap:wrap;border-bottom:2px solid var(--ink);padding-bottom:32px}
+.section-head h2{font-family:var(--display);font-size:clamp(48px,6.5vw,92px);font-weight:600;line-height:.95;letter-spacing:-.01em;text-transform:uppercase}
+.section-head h2 .it{font-family:var(--serif);font-style:italic;font-weight:500;text-transform:none;letter-spacing:-.02em;color:var(--copper-deep);display:block}
+.section-head .meta{font-family:var(--display);font-size:12px;letter-spacing:.3em;text-transform:uppercase;color:var(--copper-deep);font-weight:500;max-width:340px;text-align:right}
+
+.bean-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:0}
+.bean{padding:36px 30px;border-right:1px solid var(--ink);border-bottom:1px solid var(--ink);position:relative;transition:.3s}
+.bean:nth-child(4n){border-right:none}
+.bean:hover{background:var(--forest);color:var(--warm)}
+.bean:hover .bean-num,.bean:hover .bean-region{color:var(--copper)}
+.bean-num{font-family:var(--display);font-size:11px;letter-spacing:.35em;color:var(--copper-deep);margin-bottom:24px;font-weight:600}
+.bean h3{font-family:var(--serif);font-style:italic;font-weight:500;font-size:34px;line-height:1;margin-bottom:6px}
+.bean-region{font-family:var(--display);font-size:11px;letter-spacing:.2em;text-transform:uppercase;color:var(--copper-deep);font-weight:500;margin-bottom:20px}
+.bean-notes{font-family:var(--serif);font-style:italic;font-size:17px;line-height:1.5;opacity:.85;margin-bottom:24px;padding-bottom:20px;border-bottom:1px dashed currentColor}
+.bean-meta{font-family:var(--display);font-size:11px;letter-spacing:.1em;line-height:2;text-transform:uppercase;font-weight:500;opacity:.85}
+.bean-meta div{display:flex;justify-content:space-between}
+.bean-meta b{font-weight:600;color:var(--copper-deep)}
+.bean:hover .bean-meta b{color:var(--copper)}
+.bean-price{position:absolute;top:30px;right:30px;font-family:var(--display);font-size:18px;letter-spacing:.05em;font-weight:600;color:var(--copper-deep)}
+.bean:hover .bean-price{color:var(--copper)}
+
+/* ===== KITCHEN — modern asian ===== */
+.kitchen{background:var(--forest);color:var(--warm);padding:130px 36px}
+.kitchen-inner{max-width:1280px;margin:0 auto}
+.kitchen .section-head{border-color:rgba(244,236,224,.18)}
+.kitchen .section-head h2{color:var(--warm)}
+.kitchen .section-head h2 .it{color:var(--copper)}
+.kitchen .section-head .meta{color:var(--copper)}
+
+.menu-cols{display:grid;grid-template-columns:1fr 1fr;gap:80px}
+.menu-col h3{font-family:var(--display);font-size:14px;letter-spacing:.35em;text-transform:uppercase;color:var(--copper);font-weight:600;padding-bottom:14px;border-bottom:1px solid var(--copper);margin-bottom:18px}
+.dish{display:grid;grid-template-columns:1fr auto;gap:24px;padding:22px 0;border-bottom:1px solid var(--rule);align-items:baseline}
+.dish-name{font-family:var(--serif);font-style:italic;font-weight:500;font-size:24px}
+.dish-name b{font-style:normal;font-family:var(--display);font-size:11px;font-weight:600;letter-spacing:.2em;text-transform:uppercase;color:var(--copper);margin-left:10px;vertical-align:middle}
+.dish-price{font-family:var(--display);font-size:15px;font-weight:600;color:var(--copper);letter-spacing:.05em}
+.dish-desc{grid-column:1/-1;font-size:14px;opacity:.6;margin-top:6px;max-width:500px}
+
+/* ===== STORY ===== */
+.story{padding:140px 36px;background:var(--warm-2);position:relative}
+.story::before{content:"";position:absolute;inset:0;background:repeating-linear-gradient(135deg,transparent 0 40px,rgba(212,130,60,.04) 40px 41px);pointer-events:none}
+.story-inner{max-width:1000px;margin:0 auto;text-align:center;position:relative}
+.story-eyebrow{font-family:var(--display);font-size:12px;letter-spacing:.4em;text-transform:uppercase;color:var(--copper-deep);margin-bottom:32px;font-weight:600}
+.story h2{font-family:var(--serif);font-style:italic;font-weight:500;font-size:clamp(34px,4vw,54px);line-height:1.2;letter-spacing:-.01em;max-width:880px;margin:0 auto;color:var(--ink)}
+.story h2 em{color:var(--copper-deep);font-style:italic}
+.story .sig{margin-top:48px;font-family:var(--display);font-size:14px;letter-spacing:.3em;text-transform:uppercase;color:var(--copper-deep);font-weight:600}
+.story .sig small{display:block;font-family:var(--serif);font-style:italic;font-size:18px;letter-spacing:0;text-transform:none;font-weight:500;margin-top:8px;color:var(--ink);opacity:.6}
+
+/* ===== STATS ===== */
+.stats{background:var(--ink);color:var(--warm);padding:80px 36px;border-top:4px solid var(--copper)}
+.stats-inner{max-width:1280px;margin:0 auto;display:grid;grid-template-columns:repeat(4,1fr);gap:40px}
+.stat{text-align:center;border-right:1px solid rgba(244,236,224,.1);padding:0 20px}
+.stat:last-child{border-right:none}
+.stat-num{font-family:var(--display);font-size:64px;font-weight:600;line-height:1;color:var(--copper);margin-bottom:8px}
+.stat-num .it{font-family:var(--serif);font-style:italic;font-weight:500;font-size:46px}
+.stat-label{font-family:var(--display);font-size:11px;letter-spacing:.3em;text-transform:uppercase;opacity:.7;font-weight:500}
+
+/* ===== VISIT ===== */
+.visit{padding:130px 36px;max-width:1280px;margin:0 auto;display:grid;grid-template-columns:1fr 1fr;gap:80px;align-items:start}
+.visit h2{font-family:var(--display);font-size:clamp(48px,6vw,88px);font-weight:600;line-height:.95;letter-spacing:-.01em;text-transform:uppercase;margin-bottom:24px}
+.visit h2 .it{font-family:var(--serif);font-style:italic;font-weight:500;text-transform:none;letter-spacing:-.02em;color:var(--copper-deep);display:block}
+.visit p{font-family:var(--serif);font-style:italic;font-size:22px;line-height:1.5;color:#3a4a44;max-width:480px;margin-bottom:28px}
+.visit .addr{font-family:var(--sans);font-size:15px;line-height:2;border-left:3px solid var(--copper);padding-left:22px;margin-bottom:32px}
+.visit .addr b{font-family:var(--display);font-size:13px;letter-spacing:.25em;text-transform:uppercase;color:var(--copper-deep);font-weight:600;display:block;margin-bottom:6px}
+.hours-card{border:2px solid var(--ink);background:var(--paper)}
+.hours-card h3{font-family:var(--display);font-size:13px;letter-spacing:.35em;text-transform:uppercase;padding:24px 32px;background:var(--ink);color:var(--copper);font-weight:600}
+.hours-list{padding:24px 32px}
+.hours-row{display:grid;grid-template-columns:1fr auto;font-family:var(--sans);font-size:14px;padding:12px 0;border-bottom:1px dashed rgba(16,23,20,.15);align-items:center}
+.hours-row:last-child{border:none}
+.hours-row span:first-child{font-family:var(--display);font-size:13px;letter-spacing:.2em;text-transform:uppercase;font-weight:600}
+.hours-row span:last-child{font-family:var(--serif);font-style:italic;font-size:18px}
+
+/* ===== FOOTER ===== */
+footer{background:var(--ink);color:var(--warm);padding:80px 36px 36px}
+.foot-inner{max-width:1280px;margin:0 auto;display:grid;grid-template-columns:2fr 1fr 1fr 1fr;gap:60px;margin-bottom:60px}
+.foot-brand p{font-family:var(--serif);font-style:italic;font-size:18px;line-height:1.5;opacity:.75;max-width:340px;margin-top:18px}
+.foot h4{font-family:var(--display);font-size:12px;letter-spacing:.35em;text-transform:uppercase;color:var(--copper);margin-bottom:20px;font-weight:600}
+.foot ul{list-style:none;display:flex;flex-direction:column;gap:12px;font-family:var(--sans);font-size:14px;opacity:.8}
+.foot ul a:hover{color:var(--copper)}
+.foot-bottom{border-top:1px solid rgba(244,236,224,.1);padding-top:30px;max-width:1280px;margin:0 auto;display:flex;justify-content:space-between;font-family:var(--display);font-size:10px;letter-spacing:.3em;text-transform:uppercase;opacity:.4;flex-wrap:wrap;gap:14px}
+
+@media (max-width:960px){
+  .nav ul{display:none}
+  .hero-inner,.visit,.foot-inner,.menu-cols{grid-template-columns:1fr;gap:48px}
+  .bean-grid{grid-template-columns:1fr 1fr}
+  .bean:nth-child(4n){border-right:1px solid var(--ink)}
+  .bean:nth-child(2n){border-right:none}
+  .stats-inner{grid-template-columns:1fr 1fr;gap:30px}
+  .stat:nth-child(2n){border-right:none}
+}
+</style>
+</head>
+<body>
+
+<!-- NAV -->
+<nav class="nav">
+  <div class="nav-inner">
+    <div class="brand"><span class="mark">B</span>Blaktan</div>
+    <ul>
+      <li><a href="#roastery">Roastery</a></li>
+      <li><a href="#kitchen">Kitchen</a></li>
+      <li><a href="#story">Story</a></li>
+      <li><a href="#visit">Visit</a></li>
+    </ul>
+    <a href="#visit" class="cta">Open · 6am Daily</a>
+  </div>
+</nav>
+
+<!-- HERO -->
+<header class="hero">
+  <div class="hero-inner">
+    <div>
+      <div class="eyebrow">— Coffee roastery &amp; modern Asian kitchen</div>
+      <h1>Roasted<br>on-site.<span class="it">Eaten here.</span></h1>
+      <p>Burke Crescent, North Lakes. Beans roasted in the back, kitchen built around modern Asian flavours up front. Open seven days from sunrise.</p>
+      <div class="hero-actions">
+        <a href="#roastery" class="btn btn-primary">The bean menu →</a>
+        <a href="#visit" class="btn btn-ghost">Find the roastery</a>
+      </div>
+    </div>
+    <div class="medallion">
+      <div class="ring"></div>
+      <div>
+        <div class="medallion-eyebrow">— House blend</div>
+        <h3>Black Tan</h3>
+        <div class="origin">Ethiopia · Sumatra · Brazil</div>
+        <div class="notes">
+          <span>Cocoa</span><span>Hazelnut</span><span>Caramel</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</header>
+
+<div class="roast-band">
+  <b>Roasting today</b> <span>·</span> Black Tan house blend <span>·</span> Single origin Ethiopia Yirgacheffe <span>·</span> Decaf Brazil <span>·</span> <b>Beans bagged fresh on Tuesdays</b>
+</div>
+
+<!-- ROASTERY -->
+<section class="roastery" id="roastery">
+  <div class="section-head">
+    <h2>The bean<span class="it">menu.</span></h2>
+    <div class="meta">— Roasted weekly. Bagged Tuesday. Sold by the cup or the kilo.</div>
+  </div>
+
+  <div class="bean-grid">
+    <div class="bean">
+      <div class="bean-num">No. 01 · House</div>
+      <h3>Black Tan</h3>
+      <div class="bean-region">Ethiopia · Sumatra · Brazil</div>
+      <div class="bean-notes">"Dark chocolate body, hazelnut sweetness, long caramel finish. Built for milk."</div>
+      <div class="bean-meta">
+        <div><b>Roast</b><span>Medium-dark</span></div>
+        <div><b>250g bag</b><span>$22</span></div>
+        <div><b>1kg bag</b><span>$76</span></div>
+      </div>
+      <div class="bean-price">01</div>
+    </div>
+    <div class="bean">
+      <div class="bean-num">No. 02 · Single origin</div>
+      <h3>Yirgacheffe</h3>
+      <div class="bean-region">Sidamo, Ethiopia</div>
+      <div class="bean-notes">"Bergamot, white peach, jasmine tea. Wash-processed. Best as filter."</div>
+      <div class="bean-meta">
+        <div><b>Roast</b><span>Light</span></div>
+        <div><b>250g bag</b><span>$26</span></div>
+        <div><b>1kg bag</b><span>$92</span></div>
+      </div>
+      <div class="bean-price">02</div>
+    </div>
+    <div class="bean">
+      <div class="bean-num">No. 03 · Reserve</div>
+      <h3>Geisha Lot</h3>
+      <div class="bean-region">Volcán, Panama · 60 bags</div>
+      <div class="bean-notes">"Mandarin, honeysuckle, white tea. Single-lot, ration of 30g per customer."</div>
+      <div class="bean-meta">
+        <div><b>Roast</b><span>Filter</span></div>
+        <div><b>Pour over</b><span>$14</span></div>
+        <div><b>100g bag</b><span>$38</span></div>
+      </div>
+      <div class="bean-price">03</div>
+    </div>
+    <div class="bean">
+      <div class="bean-num">No. 04 · Decaf</div>
+      <h3>Cerrado</h3>
+      <div class="bean-region">Mountains of Brazil</div>
+      <div class="bean-notes">"Sugar-cane process. Cocoa, almond, no compromise on body. For afternoon coffees."</div>
+      <div class="bean-meta">
+        <div><b>Roast</b><span>Medium</span></div>
+        <div><b>250g bag</b><span>$24</span></div>
+        <div><b>1kg bag</b><span>$84</span></div>
+      </div>
+      <div class="bean-price">04</div>
+    </div>
+  </div>
+</section>
+
+<!-- KITCHEN -->
+<section class="kitchen" id="kitchen">
+  <div class="kitchen-inner">
+    <div class="section-head">
+      <h2>The kitchen<span class="it">today.</span></h2>
+      <div class="meta">— Breakfast 7–11. Lunch 11–2, last order 1:45.</div>
+    </div>
+    <div class="menu-cols">
+      <div class="menu-col">
+        <h3>Breakfast · until 11</h3>
+        <div class="dish">
+          <div class="dish-name">Miso butter eggs <b>Signature</b></div>
+          <div class="dish-price">$22</div>
+          <div class="dish-desc">Soft scrambled eggs, white miso butter, sourdough, charred shallot, furikake.</div>
+        </div>
+        <div class="dish">
+          <div class="dish-name">Congee bowl</div>
+          <div class="dish-price">$18</div>
+          <div class="dish-desc">Chicken &amp; ginger congee, century egg, crispy shallot, chilli oil, coriander.</div>
+        </div>
+        <div class="dish">
+          <div class="dish-name">Bacon &amp; egg bao</div>
+          <div class="dish-price">$15</div>
+          <div class="dish-desc">Steamed bao, smoked bacon, fried egg, hoisin, pickle. Made-to-order, 8 minutes.</div>
+        </div>
+        <div class="dish">
+          <div class="dish-name">Coconut chia pudding</div>
+          <div class="dish-price">$14</div>
+          <div class="dish-desc">Coconut chia, mango, pandan syrup, toasted coconut chip. Vegan.</div>
+        </div>
+      </div>
+      <div class="menu-col">
+        <h3>Lunch · 11 til close</h3>
+        <div class="dish">
+          <div class="dish-name">Pork katsu sando</div>
+          <div class="dish-price">$24</div>
+          <div class="dish-desc">Crumbed pork loin, milk bread, tonkatsu, slaw, hot mustard. Built tall.</div>
+        </div>
+        <div class="dish">
+          <div class="dish-name">Bún cha bowl</div>
+          <div class="dish-price">$26</div>
+          <div class="dish-desc">Grilled pork, vermicelli, herbs, nuoc cham, pickled carrot. Cold-served.</div>
+        </div>
+        <div class="dish">
+          <div class="dish-name">Black tan burger <b>House</b></div>
+          <div class="dish-price">$25</div>
+          <div class="dish-desc">Wagyu patty, smoked cheese, kewpie, our black-tan glaze, milk bun. Side of fries.</div>
+        </div>
+        <div class="dish">
+          <div class="dish-name">Charred broccolini</div>
+          <div class="dish-price">$18</div>
+          <div class="dish-desc">Wood-fired broccolini, gochujang butter, sesame, crispy garlic. Share plate.</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- STORY -->
+<section class="story" id="story">
+  <div class="story-inner">
+    <div class="story-eyebrow">— Our quiet rule</div>
+    <h2>"If the bean wasn't roasted this week, we won't pour it. If the dish doesn't pair with one of our coffees, <em>it doesn't go on the board.</em>"</h2>
+    <div class="sig">— The Blaktan team<small>Burke Crescent · North Lakes</small></div>
+  </div>
+</section>
+
+<!-- STATS -->
+<section class="stats">
+  <div class="stats-inner">
+    <div class="stat"><div class="stat-num">7<span class="it">days</span></div><div class="stat-label">Open weekly</div></div>
+    <div class="stat"><div class="stat-num">4<span class="it">origins</span></div><div class="stat-label">Beans in rotation</div></div>
+    <div class="stat"><div class="stat-num">1.2k+</div><div class="stat-label">Five-star reviews</div></div>
+    <div class="stat"><div class="stat-num">6<span class="it">am</span></div><div class="stat-label">Roaster fires up</div></div>
+  </div>
+</section>
+
+<!-- VISIT -->
+<section class="visit" id="visit">
+  <div>
+    <h2>Find the<span class="it">roastery.</span></h2>
+    <p>Shop 6 on Burke Crescent, opposite the playing fields. Plenty of parking out front. Beans bagged Tuesdays — call ahead for kilo orders.</p>
+    <div class="addr">
+      <b>Blaktan Coffee &amp; Kitchen</b>
+      Shop 6, 4–8 Burke Crescent<br>
+      North Lakes QLD 4509<br>
+      0425 444 733<br>
+      blaktancoffee@gmail.com
+    </div>
+    <a href="#" class="btn btn-primary">Order a bean subscription →</a>
+  </div>
+  <div class="hours-card">
+    <h3>Trading hours</h3>
+    <div class="hours-list">
+      <div class="hours-row"><span>Mon — Fri</span><span>6:00am — 2:00pm</span></div>
+      <div class="hours-row"><span>Saturday</span><span>6:30am — 2:00pm</span></div>
+      <div class="hours-row"><span>Sunday</span><span>6:30am — 2:00pm</span></div>
+      <div class="hours-row"><span>Breakfast</span><span>7:00am — 11:00am</span></div>
+      <div class="hours-row"><span>Lunch</span><span>11:00am — 1:45pm</span></div>
+      <div class="hours-row"><span>Roastery</span><span>Tuesdays, all day</span></div>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="foot-inner">
+    <div class="foot-brand foot">
+      <div class="brand" style="color:var(--warm)"><span class="mark">B</span>Blaktan</div>
+      <p>Coffee roasted on Burke Crescent. Modern Asian kitchen up front. Open seven days from sunrise.</p>
+    </div>
+    <div class="foot">
+      <h4>Visit</h4>
+      <ul>
+        <li>Shop 6, 4–8 Burke Cres</li>
+        <li>North Lakes QLD 4509</li>
+        <li>From 6am, seven days</li>
+      </ul>
+    </div>
+    <div class="foot">
+      <h4>Beans</h4>
+      <ul>
+        <li>Subscription</li>
+        <li>Wholesale</li>
+        <li>Bagged Tuesdays</li>
+      </ul>
+    </div>
+    <div class="foot">
+      <h4>Follow</h4>
+      <ul>
+        <li><a href="https://www.facebook.com/blaktancoffee/">Facebook</a></li>
+        <li>blaktancoffee@gmail.com</li>
+        <li>0425 444 733</li>
+      </ul>
+    </div>
+  </div>
+  <div class="foot-bottom">
+    <span>© Blaktan Coffee &amp; Kitchen · North Lakes QLD</span>
+    <span>Concept mockup · Degree In A Week</span>
+  </div>
+</footer>
+
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"CafeOrCoffeeShop","name":"Blaktan Coffee & Kitchen","address":{"@type":"PostalAddress","streetAddress":"Shop 6, 4-8 Burke Crescent","addressLocality":"North Lakes","addressRegion":"QLD","postalCode":"4509","addressCountry":"AU"},"telephone":"+61425444733","email":"blaktancoffee@gmail.com","openingHours":["Mo-Fr 06:00-14:00","Sa-Su 06:30-14:00"],"sameAs":["https://www.facebook.com/blaktancoffee/"]}
+</script>
+
+</body>
+</html>

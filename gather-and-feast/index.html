@@ -1,0 +1,406 @@
+<!doctype html>
+<html lang="en-AU">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Gather &amp; Feast — Real Food Cafe, Caboolture</title>
+<meta name="description" content="A family-run wholefoods cafe in Caboolture. Homemade breakfast, brunch and bowls — built around a long share table.">
+<meta name="robots" content="noindex,nofollow">
+<link rel="icon" href="data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'><circle cx='32' cy='32' r='28' fill='%23a8c099'/><text x='50%' y='42%' font-family='DM Serif Display,serif' font-size='15' fill='%23fdf6e8' text-anchor='middle' font-style='italic'>Gather</text><text x='50%' y='66%' font-family='DM Serif Display,serif' font-size='15' fill='%23fdf6e8' text-anchor='middle' font-style='italic'>&amp; Feast</text></svg>">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=Caveat+Brush&family=Manrope:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+<style>
+:root{
+  --sage:#a8c099;
+  --sage-deep:#6f8a5e;
+  --sage-shadow:#506f44;
+  --peach:#f4b58e;
+  --peach-deep:#d68455;
+  --cream:#fdf6e8;
+  --paper:#fbf3e2;
+  --butter:#f7e9c6;
+  --rust:#a85228;
+  --ink:#2c2620;
+  --rule:rgba(44,38,32,.14);
+  --display:'DM Serif Display','Times New Roman',serif;
+  --brush:'Caveat Brush',cursive;
+  --sans:'Manrope',system-ui,sans-serif;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html,body{background:var(--paper);color:var(--ink);font-family:var(--sans);line-height:1.65;-webkit-font-smoothing:antialiased}
+a{color:inherit;text-decoration:none}
+img{display:block;max-width:100%}
+
+/* ===== NAV ===== */
+.nav{position:sticky;top:0;z-index:50;background:var(--cream);border-bottom:1px solid var(--rule)}
+.nav-inner{max-width:1280px;margin:0 auto;padding:18px 36px;display:flex;align-items:center;justify-content:space-between;gap:24px}
+.brand{display:flex;align-items:center;gap:14px}
+.brand .seal{width:54px;height:54px;border-radius:50%;background:var(--sage);color:var(--cream);display:grid;place-items:center;font-family:var(--display);font-style:italic;font-size:14px;text-align:center;line-height:1.05;padding:6px}
+.brand .name{font-family:var(--display);font-style:italic;font-size:26px;line-height:1}
+.brand .name small{display:block;font-family:var(--sans);font-size:9px;letter-spacing:.32em;text-transform:uppercase;font-weight:600;color:var(--sage-deep);margin-top:4px;font-style:normal}
+.nav ul{list-style:none;display:flex;gap:32px;font-family:var(--sans);font-size:13px;letter-spacing:.16em;text-transform:uppercase;font-weight:600}
+.nav ul a{transition:.2s}
+.nav ul a:hover{color:var(--peach-deep)}
+.nav .cta{font-family:var(--sans);font-size:12px;letter-spacing:.2em;text-transform:uppercase;color:var(--cream);background:var(--sage-deep);padding:12px 22px;border-radius:999px;font-weight:600}
+.nav .cta:hover{background:var(--peach-deep)}
+
+/* ===== HERO ===== */
+.hero{padding:80px 36px 120px;background:var(--cream);position:relative;overflow:hidden}
+.hero::before{
+  content:"";position:absolute;top:-100px;right:-100px;width:500px;height:500px;border-radius:50%;background:var(--sage);opacity:.14;
+}
+.hero::after{
+  content:"";position:absolute;bottom:-80px;left:-80px;width:300px;height:300px;border-radius:50%;background:var(--peach);opacity:.18;
+}
+.hero-inner{max-width:1240px;margin:0 auto;display:grid;grid-template-columns:1.2fr 1fr;gap:70px;align-items:center;position:relative}
+.eyebrow{font-family:var(--brush);font-size:38px;color:var(--peach-deep);line-height:1;margin-bottom:14px}
+h1{font-family:var(--display);font-style:italic;font-weight:400;font-size:clamp(58px,8vw,118px);line-height:.95;letter-spacing:-.02em;margin-bottom:28px}
+h1 .alt{font-style:normal;color:var(--sage-deep)}
+.hero p{font-size:19px;line-height:1.7;max-width:500px;opacity:.85;margin-bottom:36px}
+.hero-actions{display:flex;gap:14px;flex-wrap:wrap}
+.btn{display:inline-flex;align-items:center;gap:10px;padding:15px 26px;font-family:var(--sans);font-size:12px;letter-spacing:.2em;text-transform:uppercase;font-weight:700;border-radius:999px;transition:.2s;border:1.5px solid transparent}
+.btn-primary{background:var(--sage-deep);color:var(--cream)}
+.btn-primary:hover{background:var(--peach-deep)}
+.btn-ghost{border-color:var(--sage-deep);color:var(--sage-deep)}
+.btn-ghost:hover{background:var(--sage-deep);color:var(--cream)}
+
+/* hero polaroid stack */
+.polas{position:relative;height:520px}
+.pola{position:absolute;background:var(--cream);padding:14px 14px 50px;box-shadow:0 18px 40px rgba(44,38,32,.18);border-radius:4px;width:280px}
+.pola .img{aspect-ratio:1;border-radius:2px;display:grid;place-items:center;font-family:var(--display);font-style:italic;color:var(--cream)}
+.pola .cap{position:absolute;bottom:14px;left:0;right:0;text-align:center;font-family:var(--brush);font-size:24px;color:var(--ink);line-height:1}
+.pola.a{top:0;left:0;transform:rotate(-6deg)}
+.pola.a .img{background:linear-gradient(135deg,#c89976,#a8765a);font-size:48px}
+.pola.b{top:60px;right:30px;transform:rotate(5deg);z-index:2}
+.pola.b .img{background:linear-gradient(135deg,#a8c099,#6f8a5e);font-size:48px}
+.pola.c{bottom:0;left:40px;transform:rotate(3deg);z-index:1}
+.pola.c .img{background:linear-gradient(135deg,#f4b58e,#d68455);font-size:48px}
+.pola .pin{position:absolute;top:-8px;left:50%;width:24px;height:24px;border-radius:50%;background:var(--rust);transform:translateX(-50%);box-shadow:0 3px 0 rgba(0,0,0,.15) inset, 0 2px 4px rgba(0,0,0,.2)}
+
+/* ===== BANNER ===== */
+.banner{background:var(--sage-deep);color:var(--cream);padding:22px 36px;text-align:center;font-family:var(--display);font-style:italic;font-size:22px;letter-spacing:-.01em}
+.banner span{margin:0 18px;color:var(--peach);font-family:var(--brush);font-style:normal}
+
+/* ===== MENU — share-table hero ===== */
+.menu{padding:120px 36px;max-width:1280px;margin:0 auto}
+.section-head{margin-bottom:60px;text-align:center}
+.section-head .pre{font-family:var(--brush);font-size:36px;color:var(--peach-deep);margin-bottom:8px;line-height:1}
+.section-head h2{font-family:var(--display);font-weight:400;font-size:clamp(48px,6.5vw,92px);line-height:.95;letter-spacing:-.02em;margin-bottom:14px}
+.section-head h2 em{font-style:italic;color:var(--sage-deep)}
+.section-head .sub{font-family:var(--display);font-style:italic;font-size:20px;opacity:.75;max-width:600px;margin:0 auto}
+
+.share-table{background:var(--butter);border:2px solid var(--ink);border-radius:6px;padding:50px 60px;position:relative;margin-top:30px}
+.share-table::before{
+  content:"";position:absolute;top:-2px;left:50%;transform:translateX(-50%);background:var(--ink);color:var(--cream);padding:8px 30px;font-family:var(--brush);font-size:28px;line-height:1;border-radius:0 0 12px 12px;
+}
+.share-table::after{
+  content:"the share table";position:absolute;top:-2px;left:50%;transform:translateX(-50%);font-family:var(--brush);font-size:28px;color:var(--cream);padding:8px 30px;line-height:1;background:var(--ink);border-radius:0 0 12px 12px;
+}
+.menu-cols{display:grid;grid-template-columns:1fr 1fr;gap:60px;margin-top:40px}
+.menu-col h3{font-family:var(--display);font-style:italic;font-size:36px;color:var(--sage-deep);margin-bottom:6px;line-height:1}
+.menu-col .col-pre{font-family:var(--brush);font-size:22px;color:var(--peach-deep);line-height:1;margin-bottom:6px}
+.menu-col .col-sub{font-family:var(--sans);font-size:11px;letter-spacing:.25em;text-transform:uppercase;font-weight:700;color:var(--sage-shadow);margin-bottom:24px;padding-bottom:18px;border-bottom:2px solid var(--ink)}
+.dish{display:grid;grid-template-columns:1fr auto;gap:18px;padding:18px 0;border-bottom:1px dashed var(--rule);align-items:baseline}
+.dish-name{font-family:var(--display);font-style:italic;font-size:22px;line-height:1.2}
+.dish-name b{font-family:var(--sans);font-size:9px;font-style:normal;font-weight:700;letter-spacing:.2em;text-transform:uppercase;color:var(--sage-deep);background:var(--cream);padding:3px 8px;border-radius:999px;margin-left:8px;vertical-align:middle}
+.dish-name b.gf{color:var(--peach-deep)}
+.dish-price{font-family:var(--display);font-weight:400;font-size:18px;color:var(--rust)}
+.dish-desc{grid-column:1/-1;font-family:var(--sans);font-size:14px;opacity:.65;margin-top:6px;max-width:440px}
+
+.feed-fam{margin-top:60px;background:var(--cream);border:2px dashed var(--sage-deep);border-radius:8px;padding:38px;display:grid;grid-template-columns:auto 1fr auto;gap:30px;align-items:center}
+.feed-fam .label{font-family:var(--brush);font-size:42px;color:var(--peach-deep);line-height:1}
+.feed-fam .body{font-family:var(--display);font-style:italic;font-size:22px;line-height:1.4;max-width:520px}
+.feed-fam .body small{display:block;font-family:var(--sans);font-style:normal;font-size:13px;letter-spacing:.05em;opacity:.65;margin-top:6px}
+.feed-fam .price{font-family:var(--display);font-weight:400;font-size:46px;color:var(--rust);line-height:1}
+.feed-fam .price small{display:block;font-family:var(--sans);font-size:10px;letter-spacing:.25em;text-transform:uppercase;font-weight:700;opacity:.6;margin-top:6px}
+
+/* ===== FAMILY STORY ===== */
+.story{padding:140px 36px;background:var(--sage);color:var(--cream);position:relative;overflow:hidden}
+.story::before,.story::after{content:"";position:absolute;width:200px;height:200px;border-radius:50%;background:var(--cream);opacity:.08}
+.story::before{top:-60px;left:-60px}
+.story::after{bottom:-60px;right:-60px}
+.story-inner{max-width:1000px;margin:0 auto;text-align:center;position:relative}
+.story .pre{font-family:var(--brush);font-size:38px;color:var(--cream);margin-bottom:18px;line-height:1}
+.story h2{font-family:var(--display);font-weight:400;font-size:clamp(34px,4vw,54px);line-height:1.2;letter-spacing:-.01em;max-width:900px;margin:0 auto}
+.story h2 em{font-style:italic;color:var(--butter)}
+.story .sig{margin-top:40px;font-family:var(--brush);font-size:36px;line-height:1}
+.story .sig small{display:block;font-family:var(--sans);font-size:11px;letter-spacing:.3em;text-transform:uppercase;font-weight:600;opacity:.65;margin-top:10px}
+
+/* ===== VALUES ===== */
+.values{padding:120px 36px;max-width:1280px;margin:0 auto;display:grid;grid-template-columns:repeat(4,1fr);gap:50px}
+.value h4{font-family:var(--display);font-style:italic;font-size:30px;color:var(--sage-deep);line-height:1.05;margin-bottom:10px}
+.value .num{font-family:var(--brush);font-size:54px;color:var(--peach-deep);line-height:1;margin-bottom:14px}
+.value p{font-family:var(--sans);font-size:15px;line-height:1.6;opacity:.8}
+
+/* ===== VISIT ===== */
+.visit{background:var(--butter);padding:120px 36px}
+.visit-inner{max-width:1280px;margin:0 auto;display:grid;grid-template-columns:1fr 1fr;gap:80px;align-items:start}
+.visit .pre{font-family:var(--brush);font-size:36px;color:var(--peach-deep);line-height:1;margin-bottom:8px}
+.visit h2{font-family:var(--display);font-weight:400;font-size:clamp(46px,5.5vw,82px);line-height:1;letter-spacing:-.02em;margin-bottom:24px}
+.visit h2 em{font-style:italic;color:var(--sage-deep)}
+.visit .body{font-family:var(--display);font-style:italic;font-size:22px;line-height:1.5;opacity:.85;margin-bottom:32px;max-width:480px}
+.visit .addr{font-family:var(--sans);font-size:15px;line-height:2;border-left:3px solid var(--sage-deep);padding-left:22px;margin-bottom:32px}
+.visit .addr b{font-family:var(--display);font-style:italic;font-weight:400;font-size:22px;letter-spacing:0;display:block;margin-bottom:4px;color:var(--ink)}
+
+.hours{background:var(--cream);border:2px solid var(--ink);border-radius:6px;overflow:hidden}
+.hours h3{font-family:var(--display);font-style:italic;font-weight:400;font-size:30px;padding:24px 32px;background:var(--sage-deep);color:var(--cream)}
+.hours-list{padding:24px 32px}
+.hours-row{display:grid;grid-template-columns:1fr auto;font-family:var(--sans);font-size:14px;padding:14px 0;border-bottom:1px dashed rgba(44,38,32,.18);align-items:center}
+.hours-row:last-child{border:none}
+.hours-row span:first-child{font-family:var(--sans);font-size:13px;letter-spacing:.18em;text-transform:uppercase;font-weight:700}
+.hours-row span:last-child{font-family:var(--display);font-style:italic;font-size:18px}
+
+/* ===== FOOTER ===== */
+footer{background:var(--ink);color:var(--cream);padding:80px 36px 36px}
+.foot-inner{max-width:1280px;margin:0 auto;display:grid;grid-template-columns:2fr 1fr 1fr 1fr;gap:60px;margin-bottom:50px}
+.foot h4{font-family:var(--display);font-style:italic;font-weight:400;font-size:24px;color:var(--peach);margin-bottom:18px;line-height:1}
+.foot ul{list-style:none;display:flex;flex-direction:column;gap:10px;font-family:var(--sans);font-size:14px;opacity:.78}
+.foot ul a:hover{color:var(--peach)}
+.foot-brand p{font-family:var(--display);font-style:italic;font-size:18px;line-height:1.5;opacity:.78;margin-top:18px;max-width:340px}
+.foot-bottom{border-top:1px solid rgba(253,246,232,.1);padding-top:28px;max-width:1280px;margin:0 auto;display:flex;justify-content:space-between;font-family:var(--sans);font-size:11px;letter-spacing:.2em;text-transform:uppercase;opacity:.4;flex-wrap:wrap;gap:14px}
+
+@media (max-width:960px){
+  .nav ul{display:none}
+  .hero-inner,.visit-inner,.foot-inner{grid-template-columns:1fr;gap:48px}
+  .polas{height:380px}
+  .menu-cols{grid-template-columns:1fr;gap:40px}
+  .feed-fam{grid-template-columns:1fr;text-align:center}
+  .values{grid-template-columns:1fr 1fr;gap:40px}
+}
+</style>
+</head>
+<body>
+
+<!-- NAV -->
+<nav class="nav">
+  <div class="nav-inner">
+    <div class="brand">
+      <div class="seal">Gather<br>&amp; Feast</div>
+      <div class="name">Gather &amp; Feast<small>Real Food Cafe · est. 2018</small></div>
+    </div>
+    <ul>
+      <li><a href="#menu">The table</a></li>
+      <li><a href="#story">Family</a></li>
+      <li><a href="#values">Why</a></li>
+      <li><a href="#visit">Visit</a></li>
+    </ul>
+    <a href="#visit" class="cta">Open · From 6am</a>
+  </div>
+</nav>
+
+<!-- HERO -->
+<header class="hero">
+  <div class="hero-inner">
+    <div>
+      <div class="eyebrow">— pull up a chair —</div>
+      <h1>Real food.<br><span class="alt">Real people.</span></h1>
+      <p>A family-run wholefoods cafe on James Street, Caboolture. Long shared table, homemade everything, organic fairtrade coffee, and a menu that quietly looks after vegan, GF, and the kid who only eats beige.</p>
+      <div class="hero-actions">
+        <a href="#menu" class="btn btn-primary">See the menu →</a>
+        <a href="#visit" class="btn btn-ghost">Find us on James</a>
+      </div>
+    </div>
+    <div class="polas">
+      <div class="pola a"><span class="pin"></span><div class="img">🥑</div><div class="cap">Tuesday brunch</div></div>
+      <div class="pola b"><span class="pin"></span><div class="img">🌿</div><div class="cap">Garden bowls</div></div>
+      <div class="pola c"><span class="pin"></span><div class="img">🥞</div><div class="cap">Weekend pancakes</div></div>
+    </div>
+  </div>
+</header>
+
+<!-- BANNER -->
+<div class="banner">Vegan <span>✦</span> Gluten-free friendly <span>✦</span> Kids welcome <span>✦</span> Dog-friendly out front</div>
+
+<!-- MENU -->
+<section class="menu" id="menu">
+  <div class="section-head">
+    <div class="pre">— what's on today —</div>
+    <h2>The <em>share table</em> menu.</h2>
+    <div class="sub">A short, honest menu. Everything is made each morning. Bring a friend and order three things to share — that's what the table is for.</div>
+  </div>
+
+  <div class="share-table">
+    <div class="menu-cols">
+      <div class="menu-col">
+        <div class="col-pre">— from the kitchen —</div>
+        <h3>Plates &amp; bowls</h3>
+        <div class="col-sub">Breakfast all day · Lunch from 11</div>
+        <div class="dish">
+          <div class="dish-name">Smashed avo plate <b class="">Vegan</b></div>
+          <div class="dish-price">$19</div>
+          <div class="dish-desc">Sourdough, smashed avo, lemon, dukkah, soft herbs, pickled radish.</div>
+        </div>
+        <div class="dish">
+          <div class="dish-name">Brekkie bowl <b class="gf">GF</b></div>
+          <div class="dish-price">$22</div>
+          <div class="dish-desc">Quinoa, kale, roast pumpkin, soft egg, hummus, seeds, herb oil.</div>
+        </div>
+        <div class="dish">
+          <div class="dish-name">Pancake stack</div>
+          <div class="dish-price">$21</div>
+          <div class="dish-desc">House buttermilk pancakes, berry compote, vanilla mascarpone, maple.</div>
+        </div>
+        <div class="dish">
+          <div class="dish-name">The Big Family <b>Share</b></div>
+          <div class="dish-price">$48</div>
+          <div class="dish-desc">Eggs, bacon, mushroom, tomato, hash, sourdough, herbs. Feeds two-and-a-half.</div>
+        </div>
+        <div class="dish">
+          <div class="dish-name">Halloumi burger</div>
+          <div class="dish-price">$24</div>
+          <div class="dish-desc">Grilled halloumi, slaw, beetroot relish, lemon mayo, milk bun, side of chips.</div>
+        </div>
+      </div>
+      <div class="menu-col">
+        <div class="col-pre">— from the bench —</div>
+        <h3>Sweets &amp; bench</h3>
+        <div class="col-sub">Baked daily by mum · Til they're gone</div>
+        <div class="dish">
+          <div class="dish-name">Banana bread</div>
+          <div class="dish-price">$7</div>
+          <div class="dish-desc">Warm slice, cinnamon butter, sea salt. Toasted or as-is.</div>
+        </div>
+        <div class="dish">
+          <div class="dish-name">Loaded brownie <b class="gf">GF</b></div>
+          <div class="dish-price">$8</div>
+          <div class="dish-desc">Dark chocolate, walnut, sea salt. Made every Tuesday and Friday.</div>
+        </div>
+        <div class="dish">
+          <div class="dish-name">Carrot cake slice</div>
+          <div class="dish-price">$8</div>
+          <div class="dish-desc">Three-layer, cream cheese frosting, candied walnut. The whole-cake favourite.</div>
+        </div>
+        <div class="dish">
+          <div class="dish-name">Bircher jar <b>Vegan</b></div>
+          <div class="dish-price">$11</div>
+          <div class="dish-desc">Oats, almond milk, vanilla, seasonal fruit, toasted coconut. Grab-and-go.</div>
+        </div>
+        <div class="dish">
+          <div class="dish-name">Whole cakes · pre-order</div>
+          <div class="dish-price">$65</div>
+          <div class="dish-desc">24-hour notice. Birthday, Sunday lunch, "just because". Just ask Mel.</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="feed-fam">
+      <div class="label">Feed the family</div>
+      <div class="body">A whole share-table for four. Two bowls, a sweet, a coffee, a babycino. Walk in, eat in, get on with the weekend.<small>Available Sat &amp; Sun, 8am til 11am · Book ahead</small></div>
+      <div class="price">$95<small>For 4</small></div>
+    </div>
+  </div>
+</section>
+
+<!-- STORY -->
+<section class="story" id="story">
+  <div class="story-inner">
+    <div class="pre">— our why —</div>
+    <h2>"We started Gather &amp; Feast because <em>Caboolture deserved a real food cafe</em> — somewhere mum can sit with her coffee, the kids get fed something proper, and you don't need a translator to understand the menu."</h2>
+    <div class="sig">Mel &amp; the crew<small>James Street · Caboolture · est. 2018</small></div>
+  </div>
+</section>
+
+<!-- VALUES -->
+<section class="values" id="values">
+  <div class="value">
+    <div class="num">01</div>
+    <h4>Made here</h4>
+    <p>Everything baked, dressed, pickled and poured in our tiny kitchen each morning.</p>
+  </div>
+  <div class="value">
+    <div class="num">02</div>
+    <h4>Fairtrade</h4>
+    <p>Organic, fairtrade coffee. Wholesalers we know by first name. Suppliers we visit, not just call.</p>
+  </div>
+  <div class="value">
+    <div class="num">03</div>
+    <h4>Family-built</h4>
+    <p>Run by Mel + the family + the locals who fold into the team. Bring your kids — we have crayons.</p>
+  </div>
+  <div class="value">
+    <div class="num">04</div>
+    <h4>Real choice</h4>
+    <p>Vegan, vegetarian, gluten-free aren't an afterthought — they're built into the menu, not bolted on.</p>
+  </div>
+</section>
+
+<!-- VISIT -->
+<section class="visit" id="visit">
+  <div class="visit-inner">
+    <div>
+      <div class="pre">— come down —</div>
+      <h2>7 James<br><em>Street.</em></h2>
+      <div class="body">A short stroll from the train station, opposite the park. Outdoor tables for the dog, inside for the wind, share table out the back when there's a crew.</div>
+      <div class="addr">
+        <b>Gather &amp; Feast Cafe</b>
+        7 James Street<br>
+        Caboolture QLD 4510<br>
+        (07) 5432 3876<br>
+        gatherandfeasttruck@gmail.com
+      </div>
+      <a href="#" class="btn btn-primary">Book the share table →</a>
+    </div>
+    <div class="hours">
+      <h3>Trading hours</h3>
+      <div class="hours-list">
+        <div class="hours-row"><span>Mon — Fri</span><span>6:00am — 2:00pm</span></div>
+        <div class="hours-row"><span>Saturday</span><span>7:00am — 1:00pm</span></div>
+        <div class="hours-row"><span>Sunday</span><span>7:00am — 12:00pm</span></div>
+        <div class="hours-row"><span>Kitchen</span><span>Til 1:30pm</span></div>
+        <div class="hours-row"><span>Whole cakes</span><span>24hr notice</span></div>
+        <div class="hours-row"><span>Public hols</span><span>Check the 'gram</span></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="foot-inner">
+    <div class="foot-brand foot">
+      <div class="brand">
+        <div class="seal">Gather<br>&amp; Feast</div>
+        <div class="name" style="color:var(--cream)">Gather &amp; Feast<small style="color:var(--peach)">Real Food Cafe</small></div>
+      </div>
+      <p>A small family-run wholefoods cafe on James Street, Caboolture.</p>
+    </div>
+    <div class="foot">
+      <h4>Visit</h4>
+      <ul>
+        <li>7 James Street</li>
+        <li>Caboolture QLD 4510</li>
+        <li>From 6am, weekdays</li>
+      </ul>
+    </div>
+    <div class="foot">
+      <h4>Eat</h4>
+      <ul>
+        <li>Brunch til 2</li>
+        <li>Cakes pre-order</li>
+        <li>Family share table</li>
+      </ul>
+    </div>
+    <div class="foot">
+      <h4>Follow</h4>
+      <ul>
+        <li>Facebook</li>
+        <li>Instagram</li>
+        <li>(07) 5432 3876</li>
+      </ul>
+    </div>
+  </div>
+  <div class="foot-bottom">
+    <span>© Gather &amp; Feast Cafe · Caboolture QLD</span>
+    <span>Concept mockup · Degree In A Week</span>
+  </div>
+</footer>
+
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"CafeOrCoffeeShop","name":"Gather & Feast","address":{"@type":"PostalAddress","streetAddress":"7 James Street","addressLocality":"Caboolture","addressRegion":"QLD","postalCode":"4510","addressCountry":"AU"},"telephone":"+61754323876","openingHours":["Mo-Fr 06:00-14:00","Sa 07:00-13:00","Su 07:00-12:00"]}
+</script>
+
+</body>
+</html>

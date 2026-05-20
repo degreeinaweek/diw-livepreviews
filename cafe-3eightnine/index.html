@@ -1,0 +1,383 @@
+<!doctype html>
+<html lang="en-AU">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Cafe 3EightNine — Scarborough beachfront</title>
+<meta name="description" content="A beachfront cafe on Landsborough Avenue, Scarborough. All-day breakfast, USA pork ribs, Angus beef. Open daily 6am.">
+<meta name="robots" content="noindex,nofollow">
+<link rel="icon" href="data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'><rect width='64' height='64' fill='%231a1f24'/><text x='50%' y='60%' font-family='Space Grotesk,sans-serif' font-weight='700' font-size='22' fill='%23f4c533' text-anchor='middle'>389</text></svg>">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Spectral:ital,wght@0,400;0,500;1,400;1,500;1,700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+<style>
+:root{
+  --slate:#1a1f24;
+  --slate-2:#252c33;
+  --concrete:#3a4148;
+  --paper:#f1ece2;
+  --paper-2:#e8e2d4;
+  --sun:#f4c533;
+  --sun-deep:#c89e1a;
+  --rust:#c4582a;
+  --sea:#5a8294;
+  --ink:#0f1216;
+  --rule:rgba(26,31,36,.16);
+  --display:'Space Grotesk',system-ui,sans-serif;
+  --serif:'Spectral',Georgia,serif;
+  --sans:'Inter',system-ui,sans-serif;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html,body{background:var(--paper);color:var(--slate);font-family:var(--sans);line-height:1.6;-webkit-font-smoothing:antialiased}
+a{color:inherit;text-decoration:none}
+img{display:block;max-width:100%}
+
+.nav{position:sticky;top:0;z-index:50;background:var(--paper);border-bottom:1px solid var(--rule)}
+.nav-inner{max-width:1320px;margin:0 auto;padding:18px 36px;display:flex;align-items:center;justify-content:space-between;gap:24px}
+.brand{display:flex;align-items:center;gap:14px}
+.brand .num{background:var(--slate);color:var(--sun);padding:8px 14px;font-family:var(--display);font-weight:700;font-size:18px;letter-spacing:-.02em}
+.brand-name{font-family:var(--display);font-weight:700;font-size:22px;letter-spacing:-.02em;color:var(--slate);line-height:1}
+.brand-name small{display:block;font-family:var(--sans);font-size:9px;letter-spacing:.32em;text-transform:uppercase;font-weight:600;color:var(--concrete);margin-top:5px}
+.nav ul{list-style:none;display:flex;gap:32px;font-family:var(--display);font-size:13px;letter-spacing:.18em;text-transform:uppercase;font-weight:500;color:var(--slate)}
+.nav ul a:hover{color:var(--rust)}
+.nav .cta{font-family:var(--display);font-size:12px;letter-spacing:.2em;text-transform:uppercase;color:var(--slate);background:var(--sun);padding:11px 22px;font-weight:600}
+
+/* HERO — full bleed with number lockup */
+.hero{background:var(--slate);color:var(--paper);padding:80px 36px 100px;position:relative;overflow:hidden}
+.hero::before{
+  content:"389";position:absolute;top:50%;right:-60px;transform:translateY(-50%);
+  font-family:var(--display);font-weight:700;font-size:clamp(360px,42vw,560px);
+  line-height:.85;letter-spacing:-.05em;color:rgba(244,197,51,.07);pointer-events:none;user-select:none;
+}
+.hero-inner{max-width:1320px;margin:0 auto;display:grid;grid-template-columns:1.4fr 1fr;gap:80px;align-items:end;position:relative}
+.tag-row{display:flex;gap:14px;flex-wrap:wrap;margin-bottom:36px;font-family:var(--display);font-size:11px;letter-spacing:.3em;text-transform:uppercase;font-weight:500}
+.tag{padding:7px 14px;border:1px solid rgba(241,236,226,.35);color:var(--sun)}
+.tag.solid{background:var(--sun);color:var(--slate);border-color:var(--sun)}
+h1{font-family:var(--display);font-weight:700;font-size:clamp(72px,9.5vw,148px);line-height:.88;letter-spacing:-.04em;margin-bottom:32px;color:var(--paper)}
+h1 em{font-family:var(--serif);font-style:italic;font-weight:500;letter-spacing:-.02em;color:var(--sun);display:block}
+.hero p{font-family:var(--serif);font-size:22px;line-height:1.5;max-width:520px;color:var(--paper);opacity:.78;margin-bottom:38px}
+.hero-actions{display:flex;gap:14px;flex-wrap:wrap}
+.btn{display:inline-flex;align-items:center;gap:10px;padding:15px 28px;font-family:var(--display);font-size:12px;letter-spacing:.22em;text-transform:uppercase;font-weight:600;border:1px solid transparent;transition:.2s}
+.btn-primary{background:var(--sun);color:var(--slate)}
+.btn-primary:hover{background:var(--paper)}
+.btn-ghost{border-color:var(--paper);color:var(--paper)}
+.btn-ghost:hover{background:var(--paper);color:var(--slate)}
+
+/* hero meta card */
+.meta-card{background:var(--paper);color:var(--slate);padding:32px 30px;font-family:var(--display);position:relative}
+.meta-card .label{font-size:10px;letter-spacing:.35em;text-transform:uppercase;font-weight:600;color:var(--rust);margin-bottom:14px}
+.meta-card .pre{font-family:var(--serif);font-style:italic;font-size:18px;color:var(--concrete);margin-bottom:14px;line-height:1.4}
+.meta-card .row{display:grid;grid-template-columns:90px 1fr;gap:14px;padding:11px 0;border-top:1px solid var(--rule);font-size:12px;letter-spacing:.05em;align-items:baseline}
+.meta-card .row:first-of-type{border:none}
+.meta-card .row b{font-size:10px;letter-spacing:.25em;text-transform:uppercase;font-weight:700;color:var(--rust)}
+.meta-card .row span{font-family:var(--serif);font-style:italic;font-size:18px;font-weight:500}
+.meta-card::before{content:"";position:absolute;top:-10px;left:30px;background:var(--rust);color:var(--paper);padding:5px 14px;font-size:10px;letter-spacing:.3em;text-transform:uppercase;font-weight:700}
+.meta-card::after{content:"OPEN · 6AM";position:absolute;top:-10px;left:30px;color:var(--paper);padding:5px 14px;font-family:var(--display);font-size:10px;letter-spacing:.3em;text-transform:uppercase;font-weight:700;background:var(--rust)}
+
+/* horizon strip */
+.strip{background:var(--paper-2);padding:0;border-top:1px solid var(--slate);border-bottom:1px solid var(--slate)}
+.strip-inner{max-width:1320px;margin:0 auto;display:grid;grid-template-columns:repeat(5,1fr)}
+.strip-cell{padding:24px 30px;border-right:1px solid var(--rule)}
+.strip-cell:last-child{border-right:none}
+.strip-cell b{display:block;font-family:var(--display);font-weight:700;font-size:11px;letter-spacing:.3em;text-transform:uppercase;color:var(--rust);margin-bottom:6px}
+.strip-cell span{font-family:var(--serif);font-style:italic;font-size:20px;line-height:1.2;color:var(--slate)}
+
+/* MENU — gridded */
+.menu{padding:130px 36px;max-width:1320px;margin:0 auto}
+.section-head{display:grid;grid-template-columns:1fr 1fr;gap:60px;margin-bottom:60px;align-items:end;padding-bottom:32px;border-bottom:2px solid var(--slate)}
+.section-head h2{font-family:var(--display);font-weight:700;font-size:clamp(60px,8vw,128px);line-height:.85;letter-spacing:-.04em;color:var(--slate)}
+.section-head h2 em{font-family:var(--serif);font-style:italic;font-weight:500;color:var(--rust);display:block}
+.section-head .meta{font-family:var(--serif);font-style:italic;font-size:19px;color:var(--concrete);max-width:420px;line-height:1.5}
+
+.menu-grid{display:grid;grid-template-columns:repeat(12,1fr);gap:0;border:1px solid var(--slate)}
+.mcol{padding:36px 30px;border-right:1px solid var(--slate);border-bottom:1px solid var(--slate);background:var(--paper)}
+.mcol-head{grid-column:span 4;background:var(--slate);color:var(--paper);padding:50px 32px;border-bottom:1px solid var(--slate)}
+.mcol-head .num{font-family:var(--display);font-weight:700;font-size:64px;line-height:1;color:var(--sun);letter-spacing:-.04em;margin-bottom:6px}
+.mcol-head h3{font-family:var(--display);font-weight:700;font-size:28px;letter-spacing:-.02em;margin-bottom:6px}
+.mcol-head .sub{font-family:var(--serif);font-style:italic;font-size:16px;opacity:.7}
+
+.mcol{grid-column:span 4}
+.mcol h4{font-family:var(--display);font-weight:600;font-size:12px;letter-spacing:.3em;text-transform:uppercase;color:var(--rust);margin-bottom:18px}
+.dish{display:grid;grid-template-columns:1fr auto;gap:14px;padding:14px 0;border-bottom:1px dashed var(--rule);align-items:baseline}
+.dish:last-of-type{border:none}
+.dish-name{font-family:var(--serif);font-weight:500;font-size:20px;color:var(--slate)}
+.dish-name b{font-family:var(--display);font-size:9px;font-weight:700;letter-spacing:.2em;text-transform:uppercase;color:var(--rust);margin-left:8px;vertical-align:middle}
+.dish-price{font-family:var(--display);font-weight:700;font-size:17px;color:var(--rust)}
+.dish-desc{grid-column:1/-1;font-family:var(--sans);font-size:13px;color:var(--concrete);margin-top:4px;line-height:1.55}
+
+/* GRILL */
+.grill{background:var(--slate);color:var(--paper);padding:120px 36px;position:relative;overflow:hidden}
+.grill::before{
+  content:"";position:absolute;inset:0;background:
+    radial-gradient(circle at 100% 50%,rgba(196,88,42,.22),transparent 50%),
+    repeating-linear-gradient(0deg,transparent 0 60px,rgba(241,236,226,.025) 60px 61px);
+}
+.grill-inner{max-width:1320px;margin:0 auto;display:grid;grid-template-columns:1fr 1.4fr;gap:80px;align-items:center;position:relative}
+.grill .pre{font-family:var(--display);font-size:11px;letter-spacing:.35em;text-transform:uppercase;font-weight:600;color:var(--sun);margin-bottom:12px}
+.grill h2{font-family:var(--display);font-weight:700;font-size:clamp(54px,6.5vw,108px);line-height:.88;letter-spacing:-.03em;color:var(--paper);margin-bottom:24px}
+.grill h2 em{font-family:var(--serif);font-style:italic;font-weight:500;color:var(--sun);display:block}
+.grill p{font-family:var(--serif);font-style:italic;font-size:20px;line-height:1.55;color:var(--paper);opacity:.82;margin-bottom:28px;max-width:420px}
+
+.grill-list{display:grid;gap:0}
+.grill-row{display:grid;grid-template-columns:auto 1fr auto;gap:30px;padding:30px 0;border-top:1px solid rgba(241,236,226,.16);align-items:baseline}
+.grill-row:first-child{border:none}
+.grill-row .n{font-family:var(--display);font-weight:700;font-size:38px;line-height:1;letter-spacing:-.03em;color:var(--rust)}
+.grill-row .body{}
+.grill-row .body b{display:block;font-family:var(--serif);font-style:italic;font-weight:500;font-size:26px;color:var(--paper);margin-bottom:6px}
+.grill-row .body span{font-family:var(--sans);font-size:14px;color:var(--paper);opacity:.7;line-height:1.5}
+.grill-row .p{font-family:var(--display);font-weight:700;font-size:24px;color:var(--sun);letter-spacing:-.02em}
+
+/* STORY */
+.story{padding:140px 36px;background:var(--paper-2);position:relative}
+.story-inner{max-width:1100px;margin:0 auto;text-align:center}
+.story .pre{font-family:var(--display);font-size:11px;letter-spacing:.35em;text-transform:uppercase;font-weight:600;color:var(--rust);margin-bottom:18px}
+.story h2{font-family:var(--serif);font-style:italic;font-weight:500;font-size:clamp(34px,4.5vw,58px);line-height:1.2;color:var(--slate);max-width:960px;margin:0 auto;letter-spacing:-.01em}
+.story h2 em{color:var(--rust);font-weight:700}
+.story .sig{margin-top:38px;font-family:var(--display);font-size:12px;letter-spacing:.3em;text-transform:uppercase;font-weight:600;color:var(--rust)}
+.story .sig small{display:block;font-family:var(--serif);font-style:italic;font-size:18px;font-weight:500;letter-spacing:0;text-transform:none;color:var(--concrete);margin-top:8px;opacity:.85}
+
+/* VISIT */
+.visit{padding:130px 36px;max-width:1320px;margin:0 auto;display:grid;grid-template-columns:1fr 1fr;gap:80px;align-items:start}
+.visit .pre{font-family:var(--display);font-size:11px;letter-spacing:.35em;text-transform:uppercase;font-weight:600;color:var(--rust);margin-bottom:12px}
+.visit h2{font-family:var(--display);font-weight:700;font-size:clamp(54px,6.5vw,108px);line-height:.88;letter-spacing:-.04em;color:var(--slate);margin-bottom:24px}
+.visit h2 em{font-family:var(--serif);font-style:italic;font-weight:500;color:var(--rust);display:block}
+.visit .body{font-family:var(--serif);font-style:italic;font-size:22px;line-height:1.55;color:var(--concrete);margin-bottom:32px;max-width:480px}
+.visit .addr{font-family:var(--sans);font-size:15px;line-height:2;border-left:3px solid var(--sun);padding-left:22px;margin-bottom:32px}
+.visit .addr b{font-family:var(--display);font-weight:700;font-size:22px;letter-spacing:-.01em;display:block;margin-bottom:4px;color:var(--slate)}
+
+.hours{background:var(--slate);color:var(--paper);border:1px solid var(--slate)}
+.hours h3{font-family:var(--display);font-weight:700;font-size:22px;padding:24px 32px;background:var(--sun);color:var(--slate);letter-spacing:-.01em}
+.hours-list{padding:24px 32px}
+.hours-row{display:grid;grid-template-columns:1fr auto;font-family:var(--sans);font-size:14px;padding:14px 0;border-bottom:1px dashed rgba(241,236,226,.16);align-items:center}
+.hours-row:last-child{border:none}
+.hours-row span:first-child{font-family:var(--display);font-size:12px;letter-spacing:.22em;text-transform:uppercase;font-weight:600}
+.hours-row span:last-child{font-family:var(--serif);font-style:italic;font-size:18px;color:var(--sun)}
+
+footer{background:var(--ink);color:var(--paper);padding:80px 36px 36px}
+.foot-inner{max-width:1320px;margin:0 auto;display:grid;grid-template-columns:2fr 1fr 1fr 1fr;gap:60px;margin-bottom:50px}
+.foot h4{font-family:var(--display);font-weight:700;font-size:13px;letter-spacing:.3em;text-transform:uppercase;color:var(--sun);margin-bottom:18px}
+.foot ul{list-style:none;display:flex;flex-direction:column;gap:10px;font-family:var(--sans);font-size:14px;opacity:.78}
+.foot-brand p{font-family:var(--serif);font-style:italic;font-size:18px;line-height:1.5;opacity:.7;margin-top:18px;max-width:340px}
+.foot-bottom{border-top:1px solid rgba(241,236,226,.1);padding-top:28px;max-width:1320px;margin:0 auto;display:flex;justify-content:space-between;font-family:var(--display);font-size:10px;letter-spacing:.3em;text-transform:uppercase;opacity:.4;flex-wrap:wrap;gap:14px}
+
+@media (max-width:960px){
+  .nav ul{display:none}
+  .hero-inner,.visit,.foot-inner,.grill-inner,.section-head{grid-template-columns:1fr;gap:48px}
+  .mcol-head,.mcol{grid-column:span 12}
+  .strip-inner{grid-template-columns:1fr 1fr}
+  h1{font-size:64px}
+}
+</style>
+</head>
+<body>
+
+<nav class="nav">
+  <div class="nav-inner">
+    <div class="brand">
+      <div class="num">389</div>
+      <div class="brand-name">3EightNine<small>Scarborough beachfront</small></div>
+    </div>
+    <ul>
+      <li><a href="#menu">Menu</a></li>
+      <li><a href="#grill">Grill</a></li>
+      <li><a href="#story">Why 389</a></li>
+      <li><a href="#visit">Visit</a></li>
+    </ul>
+    <a href="#visit" class="cta">Open 6 — 4</a>
+  </div>
+</nav>
+
+<header class="hero">
+  <div class="hero-inner">
+    <div>
+      <div class="tag-row">
+        <span class="tag">Scarborough</span><span class="tag solid">Beachfront</span><span class="tag">Open daily 6am</span>
+      </div>
+      <h1>89 Landsborough.<em>All day.</em></h1>
+      <p>A beachfront cafe across the road from the bay. Gourmet all-day breakfast, USA pork ribs, Angus beef from the grill. Open six til four, seven days. Open the wide doors when the sun's out.</p>
+      <div class="hero-actions">
+        <a href="#menu" class="btn btn-primary">See the all-day menu →</a>
+        <a href="#visit" class="btn btn-ghost">Find us</a>
+      </div>
+    </div>
+    <div class="meta-card">
+      <div class="label">Today on the bench</div>
+      <div class="pre">"Smoked beef brisket roll, on til it's gone. Slow-cooked sixteen hours. House BBQ. Slaw."</div>
+      <div class="row"><b>Special</b><span>$18 til 2pm</span></div>
+      <div class="row"><b>From grill</b><span>USA pork ribs · Angus sirloin</span></div>
+      <div class="row"><b>Coffee</b><span>Local roast, on tap</span></div>
+      <div class="row"><b>Wine</b><span>Six glasses, six bottles</span></div>
+    </div>
+  </div>
+</header>
+
+<div class="strip">
+  <div class="strip-inner">
+    <div class="strip-cell"><b>Hours</b><span>6 til 4, every day</span></div>
+    <div class="strip-cell"><b>Style</b><span>Funky-chic, all-day</span></div>
+    <div class="strip-cell"><b>Best</b><span>Eggs benny, pork ribs</span></div>
+    <div class="strip-cell"><b>Drinks</b><span>Coffee · wine · cold drip</span></div>
+    <div class="strip-cell"><b>To bay</b><span>30 second walk</span></div>
+  </div>
+</div>
+
+<section class="menu" id="menu">
+  <div class="section-head">
+    <h2>The all-day<em>menu.</em></h2>
+    <div class="meta">— Breakfast, lunch, breakfast-for-lunch. No artificial cut-offs. Kitchen runs til 3:30, espresso til 4.</div>
+  </div>
+
+  <div class="menu-grid">
+    <div class="mcol-head">
+      <div class="num">01</div>
+      <h3>Breakfast</h3>
+      <div class="sub">All day. No 11am cliff.</div>
+    </div>
+    <div class="mcol">
+      <h4>From the bench</h4>
+      <div class="dish"><div class="dish-name">Eggs benedict <b>Best</b></div><div class="dish-price">$22</div><div class="dish-desc">Bacon or smoked salmon, sourdough, soft poached, hollandaise made each morning.</div></div>
+      <div class="dish"><div class="dish-name">Waffle stack</div><div class="dish-price">$21</div><div class="dish-desc">Buttermilk waffles, berry compote, vanilla mascarpone, maple.</div></div>
+      <div class="dish"><div class="dish-name">Banana bread</div><div class="dish-price">$11</div><div class="dish-desc">Thick slice, brown butter, sea salt. Toasted or grilled.</div></div>
+    </div>
+    <div class="mcol" style="border-right:none">
+      <h4>From the pan</h4>
+      <div class="dish"><div class="dish-name">Big breakfast</div><div class="dish-price">$28</div><div class="dish-desc">Eggs, bacon, sausage, mushroom, tomato, hash, sourdough. Built to last.</div></div>
+      <div class="dish"><div class="dish-name">Breakfast burger</div><div class="dish-price">$19</div><div class="dish-desc">Bacon, fried egg, cheese, hash, BBQ, milk bun. On Turkish if you ask.</div></div>
+      <div class="dish"><div class="dish-name">Avo on sourdough <b>Veg</b></div><div class="dish-price">$18</div><div class="dish-desc">Smashed avo, feta, lemon, dukkah, soft egg. Sourdough cut thick.</div></div>
+    </div>
+
+    <div class="mcol-head">
+      <div class="num">02</div>
+      <h3>Lunch</h3>
+      <div class="sub">From 11am, off the same kitchen.</div>
+    </div>
+    <div class="mcol">
+      <h4>Open &amp; sharp</h4>
+      <div class="dish"><div class="dish-name">Steak open grill <b>Beef</b></div><div class="dish-price">$28</div><div class="dish-desc">Angus sirloin, charred onion, mustard cream, watercress, sourdough.</div></div>
+      <div class="dish"><div class="dish-name">Caesar with prawns</div><div class="dish-price">$26</div><div class="dish-desc">Cos, anchovy, parmesan, sourdough crouton, soft poached, garlic prawns.</div></div>
+      <div class="dish"><div class="dish-name">Garden burger</div><div class="dish-price">$22</div><div class="dish-desc">Halloumi, beetroot, slaw, lemon mayo, milk bun, hand-cut chips.</div></div>
+    </div>
+    <div class="mcol" style="border-right:none">
+      <h4>From the wood</h4>
+      <div class="dish"><div class="dish-name">USA pork ribs <b>House</b></div><div class="dish-price">$34</div><div class="dish-desc">Half-rack, slow-smoked, house BBQ glaze, slaw, fries. Built for two-handed eating.</div></div>
+      <div class="dish"><div class="dish-name">Fish of the day</div><div class="dish-price">M.P.</div><div class="dish-desc">Whatever's been pulled this morning. Always grilled, always lemon, always herbs.</div></div>
+      <div class="dish"><div class="dish-name">Charred broc</div><div class="dish-price">$16</div><div class="dish-desc">Wood-fired broccolini, chilli, garlic crumb. Side or share.</div></div>
+    </div>
+  </div>
+</section>
+
+<section class="grill" id="grill">
+  <div class="grill-inner">
+    <div>
+      <div class="pre">— from the wood —</div>
+      <h2>The grill<em>menu.</em></h2>
+      <p>USA pork ribs and Angus beef are the reason you book a 1:30 table. Slow-cooked, fire-finished, served on a board.</p>
+      <a href="#visit" class="btn btn-primary">Book the grill table →</a>
+    </div>
+    <div class="grill-list">
+      <div class="grill-row">
+        <div class="n">01</div>
+        <div class="body"><b>USA pork ribs · half</b><span>Slow-smoked 14 hours. House BBQ. Slaw, fries. The dish locals fight over.</span></div>
+        <div class="p">$34</div>
+      </div>
+      <div class="grill-row">
+        <div class="n">02</div>
+        <div class="body"><b>USA pork ribs · full</b><span>Same ribs, full rack. Shared between two or kept selfishly to yourself.</span></div>
+        <div class="p">$58</div>
+      </div>
+      <div class="grill-row">
+        <div class="n">03</div>
+        <div class="body"><b>Angus sirloin · 300g</b><span>Wood-fired, char marks, bone marrow butter, rocket, fries, lemon.</span></div>
+        <div class="p">$42</div>
+      </div>
+      <div class="grill-row">
+        <div class="n">04</div>
+        <div class="body"><b>Surf &amp; grill</b><span>250g sirloin, garlic prawns, lemon, fries. The honest plate.</span></div>
+        <div class="p">$48</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="story" id="story">
+  <div class="story-inner">
+    <div class="pre">— Why 389 —</div>
+    <h2>"We named the cafe after the door number. 89 Landsborough. The 3 is the shop. <em>The address is everything we care about</em> — a corner across from the bay, doors that fold open, food that doesn't apologise for itself."</h2>
+    <div class="sig">— Cafe 3EightNine team<small>89 Landsborough Avenue · Scarborough</small></div>
+  </div>
+</section>
+
+<section class="visit" id="visit">
+  <div>
+    <div class="pre">— Across from the bay —</div>
+    <h2>89 Landsborough,<em>Scarborough.</em></h2>
+    <div class="body">Two hundred metres from the foreshore. Big windows, fold-out doors, indoor and outdoor tables. Free parking on the avenue. Dog-friendly out front.</div>
+    <div class="addr">
+      <b>Cafe 3EightNine</b>
+      Shop 3, 89 Landsborough Avenue<br>
+      Scarborough QLD 4020<br>
+      (07) 3880 4770
+    </div>
+    <a href="#" class="btn btn-primary">Book a table →</a>
+  </div>
+  <div class="hours">
+    <h3>Trading hours</h3>
+    <div class="hours-list">
+      <div class="hours-row"><span>Daily</span><span>6:00am — 4:00pm</span></div>
+      <div class="hours-row"><span>Breakfast</span><span>All day</span></div>
+      <div class="hours-row"><span>Lunch &amp; grill</span><span>From 11am</span></div>
+      <div class="hours-row"><span>Kitchen closes</span><span>3:30pm</span></div>
+      <div class="hours-row"><span>Coffee bar</span><span>Til close</span></div>
+      <div class="hours-row"><span>Bookings</span><span>Lunch &amp; weekends</span></div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="foot-inner">
+    <div class="foot-brand foot">
+      <div class="brand">
+        <div class="num">389</div>
+        <div class="brand-name" style="color:var(--paper)">3EightNine<small style="color:var(--sun)">Scarborough beachfront</small></div>
+      </div>
+      <p>A beachfront cafe at 89 Landsborough Avenue, Scarborough. Funky chic, all-day, doors open.</p>
+    </div>
+    <div class="foot">
+      <h4>Visit</h4>
+      <ul>
+        <li>Shop 3, 89 Landsborough Ave</li>
+        <li>Scarborough QLD 4020</li>
+        <li>(07) 3880 4770</li>
+      </ul>
+    </div>
+    <div class="foot">
+      <h4>Eat</h4>
+      <ul>
+        <li>All-day breakfast</li>
+        <li>USA pork ribs</li>
+        <li>Angus grill</li>
+      </ul>
+    </div>
+    <div class="foot">
+      <h4>Follow</h4>
+      <ul>
+        <li>@cafe389scarborough</li>
+        <li>Facebook</li>
+        <li>Book a table</li>
+      </ul>
+    </div>
+  </div>
+  <div class="foot-bottom">
+    <span>© Cafe 3EightNine · Scarborough QLD</span>
+    <span>Concept mockup · Degree In A Week</span>
+  </div>
+</footer>
+
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"CafeOrCoffeeShop","name":"Cafe 3EightNine","address":{"@type":"PostalAddress","streetAddress":"Shop 3, 89 Landsborough Avenue","addressLocality":"Scarborough","addressRegion":"QLD","postalCode":"4020","addressCountry":"AU"},"telephone":"+61738804770","openingHours":["Mo-Su 06:00-16:00"]}
+</script>
+
+</body>
+</html>

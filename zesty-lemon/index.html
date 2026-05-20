@@ -1,0 +1,335 @@
+<!doctype html>
+<html lang="en-AU">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Zesty Lemon Cafe — Deception Bay</title>
+<meta name="description" content="Brunch, signature burgers, beach-side coffee on Bayview Terrace. Steps from the water in Deception Bay.">
+<meta name="robots" content="noindex,nofollow">
+<link rel="icon" href="data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'><circle cx='32' cy='32' r='28' fill='%23f4d840'/><text x='50%' y='62%' font-family='Bricolage Grotesque,sans-serif' font-size='34' fill='%231a3b6b' font-weight='800' text-anchor='middle'>z</text></svg>">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,400;12..96,600;12..96,800&family=Tinos:ital,wght@1,400;1,700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+<style>
+:root{
+  --lemon:#f4d840;
+  --lemon-deep:#d4b220;
+  --zest:#a4b834;
+  --cobalt:#1a3b6b;
+  --cobalt-deep:#0e2548;
+  --tomato:#e75c3c;
+  --white:#fffdf6;
+  --cream:#fbf6e3;
+  --ink:#1a1814;
+  --rule:rgba(26,24,20,.14);
+  --display:'Bricolage Grotesque',system-ui,sans-serif;
+  --serif:'Tinos','Times New Roman',serif;
+  --sans:'Inter',system-ui,sans-serif;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html,body{background:var(--white);color:var(--ink);font-family:var(--sans);line-height:1.6;-webkit-font-smoothing:antialiased}
+a{color:inherit;text-decoration:none}
+img{display:block;max-width:100%}
+
+.nav{position:sticky;top:0;z-index:50;background:var(--white);border-bottom:1px solid var(--rule)}
+.nav-inner{max-width:1280px;margin:0 auto;padding:18px 36px;display:flex;align-items:center;justify-content:space-between;gap:24px}
+.brand{display:flex;align-items:center;gap:14px;font-family:var(--display);font-weight:800;font-size:28px;letter-spacing:-.02em;color:var(--cobalt)}
+.brand .lemon{width:42px;height:42px;background:var(--lemon);border-radius:50%;display:grid;place-items:center;font-size:20px;font-weight:800;color:var(--cobalt);font-style:italic}
+.nav ul{list-style:none;display:flex;gap:32px;font-family:var(--sans);font-size:13px;letter-spacing:.16em;text-transform:uppercase;font-weight:600;color:var(--cobalt)}
+.nav ul a:hover{color:var(--tomato)}
+.nav .cta{font-family:var(--sans);font-size:12px;letter-spacing:.2em;text-transform:uppercase;color:var(--cobalt);background:var(--lemon);padding:11px 22px;border-radius:999px;font-weight:700}
+
+.hero{background:linear-gradient(180deg,var(--lemon) 0%,var(--lemon) 55%,var(--white) 55%,var(--white) 100%);padding:80px 36px 0;position:relative;overflow:hidden}
+.hero-inner{max-width:1280px;margin:0 auto;position:relative}
+.eyebrow{font-family:var(--serif);font-style:italic;font-size:22px;color:var(--cobalt);margin-bottom:14px}
+h1{font-family:var(--display);font-weight:800;font-size:clamp(72px,11vw,180px);line-height:.85;letter-spacing:-.04em;color:var(--cobalt);max-width:1100px;margin-bottom:36px}
+h1 em{font-family:var(--serif);font-style:italic;font-weight:700;color:var(--tomato);letter-spacing:-.02em}
+.hero p{font-family:var(--serif);font-style:italic;font-size:22px;line-height:1.5;max-width:540px;color:var(--cobalt-deep);margin-bottom:36px}
+.hero-actions{display:flex;gap:14px;margin-bottom:60px;flex-wrap:wrap}
+.btn{display:inline-flex;align-items:center;gap:10px;padding:16px 28px;font-family:var(--sans);font-size:12px;letter-spacing:.22em;text-transform:uppercase;font-weight:700;border-radius:999px;border:2px solid transparent;transition:.2s}
+.btn-primary{background:var(--cobalt);color:var(--lemon)}
+.btn-primary:hover{background:var(--tomato);color:var(--white)}
+.btn-ghost{border-color:var(--cobalt);color:var(--cobalt)}
+.btn-ghost:hover{background:var(--cobalt);color:var(--lemon)}
+
+.hero-strip{display:grid;grid-template-columns:repeat(4,1fr);gap:0;border-top:2px solid var(--cobalt);border-bottom:2px solid var(--cobalt)}
+.strip-cell{padding:30px 24px;border-right:1px solid var(--rule);text-align:center}
+.strip-cell:last-child{border-right:none}
+.strip-cell .n{font-family:var(--display);font-weight:800;font-size:54px;line-height:1;color:var(--cobalt);letter-spacing:-.03em}
+.strip-cell .n em{font-family:var(--serif);font-style:italic;font-weight:700;color:var(--tomato)}
+.strip-cell .l{font-family:var(--sans);font-size:11px;letter-spacing:.25em;text-transform:uppercase;font-weight:600;color:var(--cobalt);opacity:.7;margin-top:8px}
+
+/* big lemon graphic */
+.lemon-stack{position:absolute;right:-80px;top:60px;width:380px;height:380px;pointer-events:none;display:none}
+@media (min-width:1100px){.lemon-stack{display:block}}
+.lemon-stack::before,.lemon-stack::after{content:"";position:absolute;border-radius:50%}
+.lemon-stack::before{width:220px;height:220px;background:radial-gradient(circle at 35% 35%,var(--white) 0%,var(--lemon) 28%,var(--lemon-deep) 100%);right:20px;top:20px;box-shadow:inset -20px -30px 50px rgba(0,0,0,.12)}
+.lemon-stack::after{width:160px;height:160px;background:radial-gradient(circle at 35% 35%,var(--white) 0%,var(--lemon) 25%,var(--zest) 100%);right:140px;top:180px;box-shadow:inset -15px -20px 40px rgba(0,0,0,.12)}
+
+.menu{padding:130px 36px;max-width:1280px;margin:0 auto;background:var(--white)}
+.section-head{display:flex;justify-content:space-between;align-items:flex-end;margin-bottom:60px;gap:40px;flex-wrap:wrap;padding-bottom:30px;border-bottom:2px solid var(--cobalt)}
+.section-head h2{font-family:var(--display);font-weight:800;font-size:clamp(54px,7vw,108px);line-height:.9;letter-spacing:-.03em;color:var(--cobalt)}
+.section-head h2 em{font-family:var(--serif);font-style:italic;font-weight:700;color:var(--tomato)}
+.section-head .meta{font-family:var(--serif);font-style:italic;font-size:18px;color:var(--cobalt);max-width:320px;text-align:right;line-height:1.4}
+
+.burger-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:24px;margin-bottom:60px}
+.burger{background:var(--cream);border-radius:18px;padding:34px 30px;position:relative;border:2px solid var(--cobalt);transition:.2s}
+.burger:hover{transform:translateY(-4px);background:var(--lemon)}
+.burger .num{font-family:var(--serif);font-style:italic;font-weight:700;font-size:18px;color:var(--tomato);margin-bottom:6px}
+.burger h3{font-family:var(--display);font-weight:800;font-size:34px;line-height:1;letter-spacing:-.02em;color:var(--cobalt);margin-bottom:14px}
+.burger .body{font-family:var(--serif);font-style:italic;font-size:16px;line-height:1.55;color:var(--cobalt-deep);margin-bottom:18px;opacity:.85}
+.burger .price{position:absolute;top:30px;right:30px;font-family:var(--display);font-weight:800;font-size:30px;color:var(--cobalt);letter-spacing:-.02em}
+.burger .tags{display:flex;gap:6px;flex-wrap:wrap}
+.burger .tag{font-family:var(--sans);font-size:10px;letter-spacing:.15em;text-transform:uppercase;font-weight:700;padding:5px 11px;background:var(--cobalt);color:var(--lemon);border-radius:999px}
+.burger .tag.signature{background:var(--tomato);color:var(--white)}
+
+.menu-rows{display:grid;grid-template-columns:1fr 1fr;gap:60px;margin-top:60px}
+.menu-rows h3{font-family:var(--display);font-weight:800;font-size:32px;letter-spacing:-.02em;color:var(--cobalt);margin-bottom:6px}
+.menu-rows .pre{font-family:var(--serif);font-style:italic;font-size:16px;color:var(--tomato);margin-bottom:24px;padding-bottom:18px;border-bottom:2px solid var(--cobalt)}
+.dish{display:grid;grid-template-columns:1fr auto;gap:20px;padding:18px 0;border-bottom:1px dashed var(--rule);align-items:baseline}
+.dish-name{font-family:var(--display);font-weight:600;font-size:20px;color:var(--cobalt);letter-spacing:-.01em}
+.dish-price{font-family:var(--display);font-weight:800;font-size:18px;color:var(--tomato)}
+.dish-desc{grid-column:1/-1;font-family:var(--serif);font-style:italic;font-size:14px;color:var(--cobalt-deep);opacity:.78;margin-top:4px}
+
+/* seafood basket band */
+.basket{background:var(--cobalt);color:var(--lemon);padding:80px 36px;text-align:center}
+.basket-inner{max-width:1000px;margin:0 auto}
+.basket .pre{font-family:var(--serif);font-style:italic;font-size:22px;color:var(--lemon);margin-bottom:10px;line-height:1}
+.basket h3{font-family:var(--display);font-weight:800;font-size:clamp(46px,6vw,84px);line-height:.95;letter-spacing:-.03em;color:var(--white);margin-bottom:18px}
+.basket h3 em{font-family:var(--serif);font-style:italic;font-weight:700;color:var(--lemon)}
+.basket p{font-family:var(--serif);font-style:italic;font-size:20px;line-height:1.5;color:var(--white);opacity:.85;max-width:600px;margin:0 auto 30px}
+.basket-items{display:grid;grid-template-columns:repeat(4,1fr);gap:30px;margin-top:50px;text-align:left}
+.basket-items div{padding:20px;border:1.5px solid rgba(244,216,64,.4);border-radius:14px}
+.basket-items b{display:block;font-family:var(--display);font-weight:800;font-size:20px;color:var(--white);margin-bottom:4px;letter-spacing:-.01em}
+.basket-items span{font-family:var(--serif);font-style:italic;font-size:15px;color:var(--lemon);display:block}
+.basket-items em{font-family:var(--display);font-style:normal;font-weight:700;font-size:14px;color:var(--lemon);display:block;margin-top:8px;letter-spacing:.05em}
+
+.cakes{padding:130px 36px;max-width:1280px;margin:0 auto;background:var(--lemon);border-radius:0}
+.cakes-band{background:var(--lemon);border-radius:24px;padding:80px;display:grid;grid-template-columns:1fr 1.2fr;gap:60px;align-items:center;border:2px solid var(--cobalt)}
+.cakes h2{font-family:var(--display);font-weight:800;font-size:clamp(48px,5.5vw,84px);line-height:.95;letter-spacing:-.03em;color:var(--cobalt);margin-bottom:18px}
+.cakes h2 em{font-family:var(--serif);font-style:italic;font-weight:700;color:var(--tomato);display:block}
+.cakes p{font-family:var(--serif);font-style:italic;font-size:20px;line-height:1.5;color:var(--cobalt-deep);margin-bottom:24px}
+.cake-list{display:grid;gap:14px}
+.cake-row{display:grid;grid-template-columns:1fr auto;gap:20px;padding:18px 22px;background:var(--white);border-radius:14px;align-items:baseline;border:2px solid var(--cobalt)}
+.cake-row b{font-family:var(--display);font-weight:800;font-size:20px;color:var(--cobalt);letter-spacing:-.01em}
+.cake-row span{font-family:var(--serif);font-style:italic;font-size:14px;display:block;opacity:.7;font-weight:400;color:var(--cobalt-deep)}
+.cake-row em{font-family:var(--display);font-style:normal;font-weight:800;font-size:18px;color:var(--tomato)}
+
+.visit{padding:130px 36px;max-width:1280px;margin:0 auto;display:grid;grid-template-columns:1fr 1fr;gap:80px;align-items:start}
+.visit .pre{font-family:var(--serif);font-style:italic;font-size:22px;color:var(--tomato);margin-bottom:10px;line-height:1}
+.visit h2{font-family:var(--display);font-weight:800;font-size:clamp(50px,6vw,92px);line-height:.92;letter-spacing:-.03em;color:var(--cobalt);margin-bottom:24px}
+.visit h2 em{font-family:var(--serif);font-style:italic;color:var(--tomato);display:block}
+.visit .body{font-family:var(--serif);font-style:italic;font-size:22px;line-height:1.5;color:var(--cobalt-deep);margin-bottom:32px;max-width:480px}
+.visit .addr{font-family:var(--sans);font-size:15px;line-height:2;border-left:3px solid var(--lemon);padding-left:22px;margin-bottom:32px}
+.visit .addr b{font-family:var(--display);font-weight:800;font-size:22px;letter-spacing:-.01em;display:block;margin-bottom:4px;color:var(--cobalt)}
+
+.hours{background:var(--cobalt);color:var(--lemon);border-radius:18px;overflow:hidden}
+.hours h3{font-family:var(--display);font-weight:800;font-size:24px;padding:22px 30px;background:var(--lemon);color:var(--cobalt);letter-spacing:-.01em}
+.hours-list{padding:24px 30px}
+.hours-row{display:grid;grid-template-columns:1fr auto;font-family:var(--sans);font-size:14px;padding:12px 0;border-bottom:1px dashed rgba(244,216,64,.2);align-items:center}
+.hours-row:last-child{border:none}
+.hours-row span:first-child{font-family:var(--sans);font-size:12px;letter-spacing:.2em;text-transform:uppercase;font-weight:700;color:var(--white)}
+.hours-row span:last-child{font-family:var(--serif);font-style:italic;font-size:18px;color:var(--lemon)}
+
+footer{background:var(--cobalt-deep);color:var(--lemon);padding:80px 36px 36px}
+.foot-inner{max-width:1280px;margin:0 auto;display:grid;grid-template-columns:2fr 1fr 1fr 1fr;gap:60px;margin-bottom:50px}
+.foot h4{font-family:var(--display);font-weight:800;font-size:22px;color:var(--lemon);margin-bottom:18px;letter-spacing:-.01em}
+.foot ul{list-style:none;display:flex;flex-direction:column;gap:10px;font-family:var(--sans);font-size:14px;color:var(--white);opacity:.85}
+.foot-brand p{font-family:var(--serif);font-style:italic;font-size:18px;line-height:1.5;color:var(--white);opacity:.78;margin-top:18px;max-width:340px}
+.foot-bottom{border-top:1px solid rgba(244,216,64,.18);padding-top:28px;max-width:1280px;margin:0 auto;display:flex;justify-content:space-between;font-family:var(--sans);font-size:11px;letter-spacing:.2em;text-transform:uppercase;color:var(--white);opacity:.5;flex-wrap:wrap;gap:14px}
+
+@media (max-width:960px){
+  .nav ul{display:none}
+  .visit,.foot-inner,.cakes-band,.menu-rows,.basket-items{grid-template-columns:1fr;gap:48px}
+  .burger-grid{grid-template-columns:1fr}
+  .hero-strip{grid-template-columns:1fr 1fr}
+  h1{font-size:64px}
+}
+</style>
+</head>
+<body>
+
+<nav class="nav">
+  <div class="nav-inner">
+    <div class="brand"><span class="lemon">z</span>Zesty Lemon</div>
+    <ul>
+      <li><a href="#menu">Burgers</a></li>
+      <li><a href="#basket">Baskets</a></li>
+      <li><a href="#cakes">Cakes</a></li>
+      <li><a href="#visit">Visit</a></li>
+    </ul>
+    <a href="#visit" class="cta">Order pickup</a>
+  </div>
+</nav>
+
+<header class="hero">
+  <div class="hero-inner">
+    <div class="lemon-stack"></div>
+    <div class="eyebrow">— steps from the beach, Deception Bay —</div>
+    <h1>Bright food,<br>brighter <em>brunch.</em></h1>
+    <p>Signature burgers, fresh seafood baskets, cakes made on the bench each morning. A vivid little cafe on Bayview Terrace, two minutes from the bay.</p>
+    <div class="hero-actions">
+      <a href="#menu" class="btn btn-primary">See the burger menu →</a>
+      <a href="#visit" class="btn btn-ghost">Find us</a>
+    </div>
+    <div class="hero-strip">
+      <div class="strip-cell"><div class="n">4.6<em>★</em></div><div class="l">Google reviews</div></div>
+      <div class="strip-cell"><div class="n">700+</div><div class="l">Reviews</div></div>
+      <div class="strip-cell"><div class="n">8<em>min</em></div><div class="l">From Redcliffe</div></div>
+      <div class="strip-cell"><div class="n">2<em>min</em></div><div class="l">To the bay</div></div>
+    </div>
+  </div>
+</header>
+
+<section class="menu" id="menu">
+  <div class="section-head">
+    <h2>The <em>burger</em> bar.</h2>
+    <div class="meta">Hand-pressed patties, milk buns from the bakery on Endeavour. Loaded, never dressed-down.</div>
+  </div>
+
+  <div class="burger-grid">
+    <div class="burger">
+      <div class="price">$24</div>
+      <div class="num">— No. 01 · Signature</div>
+      <h3>The Zesty</h3>
+      <div class="body">Double smashed wagyu, sharp cheese, lemon aioli, butter lettuce, pickle, charred onion. The one we built the cafe around.</div>
+      <div class="tags"><span class="tag signature">Signature</span><span class="tag">Best seller</span></div>
+    </div>
+    <div class="burger">
+      <div class="price">$22</div>
+      <div class="num">— No. 02</div>
+      <h3>The Surfer</h3>
+      <div class="body">Beer-battered fish, slaw, dill mayo, fresh tomato, a squeeze of lemon. Built for the post-swim table.</div>
+      <div class="tags"><span class="tag">Local fish</span></div>
+    </div>
+    <div class="burger">
+      <div class="price">$23</div>
+      <div class="num">— No. 03</div>
+      <h3>The Garden</h3>
+      <div class="body">Halloumi, grilled portobello, beetroot relish, lemon labneh, rocket. The veg one that locals fight over.</div>
+      <div class="tags"><span class="tag">Veg</span></div>
+    </div>
+  </div>
+
+  <div class="menu-rows">
+    <div>
+      <h3>Brunch til 2</h3>
+      <div class="pre">— Every morning, all day weekends —</div>
+      <div class="dish"><div class="dish-name">Smashed avo plate</div><div class="dish-price">$19</div><div class="dish-desc">Sourdough, fresh avo, feta, dukkah, soft poached egg.</div></div>
+      <div class="dish"><div class="dish-name">Big breakfast</div><div class="dish-price">$26</div><div class="dish-desc">Bacon, eggs, mushroom, hash, tomato, sourdough.</div></div>
+      <div class="dish"><div class="dish-name">Lemon ricotta pancakes</div><div class="dish-price">$22</div><div class="dish-desc">Three-stack, lemon curd, vanilla mascarpone, blueberries.</div></div>
+      <div class="dish"><div class="dish-name">Eggs benny</div><div class="dish-price">$21</div><div class="dish-desc">Bacon or smoked salmon, lemon hollandaise, sourdough.</div></div>
+    </div>
+    <div>
+      <h3>Espresso bar</h3>
+      <div class="pre">— Local roast, milk from the Atherton —</div>
+      <div class="dish"><div class="dish-name">Black</div><div class="dish-price">$4.5</div></div>
+      <div class="dish"><div class="dish-name">White</div><div class="dish-price">$5</div></div>
+      <div class="dish"><div class="dish-name">Cold drip</div><div class="dish-price">$6.5</div><div class="dish-desc">Slow-pulled overnight, on tap from 7am.</div></div>
+      <div class="dish"><div class="dish-name">Lemon iced tea</div><div class="dish-price">$7</div><div class="dish-desc">House-brewed, real lemon, just enough sweet.</div></div>
+      <div class="dish"><div class="dish-name">Babycino</div><div class="dish-price">$1</div></div>
+    </div>
+  </div>
+</section>
+
+<section class="basket" id="basket">
+  <div class="basket-inner">
+    <div class="pre">— for two, to share —</div>
+    <h3>The fresh<br><em>seafood basket.</em></h3>
+    <p>Battered local snapper, salt &amp; pepper squid, prawn skewers, chunky chips, lemon aioli, slaw, fresh lemon. Served in a fluted basket built for the table.</p>
+    <div class="basket-items">
+      <div><b>Snapper</b><span>Beer battered, twice-fried.</span><em>Local catch</em></div>
+      <div><b>Squid</b><span>Salt &amp; pepper crumb, lime.</span><em>Lightly spiced</em></div>
+      <div><b>Prawns</b><span>Skewered &amp; chargrilled.</span><em>Garlic butter</em></div>
+      <div><b>Trimmings</b><span>Chunky chips, slaw, aioli.</span><em>Lemon on the side</em></div>
+    </div>
+  </div>
+</section>
+
+<section class="cakes" id="cakes">
+  <div class="cakes-band">
+    <div>
+      <h2>Cakes made<em>on the bench</em></h2>
+      <p>Whole cakes available with 24hr notice. By the slice on the bench til they're gone — usually before 1pm Saturday.</p>
+    </div>
+    <div class="cake-list">
+      <div class="cake-row"><div><b>Lemon cheesecake</b><span>Three layer, lemon curd, fresh berry. Our signature.</span></div><em>$11</em></div>
+      <div class="cake-row"><div><b>Carrot cake</b><span>Walnut, sultana, cream cheese frosting.</span></div><em>$9</em></div>
+      <div class="cake-row"><div><b>Caramel slice</b><span>House biscuit base, salted caramel, dark choc top.</span></div><em>$8</em></div>
+      <div class="cake-row"><div><b>Whole cake · pre-order</b><span>24-hour notice, serves 10–12.</span></div><em>$95</em></div>
+    </div>
+  </div>
+</section>
+
+<section class="visit" id="visit">
+  <div>
+    <div class="pre">— come down to Bayview —</div>
+    <h2>On the bay,<em>open early.</em></h2>
+    <div class="body">Two minutes' walk to the foreshore. Outdoor table for the dog, indoor tables for the wind. Open seven days from 6am.</div>
+    <div class="addr">
+      <b>Zesty Lemon Cafe</b>
+      Shop 2, 6 Bayview Terrace<br>
+      Deception Bay QLD 4508<br>
+      0435 211 220<br>
+      Uber Eats · DoorDash · in-store
+    </div>
+    <a href="#" class="btn btn-primary">Order pickup →</a>
+  </div>
+  <div class="hours">
+    <h3>Trading hours</h3>
+    <div class="hours-list">
+      <div class="hours-row"><span>Mon — Fri</span><span>6:00am — 2:30pm</span></div>
+      <div class="hours-row"><span>Saturday</span><span>6:30am — 2:00pm</span></div>
+      <div class="hours-row"><span>Sunday</span><span>6:30am — 1:00pm</span></div>
+      <div class="hours-row"><span>Breakfast</span><span>Til 11am</span></div>
+      <div class="hours-row"><span>Burger bar</span><span>From 11am</span></div>
+      <div class="hours-row"><span>Cakes</span><span>Til sold out</span></div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="foot-inner">
+    <div class="foot-brand foot">
+      <div class="brand" style="color:var(--lemon)"><span class="lemon">z</span><span style="color:var(--lemon)">Zesty Lemon</span></div>
+      <p>A vivid little cafe on Bayview Terrace, Deception Bay. Bright food, bright service, brighter brunch.</p>
+    </div>
+    <div class="foot">
+      <h4>Visit</h4>
+      <ul>
+        <li>Shop 2, 6 Bayview Tce</li>
+        <li>Deception Bay QLD 4508</li>
+        <li>0435 211 220</li>
+      </ul>
+    </div>
+    <div class="foot">
+      <h4>Order</h4>
+      <ul>
+        <li>Uber Eats</li>
+        <li>DoorDash</li>
+        <li>Phone pickup</li>
+      </ul>
+    </div>
+    <div class="foot">
+      <h4>Follow</h4>
+      <ul>
+        <li>@zestylemoncafe</li>
+        <li>Facebook</li>
+        <li>Whole cake orders</li>
+      </ul>
+    </div>
+  </div>
+  <div class="foot-bottom">
+    <span>© Zesty Lemon Cafe · Deception Bay</span>
+    <span>Concept mockup · Degree In A Week</span>
+  </div>
+</footer>
+
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"CafeOrCoffeeShop","name":"Zesty Lemon Cafe","address":{"@type":"PostalAddress","streetAddress":"Shop 2, 6 Bayview Terrace","addressLocality":"Deception Bay","addressRegion":"QLD","postalCode":"4508","addressCountry":"AU"},"telephone":"+61435211220","openingHours":["Mo-Fr 06:00-14:30","Sa 06:30-14:00","Su 06:30-13:00"]}
+</script>
+
+</body>
+</html>
